@@ -1,0 +1,433 @@
+.root{
+    /* background:linear-gradient(160deg,#000000fc,#070908); */
+        background: rgb(9, 9, 11);
+        overflow-x: hidden;
+}
+
+.root::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: 20px;
+  background: rgb(9, 9, 11);
+  transition: all 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.root > header{
+  z-index: 2;
+  position: relative;
+}
+.root > header::after {
+  content: "";
+  top: -5.5%;
+  right: -25px;
+  position: absolute;
+  width: 7.5em;
+  height: 7.5em;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  background: #c4c4c4c1;
+  box-shadow: 0px 0px 100px rgba(193, 119, 241, 0.8), 0px 0px 100px rgba(135, 42, 211, 0.8), inset #9b40fc 0px 0px 40px -12px;
+  transition: 0.4s ease-in-out;
+  z-index: -1;
+}
+.root > header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  opacity: 1;
+  box-shadow: 
+  220px 118px #fff, 
+  280px 176px #fff, 
+  40px 50px #fff, 
+  60px 180px #fff, 
+  120px 130px #fff, 
+  180px 176px #fff, 
+  220px 290px #fff, 
+  520px 250px #fff, 
+  400px 220px #fff, 
+  50px 350px #fff, 
+  10px 230px #fff,
+  300px 100px #fff,
+  500px 80px #fff,
+  350px 300px #fff,
+  450px 180px #fff,
+  600px 120px #fff,
+  550px 300px #fff,
+  700px 200px #fff,
+  150px 400px #fff,
+  650px 450px #fff,
+  100px 500px #fff,
+  80px 600px #fff,
+  370px 50px #fff,
+  430px 90px #fff,
+  620px 160px #fff,
+  510px 330px #fff,
+  670px 250px #fff,
+  230px 420px #fff,
+  540px 370px #fff,
+  330px 450px #fff,
+  310px 550px #fff,
+  450px 500px #fff,
+  150px 300px #fff,
+  750px 200px #fff,
+  800px 150px #fff,
+  900px 250px #fff,
+  850px 300px #fff,
+  950px 400px #fff, /* Mais para a direita e baixo */
+  800px 450px #fff, /* Mais para a direita e baixo */
+  900px 350px #fff, /* Mais para a direita e baixo */
+  1000px 500px #fff, /* Mais para a direita e baixo */
+  700px 550px #fff; /* Mais para a direita e baixo */
+
+
+  z-index: -1;
+  transition: 1s ease;
+  animation: 3.5s glowing-stars linear alternate infinite;
+  animation-delay: 0s;
+}
+
+
+.root > header > div > nav > li{
+  position: relative;
+  transition: 0.4s ease-in-out;
+}
+#home::before{
+  content: "";
+    position: absolute;
+    top: -100px;
+    left: 64%;
+    rotate: -40deg;
+    width: 4em;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    animation: 3s shootingStar3 ease-in-out infinite;
+    animation-delay: 7s;
+}
+#about::before{
+  content: "";
+    position: absolute;
+    top: 6%;
+    left: 128%;
+    rotate: -49deg;
+    width: 5em;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    animation: 5s shootingStar3 ease-in-out infinite;
+    animation-delay: 4s;
+}
+#service::before{
+  content: "";
+    position: absolute;
+    top: -80px;
+    left: 108%;
+    rotate: -43deg;
+    width: 5em;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    animation: 5s shootingStar1 ease-in-out infinite;
+    animation-delay: 10s;
+}
+#contact::before{
+  content: "";
+    position: absolute;
+    top: 48%;
+    top: -100px;
+    left: 98%;
+    rotate: -43deg;
+    width: 4em;
+    height: 1px;
+    background: linear-gradient(90deg, #ffffff, transparent);
+    animation: 3s shootingStar3 ease-in-out infinite;
+    animation-delay: 14s;
+}
+.root > header > div > nav > ul > li::after{
+  content: "";
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(233, 233, 233, 0.5), 0px 0px 10px rgba(192, 192, 192, 0.5);
+    border-radius: 50%;
+    z-index: -1;
+    transition: 0.3s ease-in-out;
+}
+@keyframes shootingStar1 {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-69em) translateY(0);
+    opacity: 1;
+    background: linear-gradient(90deg, #f5f5f5, transparent);
+  }
+  
+  70% {
+    transform: translateX(-73em) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes shootingStar3 {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-69em) translateY(0);
+    opacity: 1;
+  }
+  60%{
+    
+    background: linear-gradient(90deg, #7b4ef8, transparent);
+  }
+  70% {
+    transform: translateX(-73em) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+}
+@keyframes shootingStar2 {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-65em) translateY(0);
+    opacity: 1;
+    background: linear-gradient(90deg, #590ca5, transparent);
+  }
+  70% {
+    transform: translateX(-73em) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+}
+
+
+@keyframes glowing-stars {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+/* Efeito de digitação e apagamento com cursor piscante */
+@keyframes typeAndDelete {
+    0%, 10% {
+      width: 0;
+    }
+    45%, 55% {
+      width: 100%;
+    }
+    90%, 100% {
+      width: 0;
+    }
+  }
+  
+  @keyframes blinkCursor {
+    50% {
+      border-right-color: transparent;
+    }
+  }
+  
+  .typing-container {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap; /* Impede que o texto se quebre em várias linhas */
+    border-right: 0.1em solid rgb(199, 208, 233); 
+    animation: typeAndDelete 5.6s steps(50) infinite, blinkCursor 1s step-end infinite;
+    display: inline-block;
+    font-family: monospace; /* Define a fonte para parecer com um terminal */
+ 
+  }
+  
+
+  .card {
+    /* color used to softly clip top and bottom of the .words container */
+    --bg-color: #21212100;
+    background-color: var(--bg-color);
+    padding: 1rem 2rem;
+    border-radius: 1.25rem;
+  }
+  .loader {
+    color: rgb(207, 207, 207);
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 19px;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 40px;
+    padding: 10px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 8px;
+  }
+  
+  .words {
+    overflow: hidden;
+    position: relative;
+  }
+  .words::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%
+    );
+    z-index: 20;
+    width: auto;
+  }
+  
+  .word {
+    display: block;
+    height: 100%;
+    padding-left: 6px;
+    width: auto;
+    color: #6afa9c;
+    animation: spin_4991 10s  ease-in-out infinite;
+  }
+  
+  @keyframes spin_4991 {
+    10% {
+      -webkit-transform: translateY(-102%);
+      transform: translateY(-102%);
+    }
+  
+    25% {
+      -webkit-transform: translateY(-100%);
+      transform: translateY(-100%);
+    }
+  
+    35% {
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+  
+    50% {
+      -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+    }
+  
+    60% {
+      -webkit-transform: translateY(-300%);
+      transform: translateY(-300%);
+    }
+  
+    75% {
+      -webkit-transform: translateY(-300%);
+      transform: translateY(-300%);
+    }
+  
+    85% {
+      -webkit-transform: translateY(-402%);
+      transform: translateY(-402%);
+    }
+  
+    100% {
+      -webkit-transform: translateY(-400%);
+      transform: translateY(-400%);
+    }
+  }
+
+  .inf-full{
+    font-size: 1.6em;
+  }
+  @media screen and (max-width:980px){
+    .w-60{
+      margin-right: -8%;
+    }
+    .loader {
+      font-size: 17px;
+      
+    }
+  }
+  @media screen and (max-width:760px){
+    .root > header::after {
+      width: 5.5em;
+      height: 5.5em;
+    }
+    
+    .typing-container {
+      font-size: 3em;
+    }
+    .inf-full {
+      font-size: 1.3em;
+  }
+  .wrapper {
+    width: 68% !important;
+    margin-top: 94px !important;
+    left: -86px;
+  }
+  #btn_explorer{
+   margin-top: 2px; 
+  }
+  }
+  @media screen and (max-width:600px){
+    .root > header::after {
+      width: 5.5em;
+      height: 5.5em;
+    }
+    
+    .typing-container {
+      font-size: 2.8em;
+    }
+    .inf-full {
+      font-size: 1.2em;
+  }
+  .w-60{
+    margin-right: -17%;
+  }
+  .loader {
+    font-size: 14px;
+    
+  }
+  } 
+  @media screen and (max-width:502px){
+    .inf-full {
+      font-size: 1.1em;
+  }
+  
+  }
+  @media screen and (max-width:465px){
+    .devMsg{
+      display: none;
+    }
+  
+    .typing-container {
+      font-size: 2.4em;
+    }
+    .inf-full {
+      font-size: 1.1em;
+  }
+    #btn_explorer{
+      margin-top: 25px; 
+     }
+  }

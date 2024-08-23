@@ -1,0 +1,93 @@
+/* Loader.css */
+.absolute {
+    position: absolute;
+  }
+  
+  .inline-block {
+    display: inline-block;
+  }
+  
+  .loader {
+    display: flex;
+    margin: 0.25em 0;
+  }
+  
+  .loader svg {
+    width: 50px;  /* Ajuste o tamanho conforme necessário */
+    height: 50px; /* Ajuste o tamanho conforme necessário */
+  }
+  
+  .dash {
+    animation: dashArray 2s ease-in-out infinite, dashOffset 2s linear infinite;
+  }
+  
+  .spin {
+    animation: spinDashArray 2s ease-in-out infinite, spin 8s ease-in-out infinite,
+      dashOffset 2s linear infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes dashArray {
+    0% {
+      stroke-dasharray: 0 1 359 0;
+    }
+  
+    50% {
+      stroke-dasharray: 0 359 1 0;
+    }
+  
+    100% {
+      stroke-dasharray: 359 1 0 0;
+    }
+  }
+  
+  @keyframes spinDashArray {
+    0% {
+      stroke-dasharray: 135 45; /* Reduzido para ajustar o tamanho */
+    }
+  
+    50% {
+      stroke-dasharray: 0 180;
+    }
+  
+    100% {
+      stroke-dasharray: 125 45; /* Reduzido para ajustar o tamanho */
+    }
+  }
+  
+  @keyframes dashOffset {
+    0% {
+      stroke-dashoffset: 192.5; /* Ajustado para o tamanho menor */
+    }
+  
+    100% {
+      stroke-dashoffset: 2.5; /* Ajustado para o tamanho menor */
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    12.5%,
+    25% {
+      transform: rotate(135deg); /* Ajustado para o tamanho menor */
+    }
+  
+    37.5%,
+    50% {
+      transform: rotate(270deg); /* Ajustado para o tamanho menor */
+    }
+  
+    62.5%,
+    75% {
+      transform: rotate(405deg); /* Ajustado para o tamanho menor */
+    }
+  
+    87.5%,
+    100% {
+      transform: rotate(540deg); /* Ajustado para o tamanho menor */
+    }
+  }
+  
