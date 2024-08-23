@@ -1,7 +1,3 @@
-const nextConfig = {
-  images: {
-    domains: ['picsum.photos'],
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
