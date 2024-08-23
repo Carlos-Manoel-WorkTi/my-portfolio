@@ -1,5 +1,5 @@
 import React from 'react';
-import './ScrollingAuto.css';
+import './scrollauto.css';
 import 'animate.css';
 
 export default function ScrollingAuto() {
