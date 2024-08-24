@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import Button_explorer from "@/components/button_explorer/Button_explorer";
-import ScrollingAuto from "@/components/scrollingAuto/ScrollingAuto";
+import ScrollingAuto from "@/components/scrolling/Scrolling";
 import 'animate.css';
 
 const carouselItems = [

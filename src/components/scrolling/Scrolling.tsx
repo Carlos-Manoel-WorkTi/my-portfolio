@@ -2,7 +2,7 @@ import React from 'react';
 import './scrollauto.css';
 import 'animate.css';
 
-export default function ScrollingAuto() {
+export default function Scrolling() {
   return (
     <div className="wrapper animate__animated animate__slideInUp animate__delay-2s">
       <div id="item-1" className="item">
