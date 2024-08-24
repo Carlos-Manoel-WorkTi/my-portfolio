@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import "./home.css"
 import "../components/contacts/Contacts"
 import Contacts from "../components/contacts/Contacts";
+import ContactMB from "@/components/contacts/ContactMB";
 
 
 
@@ -25,6 +26,7 @@ export default function RootLayout({
         <Header/>
         <div className="stars"></div>
         <Contacts/>
+        {/* <ContactMB/> */}
         {children}
         <Footer/>
         </body>

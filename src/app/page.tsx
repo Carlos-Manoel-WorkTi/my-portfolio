@@ -1,7 +1,7 @@
 
 import Link from "next/link";
 import Button_explorer from "@/components/button_explorer/Button_explorer";
-import ScrollingAuto from "@/components/scrollingAuto/scrollingAuto";
+import ScrollingAuto from "@/components/scrollingAuto/ScrollingAuto";
 import 'animate.css';
 
 const carouselItems = [
@@ -14,8 +14,8 @@ const carouselItems = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-2  overflow-x-hidden">
-        <div className="w-full flex justify-between items-center p-5 py-2">
+    <main className="flex  flex-col items-center p-2  overflow-x- main">
+        <div className="w-full flex justify-between items-center p-5 py-2 containerTyping">
           <h2 className="typing-container text-white text-6xl mt-10 sm:mt-1 max-w-max msgInit">
           You&#39;re welcome
           </h2>

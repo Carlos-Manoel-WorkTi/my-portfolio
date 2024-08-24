@@ -240,7 +240,7 @@
     0%, 10% {
       width: 0;
     }
-    45%, 55% {
+    45%, 70% {
       width: 100%;
     }
     90%, 100% {
@@ -249,20 +249,19 @@
   }
   
   @keyframes blinkCursor {
-    50% {
+    60% {
       border-right-color: transparent;
     }
   }
   
   .typing-container {
-    max-width: 100%;
     overflow: hidden;
     white-space: nowrap; /* Impede que o texto se quebre em várias linhas */
     border-right: 0.1em solid rgb(199, 208, 233); 
     animation: typeAndDelete 5.6s steps(50) infinite, blinkCursor 1s step-end infinite;
     display: inline-block;
     font-family: monospace; /* Define a fonte para parecer com um terminal */
- 
+    
   }
   
 
@@ -360,8 +359,11 @@
   .inf-full{
     font-size: 1.6em;
   }
+  .main{
+    overflow: hidden;
+  }
   @media screen and (max-width:980px){
-    .w-60{
+    .devMsg{
       margin-right: -8%;
     }
     .loader {
@@ -374,20 +376,22 @@
       width: 5.5em;
       height: 5.5em;
     }
-    
+    .devMsg{
+      margin-right: -12%;
+    }
     .typing-container {
-      font-size: 3em;
+      font-size: 3.4em;
     }
     .inf-full {
-      font-size: 1.3em;
+      font-size: 1.6em;
   }
   .wrapper {
-    width: 68% !important;
+    width: 74% !important;
     margin-top: 94px !important;
-    left: -86px;
+    
   }
   #btn_explorer{
-   margin-top: 2px; 
+   margin-top: 60px; 
   }
   }
   @media screen and (max-width:600px){
@@ -397,10 +401,10 @@
     }
     
     .typing-container {
-      font-size: 2.8em;
+      font-size: 3.5em;
     }
     .inf-full {
-      font-size: 1.2em;
+      font-size: 1.5em;
   }
   .w-60{
     margin-right: -17%;
@@ -409,20 +413,44 @@
     font-size: 14px;
     
   }
-  } 
+  .containerTyping{
+    margin-bottom: 40px;
+  }
+  .devMsg{
+    /* display: none; */
+    position: absolute;
+    margin-top: 180px;
+    margin-left: -36px;
+  }
+  .example-2{
+    display: none !important;
+  }
+  .wrapper {
+    width: 92% !important;
+    margin-top: 53px !important;
+    left: 0px;
+    padding-top: 20px;
+}
+} 
   @media screen and (max-width:502px){
     .inf-full {
-      font-size: 1.1em;
-  }
-  
+      font-size: 1.4em;
+    }
+    .item {
+      svg {
+          width: 33px;
+      }
+    }
+
+  .root > header::after {
+    width: 7.5em;
+    height: 7.5em;
+}
   }
   @media screen and (max-width:465px){
-    .devMsg{
-      display: none;
-    }
   
     .typing-container {
-      font-size: 2.4em;
+      font-size: 2.8em;
     }
     .inf-full {
       font-size: 1.1em;

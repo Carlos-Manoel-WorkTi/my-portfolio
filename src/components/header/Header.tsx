@@ -15,7 +15,7 @@ export default function Header() {
         </h1>
 
         <nav>
-          <ul className="hidden md:flex space-x-4 mr-5 animate__animated animate__backInDown">
+          <ul className="ul-header  hidden md:flex space-x-4 mr-5 animate__animated animate__backInDown">
             <li id='home'>
               <Link href="#" className="hover:text-green-400 ">Home</Link>
             </li>
