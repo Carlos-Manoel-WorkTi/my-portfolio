@@ -1,0 +1,56 @@
+.containerDarkHole {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+  transform: rotate(271deg);
+  margin-left: -252px;
+  margin-top: 132px;
+
+}
+
+.itemDH {
+  position: absolute;
+  background-color: transparent;
+  width: calc(var(--i) * 1.7vmin);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 0.9vmin solid rgb(86 24 194 / 21%);
+  transform-style: preserve-3d;
+  transform: rotateX(70deg) translateZ(100px);
+  animation: my-move 4s ease-in-out calc(var(--i) * 0.1s) infinite;
+  box-shadow: 0px 0px 15px rgb(124, 124, 124), inset 0px 0px 15px rgb(124, 124, 124);
+}
+
+@keyframes my-move {
+  /* 0% {
+      transform: rotateX(70deg) translateZ(100px) translateY(0px);
+      opacity: 1;
+  }
+
+  50% {
+      transform: rotateX(70deg) translateZ(50px) translateY(-40vmin);
+      opacity: 0.7;
+  }
+
+  100% {
+      transform: rotateX(70deg) translateZ(0px) translateY(-80vmin);
+      opacity: 0;
+  } */
+  0% {
+    /* transform: rotateX(70deg) translateZ(60px) translateY(-40px); */
+    opacity: 0.8;
+}
+
+50% {
+    /* transform: rotateX(70deg) translateZ(50px) translateY(-40vmin); */
+    opacity: 0.7;
+}
+100% {
+    /* transform: rotateX(70deg) translateZ(-76px) translateY(-124vmin); */
+    opacity: 0;
+}
+}

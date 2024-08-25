@@ -26,7 +26,7 @@ export default function RootLayout({
         <Header/>
         <div className="stars"></div>
         <Contacts/>
-        {/* <ContactMB/> */}
+     
         {children}
         <Footer/>
         </body>

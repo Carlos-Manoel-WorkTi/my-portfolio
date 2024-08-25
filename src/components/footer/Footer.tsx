@@ -2,8 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-transparent text-white py-4 text-center relative">
-      <div className="absolute inset-x-0 top-0 border-t border-gray-700"></div>
+    <footer className="bg-transparent text-white py-4 text-center border-t border-gray-700">
       <div className="relative z-10">
         <p className="mb-2">&copy; {new Date().getFullYear()} My Portfolio</p>
         <p>
