@@ -3,17 +3,8 @@ import Link from "next/link";
 import Button_explorer from "@/components/button_explorer/Button_explorer";
 import ScrollingAuto from "@/components/scrolling/Scrolling";
 import 'animate.css';
-
 import ServeEffect from "@/components/serverEffect/ServeEffect";
 
-
-const carouselItems = [
-  { id: 1, src: "https://picsum.photos/800/600", alt: "Image 1", width: 800, height: 600, info: "Informação sobre a imagem 1." },
-  { id: 2, src: "https://picsum.photos/800/600?2", alt: "Image 2", width: 800, height: 600, info: "Informação sobre a imagem 2." },
-  { id: 3, src: "https://picsum.photos/800/600?3", alt: "Image 3", width: 800, height: 600, info: "Informação sobre a imagem 3." },
-  { id: 4, src: "https://picsum.photos/800/600?4", alt: "Image 4", width: 800, height: 600, info: "Informação sobre a imagem 4." },
-  { id: 5, src: "https://picsum.photos/800/600?5", alt: "Image 5", width: 800, height: 600, info: "Informação sobre a imagem 5." },
-];
 
 export default function Home() {
   const getGreeting = () => {
