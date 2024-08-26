@@ -210,6 +210,22 @@ export default function ServeEffect() {
                 ></path>
             </g>
           </svg>
+          <svg id='connector2'
+            xmlns="http://www.w3.org/2000/svg"
+            width="289"
+            height="270"
+            fill="none"
+            viewBox="0 0 289 270"
+          >
+            <g>
+              <path
+                stroke="rgb(78, 82, 89)"
+                strokeLinejoin="bevel"
+                strokeWidth="4"
+                d="M2 234v0c0 9.251 7.5 16.75 16.75 16.75h24.875A8.375 8.375 0 0152 259.125v0a8.375 8.375 0 008.375 8.375H198c13.255 0 24-10.745 24-24V208c0-13.255 10.745-24 24-24h17c13.255 0 24-10.745 24-24V49c0-13.255-10.745-24-24-24v0c-13.255 0-24-10.745-24-24V0"
+              ></path>
+            </g>
+          </svg>
           </div>
 
 

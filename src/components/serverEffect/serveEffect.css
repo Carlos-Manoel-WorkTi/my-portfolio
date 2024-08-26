@@ -118,6 +118,9 @@
   display: flex;
   width: 100%;
 }
+#connector2{
+  display: none;
+}
 #connector{
   width: 426px;
   height: 100%;
@@ -210,4 +213,118 @@
     height: 100%;
     margin-left: -27px;
 }
+  }
+  @media screen and (max-width:890px){
+    #connector {
+      width: 368px;
+      height: 100%;
+      margin-left: -48px;
+    }
+    #inf {
+      top: 145px;
+      width: 451px;
+      margin-right: -150px;
+    }
+    .div-connector::after {
+      width: 26px;
+      height: 9px;
+      margin-left: 300px;
+      margin-top: 9px;
+  }
+  }
+  @media screen and (max-width:730px){
+    #connector {
+      width: 368px;
+      height: 100%;
+      margin-left: -48px;
+    }
+    #inf {
+      width: 370px;
+      margin-right: -96px;
+      top: 154px;
+    }
+    #inf .border-screen {
+      font-size: 1em;
+    }
+  .SevMini svg, .Ghost svg {
+    width: 113px;
+    height: auto;
+  }
+  #connector {
+    width: 320px;
+    height: 100%;
+    margin-left: -41px;
+  }
+  .div-connector::after {
+    width: 18px;
+    height: 7px;
+    margin-left: 265px;
+    margin-top: 9px;
+  }
+  }
+  @media screen and (max-width: 600px) {
+    #inf::after {
+      width: 22px;
+      height: 23px;
+      margin-left: -31px;
+      margin-top: -77px;
+    }
+    #inf {
+      width: 347px;
+      margin-right: -160px;
+      top: 149px;
+      height: 207px;
+    }
+  }
+  @media screen and (max-width:550px) {
+    .div-connector::after {
+      width: 18px;
+      height: 7px;
+      margin-left: 115px;
+      margin-top: 44px;
+    }
+    #inf {
+      width: 347px;
+      margin-right: -2px;
+      top: 149px;
+      height: 207px;
+    }
+    #connector{
+      display: none;
+    }
+    #connector2{
+      display: block;
+      width: 190px;
+      margin-left: -34px;
+    }
+    .groupServ {
+      margin-left: 30px;
+    }
+  }
+  @media screen and (max-width:385px){
+    #inf {
+      width: 344px;
+      margin-right: 11px;
+      height: 207px;
+    }
+    #inf .border-screen {
+      font-size: 0.9em;
+    }
+  }  
+  @media screen and (max-width:350px){
+    #inf {
+      width: 287px;
+      margin-right: 18px;
+      height: 207px;
+    }
+    #inf .border-screen {
+      font-size: 0.9em;
+    }
+    .SevMini svg, .Ghost svg {
+      width: 102px;
+      height: auto;
+    }
+    .groupServ {
+      margin-left: -5px;
+    }
   }
