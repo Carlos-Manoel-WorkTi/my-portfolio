@@ -3,8 +3,8 @@ import Link from "next/link";
 import Button_explorer from "@/components/button_explorer/Button_explorer";
 import ScrollingAuto from "@/components/scrolling/Scrolling";
 import 'animate.css';
-import Image from "next/image";
-import DarkHole from "@/components/scrolling/DarkHole";
+
+import ServeEffect from "@/components/serverEffect/ServeEffect";
 
 
 const carouselItems = [
@@ -16,12 +16,24 @@ const carouselItems = [
 ];
 
 export default function Home() {
+  const getGreeting = () => {
+    const hours = new Date().getHours();
+
+    if (hours < 12) {
+      return 'Good Morning';
+    } else if (hours < 18) {
+      return 'Good Afternoon';
+    } else {
+      return 'Good Night';
+    }
+  };
+
   return (
     <>
-    <main className="flex  flex-col items-center p-2  overflow-x- main">
+    <main className="flex  flex-col items-center  overflow-x- main">
         <div className="w-full flex justify-between items-center p-5 py-2 containerTyping">
           <h2 className="typing-container text-white text-6xl mt-10 sm:mt-1 max-w-max msgInit">
-          You&#39;re welcome
+          {getGreeting()}
           </h2>
           <span className="w-60 text-white devMsg">
     
@@ -60,22 +72,15 @@ export default function Home() {
     <div className="p-4  w-full flex justify-between items-center  mt-8 ml-5    animate__animated animate__rollIn animate__delay-1s" id="btn_explorer" >
       <Button_explorer></Button_explorer>
     </div>
-    {/* <DarkHole/> */}
-    <ScrollingAuto/>
-    </main>
+    
+    <ScrollingAuto/>  
     <section className="containerSecond">
-      <Image src={"/bg/plano-de-fundo.png"} alt="plano de fundo" width={100} height={100}/>
-      <div id="inf">
-        <div className="border-screen">
-          <ul>
-            <li> <span className="icon-inf">&gt;&gt;</span> Formação em analise e desenvolvimento de sistemas.</li>
-            <li> <span className="icon-inf">&gt;&gt;</span> Nivel de ingles intermediario</li>
-            <li> <span className="icon-inf">&gt;&gt;</span> Desenvolvedor FullStack</li>
-            <li><span className="icon-inf">&gt;&gt; portfolio/carlos/: </span>em adamento...</li>
-          </ul>
-        </div>
-      </div>
+      <ServeEffect/>
     </section>
+    <section className="w-full h-72 bg-inherit ">
+        <h3 className="pl-14"></h3>
+    </section>
+    </main>
     </>
   );
 }
