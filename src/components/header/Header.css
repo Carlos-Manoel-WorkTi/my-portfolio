@@ -50,8 +50,90 @@
 .logo {
   margin-top: 2px !important;
 }
-
+.logo::before{
+  display: none;
+  content: "";
+  position: absolute;
+  top: 48%;
+  top: -100px;
+  left: 300%;
+  rotate: -43deg;
+  width: 5em;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff, transparent);
+  animation:9s shootingStar3 ease-in-out infinite;
+  animation-delay: 6s;
+}
+.logo::after{
+  display: none;
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 246%;
+  rotate: -43deg;
+  width: 4em;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff, transparent);
+  animation: 12s shootingStar3 ease-in-out infinite;
+    animation-delay: 0s;
+  animation-delay: 6s;
+}
+.button::before{
+  display: none;
+  content: "";
+  position: absolute;
+  top: 48%;
+  top: -167px;
+  left: 300%;
+  rotate: -43deg;
+  width: 4em;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff, transparent);
+  animation: 12s shootingStar3 ease-in-out infinite;
+  animation-delay: 8s;
+}
+.button::after{
+  display: none;
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 288%;
+  rotate: -70deg;
+  width: 4em;
+  height: 1px;
+  background: linear-gradient(90deg, #ffffff, transparent);
+  animation: 4s shootingStar3 ease-in-out infinite;
+  animation-delay: 2s;
+}
+@keyframes shootingStar1 {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(29em) translateY(0);
+    opacity: 1;
+    background: linear-gradient(90deg, #f5f5f5, transparent);
+  }
+  70% {
+    transform: translateX(43em) translateY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+    opacity: 0;
+  }
+}
 @media screen and (max-width: 600px) {
+  .logo::before{
+    display: block;
+  }
+  .button:before{
+    display: block;
+  }
+  .logo::after{
+    display: block;
+  }
   .button {
     --fs-size: 1.5em; /* Diminui o tamanho da fonte */
     letter-spacing: 1px; /* Reduz o espaçamento entre as letras */

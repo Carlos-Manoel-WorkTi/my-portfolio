@@ -107,7 +107,7 @@
     width: 4em;
     height: 1px;
     background: linear-gradient(90deg, #ffffff, transparent);
-    animation: 3s shootingStar3 ease-in-out infinite;
+    animation: 5s shootingStar3 ease-in-out infinite;
     animation-delay: 7s;
 }
 #about::before{
@@ -119,7 +119,7 @@
     width: 5em;
     height: 1px;
     background: linear-gradient(90deg, #ffffff, transparent);
-    animation: 5s shootingStar3 ease-in-out infinite;
+    animation: 7s shootingStar3 ease-in-out infinite;
     animation-delay: 4s;
 }
 #service::before{
@@ -131,7 +131,7 @@
     width: 5em;
     height: 1px;
     background: linear-gradient(90deg, #ffffff, transparent);
-    animation: 5s shootingStar1 ease-in-out infinite;
+    animation: 8s shootingStar1 ease-in-out infinite;
     animation-delay: 10s;
 }
 #contact::before{
@@ -144,7 +144,7 @@
     width: 4em;
     height: 1px;
     background: linear-gradient(90deg, #ffffff, transparent);
-    animation: 3s shootingStar3 ease-in-out infinite;
+    animation: 4s shootingStar3 ease-in-out infinite;
     animation-delay: 14s;
 }
 .root > header > div > nav > ul > li::after{
