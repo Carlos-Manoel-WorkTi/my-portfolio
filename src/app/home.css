@@ -384,6 +384,13 @@
     margin-bottom: 5px;
   } */
 
+  .ipt{
+    background-color: rgb(18, 18, 20);
+    color: white;
+  }
+  .sp{
+    background-color: rgb(29, 29, 31);
+  }
   @media screen and (max-width:980px){
     .devMsg{
       margin-right: -8%;
