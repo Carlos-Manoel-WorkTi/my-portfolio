@@ -366,12 +366,11 @@
   .containerSecond{
     width: 100%;
     background: linear-gradient(to bottom, transparent, rgb(10 11 40));
-    /* margin-left: 50px; */
     padding-left: 50px;
     position: relative;
     display: flex;
     height: 440px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     /* justify-content: center; */
 
     img{

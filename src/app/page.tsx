@@ -68,9 +68,6 @@ export default function Home() {
     <section className="containerSecond">
       <ServeEffect/>
     </section>
-    <section className="w-full h-72 bg-inherit ">
-        <h3 className="pl-14"></h3>
-    </section>
     </main>
     </>
   );

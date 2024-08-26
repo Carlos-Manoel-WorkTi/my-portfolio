@@ -5,6 +5,7 @@ import Footer from "@/components/footer/Footer";
 import "./home.css"
 import "../components/contacts/Contacts"
 import Contacts from "../components/contacts/Contacts";
+import 'aos/dist/aos.css';
 
 
 

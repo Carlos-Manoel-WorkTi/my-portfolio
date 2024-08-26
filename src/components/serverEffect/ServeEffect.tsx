@@ -1,18 +1,23 @@
 'use client';
 
-import React from 'react';
-import OpElements from '../opacityElements/OpElements';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Importa o CSS do AOS
 import './serveEffect.css';
 import Link from 'next/link';
 
-export default function ServeEffect(){
+export default function ServeEffect() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out', 
+    });
+  }, []);
+
   return (
-    <OpElements
-      enterAnimation="animate__slideInUp"
-      exitAnimation="animate__slideOutDown"
-    >
-      <div className="container_SevMini">
-      <div className='groupServ'>
+    <>
+      <div className="container_SevMini" data-aos="zoom-in-down"> 
+      <div className='groupServ' >
 
         <div className="SevMini">
           <svg
@@ -226,6 +231,6 @@ export default function ServeEffect(){
             </div>
           </div>
       </div>
-    </OpElements>
+    </>
   )
 }
