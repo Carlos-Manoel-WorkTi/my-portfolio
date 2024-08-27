@@ -275,27 +275,35 @@ export default function ServeEffect() {
      
           <div id="inf" ref={infRef}>
           <div className="border-screen">
-            <ul className={`terminal ${isInView ? 'in-view' : ''}`}>
-              <li>
-                <span className="icon-inf">$</span> Bem vindo ao meu portifolio
-              </li>
-              <li>
-                <span className="icon-inf">$</span> Carregando recursos
-                <span id="dot1" className="dot">.</span>
-                <span id="dot2" className="dot">.</span>
-                <span id="dot3" className="dot">.</span>
-              </li>
-              <li className='lm'>
-                <span className="icon-inf">$</span> Meu nome é carlos, é um prazer te conhecer. 
-              </li>
-              <li className='lm'>
-                Estou no ultimo semestre do curso analise 
-              </li>
-              <li>e desenvolvimento de sistemas.</li>
-              <li>
-                <span className="icon-inf">$</span>Veja mais sobre mim, click em: <Link  id="ab" href={"/about"}>checar</Link> 
-              </li>
-            </ul>
+          <ul className={`terminal ${isInView ? 'in-view' : ''}`}>
+            <li>
+              <span className="icon-inf">$</span> Bem-vindo ao meu portfólio
+            </li>
+            <li>
+              <span className="icon-inf">$</span> Carregando recursos
+              <span id="dot1" className="dot">.</span>
+              <span id="dot2" className="dot">.</span>
+              <span id="dot3" className="dot">.</span>
+            </li>
+            <li className="lm">
+              <span className="icon-inf">$</span> Meu nome é Carlos, é um prazer te conhecer.
+            </li>
+            <li className="lm">
+              Estou no último semestre do curso de <span className='curso'>&quot;Análise</span>
+            </li>
+            <li><span className='curso'>e Desenvolvimento de Sistemas&quot;.</span> </li>
+            <li id="ab"   >
+              <span className="icon-inf">$</span> Mais sobre mim, clique em: <Link href="/about">
+              <button className="signupBtn">
+  ver mais
+  <span className="arrow">
+     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="rgb(44, 182, 120)"><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+  </span>
+</button>
+              </Link>
+            </li>
+          </ul>
+
           </div>
         </div>
       </div>

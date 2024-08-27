@@ -196,11 +196,7 @@
 .lm{
   margin-bottom: 0 !important;
 }
-#ab{
-  padding: 4px;
-  background-color: green;
-  border-radius: 5px;
-}
+
 /* Animação de digitação */
 @keyframes typing {
     from {
@@ -292,7 +288,7 @@
   }
 
   svg #front {
-    stroke: rgb(19, 188, 0);
+    stroke: rgba(19, 188, 0, 0.551);
     animation: dash_682 1.2s linear infinite;
   }
   svg #back2 {
@@ -300,7 +296,7 @@
   }
 
   svg #front2 {
-    stroke: rgb(19, 188, 0)#4d5cff;
+    stroke: rgba(26, 180, 9, 0.729);
     animation: dash_682 1.4s linear infinite;
   }
   @keyframes dash_682 {
@@ -315,7 +311,61 @@
 
 
 
+.curso{
+  color: rgb(165 231 164);
+  font-style: italic;
+}
 
+#ab{
+  display: flex;
+  gap: 7px;
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.signupBtn {
+  width: 89px;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 7px;
+  gap: 9px;
+  color: white;
+  background: linear-gradient(to right, rgb(104 190 108), rgb(52 185 144));
+  position: relative;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.212);
+}
+
+.arrow {
+  position: absolute;
+  right: 4.5px;
+  background-color: rgb(255, 255, 255);
+  width: 18px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.signupBtn:hover .arrow {
+  animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
   @media screen and (min-width:1100px){
     #inf {
@@ -352,7 +402,7 @@
   }
     
     #inf .border-screen {
-      font-size: 1.4em;
+      font-size: 1.3em;
   }
   #connector {
     width: 626px;
@@ -424,7 +474,7 @@
   }
   @media screen and (max-width:550px) {
     #inf .border-screen {
-      font-size: 0.8em !important;
+      font-size: 0.9em !important;
   }
     .div-connector::after {
       width: 18px;
