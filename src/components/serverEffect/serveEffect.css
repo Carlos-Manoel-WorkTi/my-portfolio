@@ -481,9 +481,7 @@
     }
   }
   @media screen and (max-width:550px) {
-    #inf .border-screen {
-      font-size: 0.9em !important;
-  }
+
     .div-connector::after {
       width: 18px;
       height: 7px;
@@ -513,9 +511,7 @@
       width: 100%;
      
     }
-    #inf .border-screen {
-      font-size: 0.9em !important;
-    }
+
     .lmm{
       display: block;
     }
