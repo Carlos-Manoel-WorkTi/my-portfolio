@@ -366,7 +366,9 @@
     opacity: 1;
   }
 }
-
+.lmm{
+  display: none;
+}
   @media screen and (min-width:1100px){
     #inf {
       height: 270px;
@@ -435,12 +437,14 @@
       margin-left: -48px;
     }
     #inf {
-      width: 370px;
-      margin-right: -96px;
-      top: 154px;
+      margin-right: -102px;
+      top: 175px;
+      height: 200px;
+      width: 385px;
     }
     #inf .border-screen {
-      font-size: 1em;
+      font-size: 0.9em;
+      padding: 5px 5px;
     }
   .SevMini svg, .Ghost svg {
     width: 113px;
@@ -466,8 +470,8 @@
       margin-top: -77px;
     }
     #inf {
-      width: 347px;
-      margin-right: -160px;
+      width: 382px;
+      margin-right: -150px;
       top: 149px;
       height: 207px;
     }
@@ -505,23 +509,41 @@
       width: 100%;
      
     }
+    #inf .border-screen {
+      font-size: 0.9em !important;
+    }
+    .lmm{
+      display: block;
+    }
+    .lmg{
+      display: none;
+    }
   }
-  @media screen and (max-width:385px){
-    
-    #inf {
-      width: 344px;
-      margin-right: 11px;
-      height: 207px;
+  @media screen and (max-width:395px){
+    .signupBtn {
+      width: 78px;
     }
     #inf .border-screen {
-      font-size: 0.8em;
-    }
-  }  
+      font-size: 0.8em !important;
+  }
+  #inf {
+    width: 315px;
+    margin-right: 12px;
+    top: 175px;
+    height: 182px;
+}
+  }
+
   @media screen and (max-width:350px){
+    .arrow {
+      width: 14px;
+      height: 14px;
+    }
+    .signupBtn {
+      width: 72px;
+    }
     #inf {
-      width: 287px;
-      margin-right: 18px;
-      height: 207px;
+      width: 300px;
     }
     #inf .border-screen {
       font-size: 0.9em;

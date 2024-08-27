@@ -286,10 +286,10 @@ export default function ServeEffect() {
               <span id="dot3" className="dot">.</span>
             </li>
             <li className="lm">
-              <span className="icon-inf">$</span> Meu nome é Carlos, é um prazer te conhecer.
+              <span className="icon-inf">$</span> Olá, sou Carlos. Prazer em conhecê-lo.
             </li>
             <li className="lm">
-              Estou no último semestre do curso de <span className='curso'>&quot;Análise</span>
+              Estou no curso de <span className='curso'>&quot;Análise</span>
             </li>
             <li><span className='curso'>e Desenvolvimento de Sistemas&quot;.</span> </li>
             <li id="ab"   >
