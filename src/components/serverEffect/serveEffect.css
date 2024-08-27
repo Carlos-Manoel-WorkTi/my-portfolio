@@ -489,7 +489,7 @@
       margin-top: 44px;
     }
     #inf {
-      width: 400px;
+      width: 100%;
       margin-right: 12px;
       top: 149px;
       height: 207px;
@@ -504,6 +504,9 @@
     }
     .groupServ {
       margin-left: 30px;
+    }
+    #inf .border-screen {
+      font-size: 17px;
     }
   }
   @media screen and (max-width:435px){
