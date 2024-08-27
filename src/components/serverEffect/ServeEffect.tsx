@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // Importa o CSS do AOS
 import './serveEffect.css';
@@ -12,6 +12,34 @@ export default function ServeEffect() {
       duration: 1000,
       easing: 'ease-in-out', 
     });
+  }, []);
+
+
+  const infRef = useRef<HTMLDivElement | null>(null);  // Type the ref as HTMLDivElement or null
+  const [isInView, setIsInView] = useState<boolean>(false);
+
+  useEffect(() => {
+    const currentInfRef = infRef.current; // Save the current ref value
+
+    if (currentInfRef) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              setIsInView(true);
+              observer.unobserve(currentInfRef); // Use the saved ref value here
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      observer.observe(currentInfRef);
+
+      return () => {
+        observer.unobserve(currentInfRef); // Cleanup using the saved ref value
+      };
+    }
   }, []);
 
   return (
@@ -195,57 +223,81 @@ export default function ServeEffect() {
 
 
           <div className='div-connector'>
-
-          <svg id='connector'
-            xmlns="http://www.w3.org/2000/svg"
-            width="683"
-            height="157"
-            fill="none"
-            viewBox="0 0 683 157"
-            >
+          <svg id="connector" xmlns="http://www.w3.org/2000/svg" width="683" height="157" fill="none" viewBox="0 0 683 157">
             <g>
               <path
-                fill="rgb(78, 82, 89)"
+                id="back"
+                fill="none"
+                stroke="rgb(78, 82, 89, 0.2)"
+                strokeWidth="3"
                 d="M20 9L2.31.786C1.352.234 0 1.016 0 2.12v17.76c0 1.105 1.353 1.886 2.31 1.334L20 13V9zm654 38l8.214-17.69c.552-.957-.229-2.31-1.334-2.31h-17.76c-1.105 0-1.886 1.353-1.334 2.31L670 47h4zM18 13h70V9H18v4zm92 22v96h4V35h-4zm26 122h512v-4H136v4zm538-26V45h-4v86h4zm-26 26c14.359 0 26-11.641 26-26h-4c0 12.15-9.85 22-22 22v4zm-538-26c0 14.359 11.641 26 26 26v-4c-12.15 0-22-9.85-22-22h-4zM88 13c12.15 0 22 9.85 22 22h4c0-14.36-11.641-26-26-26v4z"
-                ></path>
+              ></path>
+              <path
+                id="front"
+                fill="none"
+                stroke="rgb(78, 82, 89)"
+                strokeWidth="3"
+                strokeDasharray="48, 144"
+                strokeDashoffset="192"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M20 9L2.31.786C1.352.234 0 1.016 0 2.12v17.76c0 1.105 1.353 1.886 2.31 1.334L20 13V9zm654 38l8.214-17.69c.552-.957-.229-2.31-1.334-2.31h-17.76c-1.105 0-1.886 1.353-1.334 2.31L670 47h4zM18 13h70V9H18v4zm92 22v96h4V35h-4zm26 122h512v-4H136v4zm538-26V45h-4v86h4zm-26 26c14.359 0 26-11.641 26-26h-4c0 12.15-9.85 22-22 22v4zm-538-26c0 14.359 11.641 26 26 26v-4c-12.15 0-22-9.85-22-22h-4zM88 13c12.15 0 22 9.85 22 22h4c0-14.36-11.641-26-26-26v4z"
+              ></path>
             </g>
           </svg>
-          <svg id='connector2'
-            xmlns="http://www.w3.org/2000/svg"
-            width="289"
-            height="270"
-            fill="none"
-            viewBox="0 0 289 270"
-          >
+        
+          <svg id="connector2" xmlns="http://www.w3.org/2000/svg" width="289" height="270" fill="none" viewBox="0 0 289 270">
             <g>
               <path
-                stroke="rgb(78, 82, 89)"
-                strokeLinejoin="bevel"
+                id="back2"
+                fill="none"
+                stroke="rgb(78, 82, 89, 0.2)"
                 strokeWidth="4"
+                strokeLinejoin="bevel"
+                d="M2 234v0c0 9.251 7.5 16.75 16.75 16.75h24.875A8.375 8.375 0 0152 259.125v0a8.375 8.375 0 008.375 8.375H198c13.255 0 24-10.745 24-24V208c0-13.255 10.745-24 24-24h17c13.255 0 24-10.745 24-24V49c0-13.255-10.745-24-24-24v0c-13.255 0-24-10.745-24-24V0"
+              ></path>
+              <path
+                id="front2"
+                fill="none"
+                stroke="rgb(78, 82, 89)"
+                strokeWidth="4"
+                strokeLinejoin="bevel"
+                strokeDasharray="48, 144"
+                strokeDashoffset="192"
                 d="M2 234v0c0 9.251 7.5 16.75 16.75 16.75h24.875A8.375 8.375 0 0152 259.125v0a8.375 8.375 0 008.375 8.375H198c13.255 0 24-10.745 24-24V208c0-13.255 10.745-24 24-24h17c13.255 0 24-10.745 24-24V49c0-13.255-10.745-24-24-24v0c-13.255 0-24-10.745-24-24V0"
               ></path>
             </g>
           </svg>
+
           </div>
 
 
-          <div id="inf">
-            <div className="border-screen">
-            <ul>
-              <li> <span className="icon-inf">&gt;&gt;</span> Formação em analise e desenvolvimento de sistemas.</li>
-              <li> <span className="icon-inf">&gt;&gt;</span> Nivel de ingles intermediario</li>
-              <li> <span className="icon-inf">&gt;&gt;</span> Desenvolvedor FullStack</li>
-              <li><span className="icon-inf">&gt;&gt; portfolio/carlos/: </span>em adamento...</li>
+     
+          <div id="inf" ref={infRef}>
+          <div className="border-screen">
+            <ul className={`terminal ${isInView ? 'in-view' : ''}`}>
               <li>
-                <span className="icon-inf">&gt;&gt;</span> Deseja acessar mais informações: 
-                <Link href={"/about"}><span className="text-green-600 border-b border-green-700 inline-block ml-1">  YES </span></Link> / 
-                <Link href={"/about"}><span className="text-red-500 border-b border-red-500 border-solid inline-block ml-2"> NOT </span></Link> 
+                <span className="icon-inf">$</span> Bem vindo ao meu portifolio
               </li>
-
-           
+              <li>
+                <span className="icon-inf">$</span> Carregando recursos
+                <span id="dot1" className="dot">.</span>
+                <span id="dot2" className="dot">.</span>
+                <span id="dot3" className="dot">.</span>
+              </li>
+              <li className='lm'>
+                <span className="icon-inf">$</span> Meu nome é carlos, é um prazer te conhecer. 
+              </li>
+              <li className='lm'>
+                Estou no ultimo semestre do curso analise 
+              </li>
+              <li>e desenvolvimento de sistemas.</li>
+              <li>
+                <span className="icon-inf">$</span>Veja mais sobre mim, click em: <Link  id="ab" href={"/about"}>checar</Link> 
+              </li>
             </ul>
-            </div>
           </div>
+        </div>
       </div>
     </>
   )

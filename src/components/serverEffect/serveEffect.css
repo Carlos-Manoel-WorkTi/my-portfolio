@@ -126,51 +126,197 @@
   height: 100%;
   margin-left: -40px;
   }
-  .div-connector::after{
+  .div-connector::after {
     content: "";
-    background-color: #331186;
-    width: 20px;
-    height: 7px;
-    margin-left: 368px;
+    background-color: rgb(31, 37, 47);
+    width: 16px;
+    height: 6px;
+    margin-left: 371px;
     position: absolute;
-    margin-top:11px;
+    margin-top: 12px;
     border-radius: 11%;
     z-index: 9999;
-  }
+}
 
 
   #inf{
     height: 223px;
     max-height: 302px;
     width: 500px;
-    background-color: #331186;
+    background-color:  rgb(31, 37, 47);;
     padding: 4px;
     border-radius: 5px;
     overflow: hidden;
     margin-right: -105px;
     position: absolute;
-    top: 129px;
-    z-index: 999;
+    top: 132px;
+    z-index: 3;
+    box-shadow: 1px 2px 2px rgb(27 104 33);
   }
+  
 
   
   #inf .border-screen{
     width: 100%;
     height: 100%;
-    background-color: rgb(22, 26, 37);
-    border: 1px solid white;
+    background-color: rgb(26, 26, 26);
+    border: 1px solid #252c2e;
     border-radius: 5px;
     padding: 5px 10px;
     font-family: monospace;
-    font-size: 1.1em;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
     z-index: 9999;
     li{
       margin-bottom: 10px;
     }
   }
   .icon-inf{
-    color: #37bb1a;
+    color: 
+    #37bb1a;
   }
+
+
+  .terminal li {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #0f0; /* Cursor */
+    font-family: "Consolas", "Courier New", Courier, monospace;
+    line-height: 1.5;
+    width: auto;
+    opacity: 0; /* Inicia invisível */
+    height: auto;
+}
+
+.in-view li {
+    animation: typing 2s steps(30, end) forwards, blink-caret 1s step-end 2s forwards;
+}
+.lm{
+  margin-bottom: 0 !important;
+}
+#ab{
+  padding: 4px;
+  background-color: green;
+  border-radius: 5px;
+}
+/* Animação de digitação */
+@keyframes typing {
+    from {
+        width: 0;
+        opacity: 0; /* Mantém invisível até o final da digitação */
+    }
+    to {
+        width: 100%;
+        opacity: 1; /* Torna visível ao final da digitação */
+        border-color: rgba(90, 98, 90, 0); /* Remove a borda ao final */
+    }
+    5%{
+      opacity: 1;
+    }
+}
+
+/* Animação de piscar do cursor */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: rgb(229, 229, 229);
+    }
+}
+
+/* Delay de animação para cada item */
+.terminal li:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.terminal li:nth-child(2) {
+    animation-delay: 3s; /* Ajuste o delay com base na duração da animação de digitação */
+}
+
+.terminal li:nth-child(3) {
+    animation-delay: 7s; /* Ajuste conforme necessário */
+}
+.terminal li:nth-child(4) {
+  animation-delay: 9s; /* Ajuste conforme necessário */
+}
+.terminal li:nth-child(5) {
+  animation-delay: 10s; /* Ajuste conforme necessário */
+}
+.terminal li:nth-child(6) {
+  animation-delay: 11s; /* Ajuste conforme necessário */
+}
+/* Adicione mais regras para itens subsequentes se necessário */
+
+
+
+
+
+
+
+.dot {
+  opacity: 0;
+  animation: dotFadeInOut 1.5s infinite;
+  animation-iteration-count: 5;
+}
+
+@keyframes dotFadeInOut {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+#dot1 {
+  animation-delay: 0.5s;
+}
+
+#dot2 {
+  animation-delay: 0.6s;
+}
+
+#dot3 {
+  animation-delay: 0.7s;
+}
+
+
+
+/*  */
+
+  svg #back {
+    stroke: rgb(31, 37, 47);
+  }
+
+  svg #front {
+    stroke: rgb(19, 188, 0);
+    animation: dash_682 1.2s linear infinite;
+  }
+  svg #back2 {
+    stroke: rgb(31, 37, 47);
+  }
+
+  svg #front2 {
+    stroke: rgb(19, 188, 0)#4d5cff;
+    animation: dash_682 1.4s linear infinite;
+  }
+  @keyframes dash_682 {
+    72.5% {
+      opacity: 0;
+    }
+
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+
+
+
+
   @media screen and (min-width:1100px){
     #inf {
       height: 270px;
@@ -277,6 +423,9 @@
     }
   }
   @media screen and (max-width:550px) {
+    #inf .border-screen {
+      font-size: 0.8em !important;
+  }
     .div-connector::after {
       width: 18px;
       height: 7px;
@@ -284,8 +433,8 @@
       margin-top: 44px;
     }
     #inf {
-      width: 347px;
-      margin-right: -2px;
+      width: 400px;
+      margin-right: 12px;
       top: 149px;
       height: 207px;
     }
@@ -301,14 +450,21 @@
       margin-left: 30px;
     }
   }
+  @media screen and (max-width:435px){
+    #inf {
+      width: 100%;
+     
+    }
+  }
   @media screen and (max-width:385px){
+    
     #inf {
       width: 344px;
       margin-right: 11px;
       height: 207px;
     }
     #inf .border-screen {
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
   }  
   @media screen and (max-width:350px){
