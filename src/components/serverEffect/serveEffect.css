@@ -326,6 +326,7 @@
   height: 25px;
   border-radius: 5px;
   border: none;
+  margin-top: 5px;
   font-size: 0.8em;
   display: flex;
   align-items: center;
@@ -413,6 +414,9 @@
 }
   }
   @media screen and (max-width:890px){
+    .signupBtn {
+      margin-top: 0px;
+    }
     #connector {
       width: 368px;
       height: 100%;
@@ -521,16 +525,16 @@
   }
   @media screen and (max-width:395px){
     .signupBtn {
-      width: 78px;
+      width: 84px;
     }
     #inf .border-screen {
-      font-size: 0.8em !important;
+      font-size: 0.9em !important;
   }
   #inf {
-    width: 315px;
+    width: 100%;
     margin-right: 12px;
-    top: 175px;
-    height: 182px;
+    top: 156px;
+    height: 200px;
 }
   }
 

@@ -286,14 +286,14 @@ export default function ServeEffect() {
               <span id="dot3" className="dot">.</span>
             </li>
             <li className="lm">
-              <span className="icon-inf">$</span> Olá, sou Carlos. Prazer em conhecê-lo.
+              <span className="icon-inf">$</span> Olá, Meu nome é Carlos Manoel,
             </li>
             <li className="lm">
-              Estou no curso de <span className='curso'>&quot;Análise</span>
+              estou no curso de <span className='curso'>&quot;Análise</span>
             </li>
             <li><span className='curso'>e Desenvolvimento de Sistemas&quot;.</span> </li>
             <li id="ab"   >
-              <span className="icon-inf">$</span> Mais sobre mim, clique em: <Link href="/about">
+              <span className="icon-inf">$</span> Para mais informações: <Link href="/about">
               <button className="signupBtn">
   ver mais
   <span className="arrow">
