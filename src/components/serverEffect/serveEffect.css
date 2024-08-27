@@ -448,6 +448,7 @@
     }
     #inf .border-screen {
       padding: 5px 5px;
+      font-size: 16px;
     }
   .SevMini svg, .Ghost svg {
     width: 113px;
@@ -523,7 +524,7 @@
       width: 84px;
     }
     #inf .border-screen {
-      font-size: 1em !important;
+      font-size: 15px !important;
   }
   #inf {
     width: 100%;
