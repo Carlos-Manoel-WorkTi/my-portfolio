@@ -168,7 +168,9 @@
 #uls > li::after{
   display: none;
 }
-
+.fw::after{
+  display: none !important;
+}
 @media screen and (max-width: 600px) {
   .logo::before{
     display: block;

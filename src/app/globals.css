@@ -3,8 +3,10 @@
 @tailwind utilities;
 ;
 
-body {
+html,body {
   color: white;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 /* Para navegadores Webkit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {

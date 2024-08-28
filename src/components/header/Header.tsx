@@ -16,20 +16,20 @@ export default function Header() {
         </h1>
 
         <nav>
-          <ul className="ul-header  hidden md:flex space-x-4 mr-5 animate__animated animate__backInDown">
-            <li id='home'>
+          <ul className="ul-header items-center  hidden md:flex space-x-4 mr-5 animate__animated animate__backInDown">
+            <li id='home' className='fw'>
               <Link href="#" className="hover:text-green-400 ">Home</Link>
             </li>
-            <li id='about'>
+            <li id='about' className='fw'>
               <Link href="#" className="hover:text-green-400 " >About</Link>
             </li>
-            <li id='service'>
+            <li id='service' className='fw'>
               <Link href="#" className="hover:text-green-400 " >Services</Link>
             </li>
-            <li id='contact'>
+            <li id='contact' className='fw'>
               <Link href="#" className="hover:text-green-400 " >Contact</Link>
             </li>
-            <li>
+            <li className='pl-4 fw'>
             <ThemeToggle/>
             </li>
           </ul>
