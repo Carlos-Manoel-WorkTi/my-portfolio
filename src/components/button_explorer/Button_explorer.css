@@ -42,7 +42,7 @@
   font-family: "Orbitron", sans-serif;
   font-size: 12px;
   letter-spacing: 5px;
-  color: #ffffff;
+  color: #eae7e7;
   text-shadow: 0 0 4px white;
 }
 
@@ -82,8 +82,10 @@
   background-color: #161a25;
 }
 
-.btn_see_proj:hover {
-  transform: scale(1.1);
+.strong:hover {
+
+  color: rgb(255, 255, 255);
+  
 }
 
 .btn:active {

@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Contacts() {
   return (
-    <div className='fixed bottom-24 right-4'>
+    <div className='fixed bottom-24 right-4 contacts'>
       
 
         <ul className="example-2">

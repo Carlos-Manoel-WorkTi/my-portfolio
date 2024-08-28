@@ -2,6 +2,9 @@ ul {
     list-style: none;
 }
 
+.contacts{
+    z-index:4;
+}
 .example-2 {
     display: flex;
     justify-content: center;
@@ -106,4 +109,10 @@ ul {
 .example-2 .icon-content a[data-social="youtube"] .filled,
 .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
     background-color: #ff0000;
+}
+
+@media screen and (max-width:785px) {
+    .example-2{
+        margin-right:-30px
+    }
 }

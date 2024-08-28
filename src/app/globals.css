@@ -7,6 +7,27 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+/* Para navegadores Webkit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1c1c; /* Cor do fundo da track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #303030; /* Cor da thumb (o "polegar" que você arrasta) */
+  border-radius: 20px; /* Bordas arredondadas da thumb */
+  border: 3px solid #1c1c1c; /* Espaço ao redor da thumb */
+}
+
+/* Para navegadores Firefox */
+* {
+  scrollbar-width: thin; /* Largura fina da scrollbar */
+  scrollbar-color: #303030 #1c1c1c00; /* Cor da thumb e da track */
+}
+
 
 @media (prefers-color-scheme: dark) {
   :root {

@@ -391,6 +391,81 @@
   .sp{
     background-color: rgb(29, 29, 31);
   }
+
+
+/* FG */
+
+
+@keyframes float {
+  0% {
+    transform: translateX(100vw) translateY(80vh) rotate(266deg);
+    opacity: 1; /* Começa visível */
+  }
+  10% {
+    transform: translateX(50vw) translateY(10vh) rotate(240deg);
+  }
+  40% {
+    transform: translateX(-40vw) translateY(-35vh) rotate(262deg);
+    opacity: 1; /* Fica visível até o final */
+  }
+  50%{
+    transform: translateX(10vw) translateY(-55vh)   rotate(154deg);
+  }
+  70%{
+    /* transform: translateX(-10vw) translateY(75vh)   rotate(173deg); */
+    transform: translateX(0vw) translateY(75vh)   rotate(156deg);
+   
+  }
+  75%{
+    /* transform: translateX(-10vw) translateY(75vh)   rotate(173deg); */
+    transform: translateX(-70vw) translateY(75vh)   rotate(38deg);
+   
+  }
+  100%{
+    transform: translateX(70vw) translateY(-30vh)   rotate(38deg);
+  }
+}
+
+/* Adiciona um atraso maior para o próximo ciclo de animação */
+
+
+#fg {
+  position: absolute;
+  transform: rotate(266deg);  
+  animation: float 15s ease-in-out infinite;
+
+}
+
+
+.inptc{
+  background-color: rgb(28, 28, 31);
+  padding: 6px 8px;
+  border-radius: 2px;
+  color: #d2d2d2;
+}
+
+.btncp{
+  margin: 0 5px;
+  background-color: rgb(35, 114, 192);
+  height: 34px;
+  width: auto;
+  padding: 0 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   @media screen and (min-width:1200px) {
     .groupServ {
       padding-top: 93px;

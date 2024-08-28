@@ -280,16 +280,16 @@ export default function ServeEffect() {
               <span className="icon-inf">$</span> Bem-vindo ao meu portfólio
             </li>
             <li>
-              <span className="icon-inf">$</span> Carregando recursos
+              <span className="icon-inf">$</span> Carregando informações
               <span id="dot1" className="dot">.</span>
               <span id="dot2" className="dot">.</span>
               <span id="dot3" className="dot">.</span>
             </li>
             <li className="lm">
-              <span className="icon-inf">$</span> Olá, Meu nome é Carlos Manoel,
+              <span className="icon-inf">$</span> Olá, eu sou um desenvolvedor web,
             </li>
             <li className="lm">
-              estou no curso de <span className='curso'>&quot;Análise</span>
+              <span id='lmg'>estou no ultimo semestre do curso </span><span id='lms'>estou no curso de</span> <span className='curso'>&quot;Análise</span>
             </li>
             <li><span className='curso'>e Desenvolvimento de Sistemas&quot;.</span> </li>
             <li id="ab"   >

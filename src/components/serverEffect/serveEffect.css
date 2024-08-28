@@ -370,6 +370,12 @@
 .lmm{
   display: none;
 }
+#lmg{
+  display: inline;
+}
+#lms{
+  display: none;
+}
   @media screen and (min-width:1100px){
     #inf {
       height: 270px;
@@ -391,6 +397,12 @@
   }
 
   @media screen and (min-width:1200px){
+    #lmg{
+      display: inline;
+    }
+    #lms{
+      display: none;
+    }
     .div-connector::after {
       width: 33px;
       height: 9px;
@@ -435,6 +447,12 @@
   }
   }
   @media screen and (max-width:730px){
+    #lmg{
+      display: none;
+    }
+    #lms{
+      display: inline;
+    }
     #connector {
       width: 368px;
       height: 100%;
