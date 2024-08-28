@@ -553,9 +553,10 @@
     .main{
       padding-left: 5px;
     }
-    .containerSecond{
+    .dark .containerSecond,.light .containerSecond{
       padding-left: 20px;
     }
+    
   }
   @media screen and (max-width:760px){
     .root > header::after {
@@ -619,7 +620,7 @@
     margin-top: 53px !important;
     left: 0px;
 }
-.containerSecond{
+.dark .containerSecond,.light .containerSecond{
   margin-left: 10px;
   align-items: end;
   padding: 10px 20px;
@@ -658,7 +659,7 @@
 }
 } 
 @media screen and (max-width:550px) {
-  .containerSecond {
+  .dark .containerSecond,.light .containerSecond {
     height: 579px;
     align-items: start;
     padding:  0px 20px;
