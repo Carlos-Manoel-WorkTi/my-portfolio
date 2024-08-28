@@ -1,0 +1,116 @@
+
+
+@keyframes float {
+    0% {
+      transform: translateX(100vw) translateY(80vh) rotate(266deg);
+      opacity: 1; /* Começa visível */
+    }
+    10% {
+      transform: translateX(50vw) translateY(10vh) rotate(240deg);
+    }
+    40% {
+      transform: translateX(-40vw) translateY(-35vh) rotate(262deg);
+      opacity: 1; /* Fica visível até o final */
+    }
+    50%{
+      transform: translateX(10vw) translateY(-55vh)   rotate(154deg);
+    }
+    70%{
+      /* transform: translateX(-10vw) translateY(75vh)   rotate(173deg); */
+      transform: translateX(0vw) translateY(75vh)   rotate(156deg);
+     
+    }
+    75%{
+      /* transform: translateX(-10vw) translateY(75vh)   rotate(173deg); */
+      transform: translateX(-70vw) translateY(75vh)   rotate(38deg);
+     
+    }
+    100%{
+      transform: translateX(70vw) translateY(-30vh)   rotate(38deg);
+    }
+  }
+  
+  /* Adiciona um atraso maior para o próximo ciclo de animação */
+  
+  
+  
+.containerContact {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  align-items: flex-start;
+}
+
+.contactInfo {
+  width: 30%;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.contactInfo h3 {
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 2em;
+}
+
+.contactItem {
+  margin-bottom: 15px;
+}
+
+.contactItem label {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 13px;
+  font-size: 1.2em;
+}
+
+.contactItem span {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 15px;
+  padding: 6px 24px;
+  border-radius: 11px;
+  font-size: 1.1em;
+  background: #1f1f1f;
+  color: #a0a0a0;
+}
+.copyButton {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.copyButton:hover {
+  background-color: #0056b3;
+}
+
+.imageContainer {
+  width: 50%;
+  position: relative;
+  height: 50vh;
+}
+
+.imageContainer img {
+  width: 200px;
+  height: auto;
+}
+
+
+#fg {
+  position: absolute;
+  transform: rotate(266deg);  
+  animation: float 15s ease-in-out infinite;
+
+}
+
+#img-autor{
+  border-radius: 50%;
+  border: 3px solid white;
+  margin: 11px;
+}

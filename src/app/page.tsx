@@ -70,7 +70,8 @@ export default function Home() {
       <ServeEffect/>
     </section>
     </main>
-    <section className="flex w-full overflow-hidden  h-80 align-top">
+    
+    {/* <section className="flex w-full overflow-hidden  h-80 align-top">
        <form action="#" className="w-[50%] h-auto mt-10 mb-9 pl-5">
 
           <label className="block mb-5">Entre em contato:</label>
@@ -87,7 +88,7 @@ export default function Home() {
 
             </div>
 
-          </div>
+          </div> */}
 
           {/* <div className="w-full h-auto mt-10 mb-9 flex justify-start">
 
@@ -195,14 +196,14 @@ export default function Home() {
           
 
           
-    </form>
+    {/* </form>
 
     <div className="w-[50%] relative h-70">
       
         <Image alt='' src={"/foguete.png"} width={300} height={300} id="fg"/>
 
     </div>
-    </section>
+    </section> */}
    
     </>
   );
