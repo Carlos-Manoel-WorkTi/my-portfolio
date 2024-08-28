@@ -7,6 +7,8 @@ html,body {
   color: white;
   box-sizing: border-box;
   overflow-x: hidden;
+  width: 100vw;
+  max-width: 100vw;
 }
 /* Para navegadores Webkit (Chrome, Safari, Edge) */
 ::-webkit-scrollbar {
