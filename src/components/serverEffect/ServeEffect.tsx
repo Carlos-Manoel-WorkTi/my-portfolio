@@ -7,18 +7,16 @@ import './serveEffect.css';
 import Link from 'next/link';
 
 export default function ServeEffect() {
+
+  
+  const infRef = useRef<HTMLDivElement | null>(null);  // Type the ref as HTMLDivElement or null
+  const [isInView, setIsInView] = useState<boolean>(false);
+  
   useEffect(() => {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out', 
     });
-  }, []);
-
-
-  const infRef = useRef<HTMLDivElement | null>(null);  // Type the ref as HTMLDivElement or null
-  const [isInView, setIsInView] = useState<boolean>(false);
-
-  useEffect(() => {
     const currentInfRef = infRef.current; // Save the current ref value
 
     if (currentInfRef) {

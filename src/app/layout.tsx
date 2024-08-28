@@ -7,6 +7,7 @@ import "../components/contacts/Contacts"
 import Contacts from "../components/contacts/Contacts";
 import 'aos/dist/aos.css';
 import FieldContact from "@/components/fieldContact/FieldContact";
+import {Theme }from "@/themes/themes-provide";
 
 
 
@@ -24,13 +25,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="root">
-        <Header/>
-        <div className="stars"></div>
-        <Contacts/>
-     
-        {children}
-        <FieldContact/>
-        <Footer/>
+        <Theme attribute="class"
+               defaultTheme="system"
+               enableSystem>
+          <Header/>
+          <div className="stars"></div>
+          <Contacts/>
+      
+          {children}
+          <FieldContact/>
+          <Footer/>
+        </Theme>
         </body>
     </html>
   );

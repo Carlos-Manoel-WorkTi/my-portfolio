@@ -42,7 +42,7 @@
 }
 
 .contactInfo {
-  width: 30%;
+  width: 100%;
   margin: 10px 0;
   padding-left: 20px;
 }
@@ -51,8 +51,17 @@
   padding-left: 10px;
   font-weight: 500;
   font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
 }
-
+#subtd::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 40px;
+  background-color: #8f5aeb;
+  margin-left: -10px;
+  margin-top: 4px;
+}
 .contactItem {
   margin-bottom: 15px;
 }
@@ -62,6 +71,7 @@
   margin-bottom: 5px;
   padding-left: 13px;
   font-size: 1.2em;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .contactItem span {
@@ -70,9 +80,11 @@
   margin-left: 15px;
   padding: 6px 24px;
   border-radius: 11px;
-  font-size: 1.1em;
+  font-size: 1.3em;
   background: #1f1f1f;
   color: #a0a0a0;
+  font-family: monospace;
+  width: 207px;
 }
 .copyButton {
   display: inline-block;
@@ -92,8 +104,11 @@
 
 .imageContainer {
   width: 50%;
-  position: relative;
+  position: absolute;
   height: 50vh;
+  width: 50%;
+  margin-right: 0;
+  right: 0;
 }
 
 .imageContainer img {
@@ -113,4 +128,112 @@
   border-radius: 50%;
   border: 3px solid white;
   margin: 11px;
+  width: 80px;
+  height: 80px;
+}
+#coImgNaIa{
+  align-items: center;
+  font-family: monospace;
+}
+#coImgNaIa h3{
+  font-size: 1.9em;
+  padding: 0;
+  
+}
+#coImgNaIa span{
+  font-size: 1.5em;
+  color: #a0a0a0;
+}
+
+@media screen and (max-width:785px) {
+  .contactInfo h3 {
+    padding-left: 10px;
+    font-size: 1.8em;
+}
+#subtd::before {
+  height: 33px;
+}
+  #img-autor{
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 11px;
+    width: 75px;
+    height: 75px;
+  }
+  #coImgNaIa h3{
+    font-size: 1.6em;
+    padding: 0;
+    
+  }
+  #coImgNaIa span{
+    font-size: 1.4em;
+    color: #a0a0a0;
+  }
+}
+@media screen and (max-width:480px) {
+  .contactInfo h3 {
+    padding-left: 10px;
+    font-size: 1.6em;
+}
+#subtd::before {
+  height: 33px;
+}
+  #img-autor{
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 11px;
+    width: 70px;
+    height: 70px;
+  }
+  #coImgNaIa h3{
+    font-size: 1.3em;
+    padding: 0;
+    
+  }
+  #coImgNaIa span{
+    font-size: 1.2em;
+    color: #a0a0a0;
+  }
+  .contactInfo {
+    padding-left: 14px;
+}
+}
+@media screen and (max-width:340px) {
+  .contactInfo h3 {
+    padding-left: 10px;
+    font-size: 1.6em;
+}
+#subtd::before {
+  height: 33px;
+}
+  #img-autor{
+    border-radius: 50%;
+    border: 3px solid white;
+    margin: 11px;
+    width: 60px;
+    height: 60px;
+  }
+  #coImgNaIa h3{
+    font-size: 1.1em;
+    padding: 0;
+    
+  }
+  #coImgNaIa span{
+    font-size: 1em;
+    color: #a0a0a0;
+  }
+  .contactInfo {
+    padding-left: 5px;
+}
+.contactItem span {
+  margin-left: 15px;
+  padding: 6px 10px;
+  border-radius: 11px;
+  font-size: 1.2em;
+  width: 180px;
+}
+.copyButton {
+  padding: 5px 7px;
+  font-size: 12px;
+}
 }
