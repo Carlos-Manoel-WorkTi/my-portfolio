@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
+  import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import "./home.css"
-import "../components/contacts/Contacts"
+
 import Contacts from "../components/contacts/Contacts";
 import 'aos/dist/aos.css';
 import FieldContact from "@/components/fieldContact/FieldContact";
@@ -23,10 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body className="root">
         <Theme attribute="class"
-               defaultTheme="system"
+               defaultTheme="dark"
                enableSystem>
           <Header/>
           <div className="stars"></div>

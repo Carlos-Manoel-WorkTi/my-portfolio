@@ -1,4 +1,4 @@
-/*------ Settings ------*/
+
 .container {
     --size: 30px;
     display: flex;
@@ -27,7 +27,7 @@
   .moon{
     fill: rgb(255, 230, 0);
   }
-  /* ------ On check event ------ */
+
   .container input:checked ~ .moon {
     display: none;
   }
@@ -36,7 +36,7 @@
     display: block;
   }
   
-  /* ------ Hide the default checkbox ------ */
+
   .container input {
     position: absolute;
     opacity: 0;
@@ -45,7 +45,7 @@
     width: 0;
   }
   
-  /* ------ Animation ------ */
+
   @keyframes keyframes-fill {
     0% {
       transform: rotate(-360deg) scale(0);

@@ -99,11 +99,10 @@
   800px 150px #fff,
   900px 250px #fff,
   850px 300px #fff,
-  950px 400px #fff, /* Mais para a direita e baixo */
-  800px 450px #fff, /* Mais para a direita e baixo */
-  900px 350px #fff, /* Mais para a direita e baixo */
-  1000px 500px #fff, /* Mais para a direita e baixo */
-  700px 550px #fff; /* Mais para a direita e baixo */
+  950px 400px #fff, 
+  900px 350px #fff, 
+  1000px 500px #fff, 
+  700px 550px #fff; 
 
 
   z-index: -1;
@@ -271,7 +270,7 @@
     opacity: 0;
   }
 }
-/* Efeito de digitação e apagamento com cursor piscante */
+
 @keyframes typeAndDelete {
     0%, 10% {
       width: 0;
@@ -292,17 +291,17 @@
   
   .typing-container {
     overflow: hidden;
-    white-space: nowrap; /* Impede que o texto se quebre em várias linhas */
+    white-space: nowrap;
     border-right: 0.1em solid rgb(199, 208, 233); 
     animation: typeAndDelete 5.6s steps(50) infinite, blinkCursor 1s step-end infinite;
     display: inline-block;
-    font-family: monospace; /* Define a fonte para parecer com um terminal */
+    font-family: monospace;
     
   }
   
 
   .card {
-    /* color used to softly clip top and bottom of the .words container */
+
     --bg-color: #21212100;
     background-color: var(--bg-color);
     padding: 1rem 2rem;
@@ -404,8 +403,7 @@
   }
   .dark .main{
     overflow: hidden;
-    /* background: #0088ff; */
-    /* padding-left: 15px; */
+   
   }
   .light .main{
     background-color: #0864b4;
@@ -438,9 +436,7 @@
       z-index: 999;
     }
 }
-  /* #inf > .border-screenul > ul > li{
-    margin-bottom: 5px;
-  } */
+ 
 
   .ipt{
     background-color: rgb(18, 18, 20);
@@ -451,7 +447,7 @@
   }
 
 
-/* FG */
+
 
 
 
@@ -607,7 +603,7 @@
     margin-bottom: 40px;
   }
   .devMsg{
-    /* display: none; */
+
     position: absolute;
     margin-top: 180px;
     margin-left: -36px;
