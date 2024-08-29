@@ -116,7 +116,7 @@
   background-color: transparent;
 }
 .light .root > header {
-  background-color: #3888ce;
+  background-color: #0864b4;
 }
 .root > header > div > nav > li{
   position: relative;
@@ -408,7 +408,7 @@
     /* padding-left: 15px; */
   }
   .light .main{
-    background-color: #3888ce;
+    background-color: #0864b4;
   }
   .dark .containerSecond{
     width: 100%;

@@ -46,6 +46,13 @@
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color));
 }
+.light .button .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+  border-right: none;
+  border-left: var(--border-right) solid var(--animation-color);
+  margin-left: -6px;
+}
 
 .logo {
   margin-top: 2px !important;
