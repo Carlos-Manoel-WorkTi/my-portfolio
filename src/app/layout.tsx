@@ -3,11 +3,12 @@ import "./globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import "./home.css"
-
+import "../components/bg/bg.css"
 import Contacts from "../components/contacts/Contacts";
 import 'aos/dist/aos.css';
 import FieldContact from "@/components/fieldContact/FieldContact";
 import {Theme }from "@/themes/themes-provide";
+import Bg from "@/components/bg/bg";
 
 
 
@@ -28,13 +29,14 @@ export default function RootLayout({
         <Theme attribute="class"
                defaultTheme="dark"
                enableSystem>
-          <Header/>
-          <div className="stars"></div>
-          <Contacts/>
-      
-          {children}
-          <FieldContact/>
-          <Footer/>
+          <Bg/>
+            <Header/>
+            <div className="stars"></div>
+            <Contacts/>
+        
+            {children}
+            <FieldContact/>
+            <Footer/>
         </Theme>
         </body>
     </html>

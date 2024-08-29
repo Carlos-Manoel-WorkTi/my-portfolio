@@ -1,0 +1,49 @@
+body {
+    margin: 0; /* Remove qualquer margem padrão do body */
+    overflow-x: hidden; /* Garante que nada cause overflow horizontal */
+}
+
+#container-bg {
+    position: fixed; /* Fixa o fundo em relação à tela, para que ele sempre permaneça na mesma posição */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa toda a largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    overflow: hidden; /* Esconde qualquer coisa que ultrapasse os limites do contêiner */
+    z-index: 1; /* Mantém o fundo atrás de todos os outros conteúdos */
+    pointer-events: none; /* Garante que o fundo não interfira com cliques ou interações no conteúdo */
+}
+
+.dark #bg {
+    position: absolute; /* Permite posicionar o elemento em relação ao container */
+    top: -2em; /* Ajuste conforme necessário para controlar a posição do fundo */
+    right: -2em;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+    background: #c4c4c4c1;
+    box-shadow: 0px 0px 100px rgba(193, 119, 241, 0.8), 
+                0px 0px 100px rgba(135, 42, 211, 0.8), 
+                inset #9b40fc 0px 0px 40px -12px;
+    z-index: 1; /* Garante que o elemento seja visível */
+}
+.light #bg {
+    position: absolute; /* Permite posicionar o elemento em relação ao container */
+    top: -2em; /* Ajuste conforme necessário para controlar a posição do fundo */
+    right: -2em;
+    width: 15em;
+    height: 15em;
+    border-radius: 50%;
+  background: #ddddddc1;
+  box-shadow: 0px 0px 100px rgba(252, 252, 252, 0.8), 0px 0px 100px rgba(246, 246, 246, 0.8), inset #ffffff 0px 0px 40px -12px;
+  transition: 0.4s ease-in-out;
+  z-index: 1;
+}
+
+@media screen and (max-width:600px) {
+    .light #bg,.dark #bg {
+        right: -2em;
+        width: 14em;
+        height: 14em;
+    }
+}

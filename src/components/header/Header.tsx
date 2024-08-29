@@ -6,16 +6,15 @@ import { ThemeToggle } from '@/themes/themes-provide';
 
 export default function Header() {
   return (
-    <header className="bg-zinc-950   text-white p-4  relative w-full">
+    <header className="  text-white p-4  relative w-[100%] z-10">
       <div className="w-full flex justify-between p-1.25 md:p-2.5">
         <h1 className="logo animate__animated animate__backInDown">
           <button className="button" data-text="Awesome">
-            {/* <span className="actual-text">&nbsp;Portfólio&nbsp;</span>
-            <span aria-hidden="true" className="hover-text">&nbsp;Portfólio&nbsp;</span> */}
-            <span>Teste</span>
+            <span className="actual-text">&nbsp;Portfólio&nbsp;</span>
+            <span aria-hidden="true" className="hover-text">&nbsp;Portfólio&nbsp;</span>
           </button>
         </h1>
-
+  
         <nav>
           <ul className="ul-header items-center  hidden md:flex space-x-4 mr-5 animate__animated animate__backInDown">
             <li id='home' className='fw'>
