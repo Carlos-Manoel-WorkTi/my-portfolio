@@ -23,64 +23,7 @@
 
 
 
-/* .root > header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  opacity: 1;
-  box-shadow: 
-  220px 118px #fff, 
-  280px 176px #fff, 
-  40px 50px #fff, 
-  60px 180px #fff, 
-  120px 130px #fff, 
-  180px 176px #fff, 
-  220px 290px #fff, 
-  520px 250px #fff, 
-  400px 220px #fff, 
-  50px 350px #fff, 
-  10px 230px #fff,
-  300px 100px #fff,
-  500px 80px #fff,
-  350px 300px #fff,
-  450px 180px #fff,
-  600px 120px #fff,
-  550px 300px #fff,
-  700px 200px #fff,
-  150px 400px #fff,
-  650px 450px #fff,
-  100px 500px #fff,
-  80px 600px #fff,
-  370px 50px #fff,
-  430px 90px #fff,
-  620px 160px #fff,
-  510px 330px #fff,
-  670px 250px #fff,
-  230px 420px #fff,
-  540px 370px #fff,
-  330px 450px #fff,
-  310px 520px #fff,
-  450px 500px #fff,
-  150px 300px #fff,
-  750px 200px #fff,
-  800px 150px #fff,
-  900px 250px #fff,
-  850px 300px #fff,
-  950px 400px #fff, 
-  900px 350px #fff, 
-  1000px 500px #fff, 
-  700px 550px #fff; 
 
-
-  z-index: -1;
-  transition: 0s ease;
-  animation: 3.5s glowing-stars linear alternate infinite;
-  animation-delay: 0s;
-} */
 
 .dark .root > header {
   background-color: transparent;
@@ -342,7 +285,7 @@
   .dark .containerSecond{
     width: 100%;
     background: linear-gradient(to bottom, transparent, rgb(9 17 35));
-    padding-left: 50px;
+    /* padding-left: 50px; */
     position: relative;
     display: flex;
     height: 440px;
@@ -356,7 +299,7 @@
  .light .containerSecond {
   width: 100%;
   background: linear-gradient(to bottom, transparent, rgb(250 250 250));
-  padding-left: 50px;
+  /* padding-left: 50px; */
   position: relative;
   display: flex;
   height: 440px;
@@ -496,9 +439,9 @@
     /* .main{
       padding-left: 5px;
     } */
-    .dark .containerSecond,.light .containerSecond{
+    /* .dark .containerSecond,.light .containerSecond{
       padding-left: 20px;
-    }
+    } */
     
   }
   @media screen and (max-width:760px){
