@@ -1,14 +1,15 @@
 import React from 'react';
+import './footer.css'; // Importa o CSS
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-transparent text-white py-4 m-0 text-center border-t border-gray-700">
-      <div className="relative z-10">
-        <p className="mb-2">&copy; {new Date().getFullYear()} My Portfolio</p>
-        <p>
-          <a href="/about" className="text-blue-400 hover:underline mx-2">About</a>
+    <footer className="footer">
+      <div className="footer-content">
+        <p className="footer-text">&copy; {new Date().getFullYear()} My Portfolio</p>
+        <p className="footer-links">
+          <a href="/about" className="footer-link">About</a>
           |
-          <a href="/contact" className="text-blue-400 hover:underline mx-2">Contact</a>
+          <a href="/contact" className="footer-link">Contact</a>
         </p>
       </div>
     </footer>

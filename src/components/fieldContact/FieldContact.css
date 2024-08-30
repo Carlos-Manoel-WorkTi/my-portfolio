@@ -40,7 +40,15 @@
   overflow: hidden;
   align-items: flex-start;
 }
-
+.light .containerContact, .light .contactInfo{
+  /* background-color: white; */
+  background: linear-gradient(to right, white 80%, rgb(32, 147, 239) 20%);
+  color: #1f1f1f;
+}
+.dark.containerContact, .dark .contactInfo{
+  background-color: transparent;
+  color: #fefefe;
+}
 .contactInfo {
   width: 100%;
   margin: 10px 0;
@@ -61,6 +69,9 @@
   background-color: #8f5aeb;
   margin-left: -10px;
   margin-top: 4px;
+}
+.light #subtd::before {
+  background-color: #2d9cf1;
 }
 .contactItem {
   margin-bottom: 15px;
@@ -85,6 +96,19 @@
   color: #a0a0a0;
   font-family: monospace;
   width: 207px;
+}
+.light .contactItem span {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 15px;
+  padding: 6px 24px;
+  border-radius: 6px;
+  font-size: 1.3em;
+  border: 1px solid #a8a5a5;
+  background: #ffffff;
+  color: #747474;
+  font-family: monospace;
+  width: 209px;
 }
 .copyButton {
   display: inline-block;
@@ -125,11 +149,14 @@
 }
 
 #img-autor{
-  border-radius: 50%;
+  border-radius: 30%;
   border: 3px solid white;
   margin: 11px;
   width: 80px;
   height: 80px;
+}
+.light #img-autor {
+  border: 3px solid #4db0ff;
 }
 #coImgNaIa{
   align-items: center;
@@ -144,8 +171,15 @@
   font-size: 1.5em;
   color: #a0a0a0;
 }
+.light #coImgNaIa h3{
+  color: #515151;
+  
+}
+@media screen and (min-widht:780px){
 
+}
 @media screen and (max-width:785px) {
+
   .contactInfo h3 {
     padding-left: 10px;
     font-size: 1.8em;
@@ -169,10 +203,30 @@
     font-size: 1.4em;
     color: #a0a0a0;
   }
+}  .light .containerContact, .light .contactInfo {
+  background: white;
+}
+@media screen and (max-width:600px) {
+  .contactInfo {
+    width: 100%;
+    margin: 10px 0;
+    padding-left: 8px;
+  }
+  .light .contactItem span,.dark .contactItem span {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 1.2em;
+    width: 188px;
+}
 }
 @media screen and (max-width:480px) {
+  .contactInfo {
+    width: 100%;
+    margin: 7px 0;
+    padding-left: 4px;
+  }
   .contactInfo h3 {
-    padding-left: 10px;
+    padding-left: 5px;
     font-size: 1.6em;
 }
 #subtd::before {

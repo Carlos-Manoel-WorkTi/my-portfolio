@@ -42,7 +42,7 @@ export default function RootLayout({
             <Contacts/>
         
             {children}
-            {/* <FieldContact/> */}
+            <FieldContact/>
             <Footer/>
         </Theme>
         </body>

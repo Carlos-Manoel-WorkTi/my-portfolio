@@ -6,7 +6,7 @@ import { ThemeToggle } from '@/themes/themes-provide';
 
 export default function Header() {
   return (
-    <header className="  text-white p-4  relative w-[100%] z-10">
+    <header className="  text-white p-2 pl-4  relative w-[100%] z-10">
       <div className="w-full flex justify-between p-1.25 md:p-2.5">
         <h1 className="logo animate__animated animate__backInDown">
           <button className="button" data-text="Awesome">

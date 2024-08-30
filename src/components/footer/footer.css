@@ -1,0 +1,39 @@
+.footer {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 1rem; /* py-4 em Tailwind */
+    margin: 0;
+    text-align: center;
+    border-radius: 0;
+  }
+.light footer{
+    background-color: #3b82f6;
+}  
+.dark footer{
+    background-color: transparent;
+    border-top: 1px solid #3b82f6;
+}  
+  .footer-content {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .footer-text {
+    margin-bottom: 0.5rem; /* mb-2 em Tailwind */
+  }
+  
+  .footer-links {
+    font-size: 1rem; /* Ajuste conforme necessário */
+  }
+  
+  .footer-link {
+    color: #f2f2f2; /* text-blue-400 em Tailwind */
+    text-decoration: none;
+    margin: 0 0.5rem; /* mx-2 em Tailwind */
+  }
+  
+  .footer-link:hover {
+    text-decoration: underline;
+  }
+  

@@ -19,7 +19,7 @@
       137.48deg,
       #43f56a 10%,
       rgb(16, 94, 172) 45%,
-      #9b48f3 67%,
+      #98ee4d 67%,
       #161a25 87%
     );
   background-origin: border-box;
@@ -28,7 +28,7 @@
 }
 .light .btn_see_proj {
   border-radius: 10px;
-  background-image: linear-gradient(#ffffff, #f4f4f4),  linear-gradient(137.48deg, #1be59a 10%,  #56d89a, #4caf8d 67%,  #5458c4 87% );
+  background-image: linear-gradient(#0092e4, #f4f4f4),  linear-gradient(137.48deg, #1be59a 10%,  #56d89a, #4caf8d 67%,  #e1ee4d 87% );
 }
 
 .light .strong {
@@ -71,7 +71,9 @@
   backdrop-filter: blur(1rem);
   border-radius: 5rem;
 }
-
+.light #container-stars {
+  border-radius: 0rem;
+}
 .strong {
   z-index: 2;
   font-family: "Orbitron", sans-serif;
