@@ -65,9 +65,9 @@ export default function Home() {
     </div>
     
     <ScrollingAuto/>  
-    <section className="containerSecond">
+    {/* <section className="containerSecond">
       <ServeEffect/>
-    </section>
+    </section> */}
     </main>
    
     </>

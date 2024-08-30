@@ -42,8 +42,8 @@ export default function RootLayout({
             <Contacts/>
         
             {children}
-            {/* <FieldContact/>
-            <Footer/> */}
+            {/* <FieldContact/> */}
+            <Footer/>
         </Theme>
         </body>
     </html>
