@@ -1,35 +1,35 @@
 body {
-    margin: 0; /* Remove qualquer margem padrão do body */
-    overflow-x: hidden; /* Garante que nada cause overflow horizontal */
+    margin: 0;
+    overflow-x: hidden;
 }
 
 #container-bg {
-    position: absolute; /* Fixa o fundo em relação à tela, para que ele sempre permaneça na mesma posição */
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100vw; /* Ocupa toda a largura da tela */
-    height: 100vh; /* Ocupa toda a altura da tela */
-    overflow: hidden; /* Esconde qualquer coisa que ultrapasse os limites do contêiner */
-    z-index: 1; /* Mantém o fundo atrás de todos os outros conteúdos */
-    pointer-events: none; /* Garante que o fundo não interfira com cliques ou interações no conteúdo */
+    width: 100vw; 
+    height: 100vh; 
+    overflow: hidden; 
+    z-index: 1; 
+    pointer-events: none; 
 }
 
 .dark #bg {
-    position: absolute; /* Permite posicionar o elemento em relação ao container */
-    top: -2em; /* Ajuste conforme necessário para controlar a posição do fundo */
+    position: absolute; 
+    top: -2em; 
     right: -2em;
     width: 15em;
     height: 15em;
     border-radius: 50%;
     background: #c4c4c4c1;
-    box-shadow: 0px 0px 100px rgba(193, 119, 241, 0.8), 
-                0px 0px 100px rgba(135, 42, 211, 0.8), 
-                inset #9b40fc 0px 0px 40px -12px;
-    z-index: 1; /* Garante que o elemento seja visível */
+    /* box-shadow: 0px 0px 100px rgba(193, 119, 241, 0.8), 0px 0px 100px rgba(135, 42, 211, 0.8),   inset #9b40fc 0px 0px 40px -12px; */
+    /* box-shadow: 0px 0px 100px #0f60a0, 0px 0px 100px #3F51B5, inset #4088fc 0px 0px 40px -12px;  */
+    box-shadow: 0px 0px 100px rgba(15, 96, 160, 0.8), 0px 0px 100px rgba(63, 81, 181, 0.8), inset #6095ea 0px 0px 40px -12px; 
+    z-index: 1;
 }
 .light #bg {
-    position: absolute; /* Permite posicionar o elemento em relação ao container */
-    top: -2em; /* Ajuste conforme necessário para controlar a posição do fundo */
+    position: absolute;
+    top: -2em; 
     right: -2em;
     width: 15em;
     height: 15em;
