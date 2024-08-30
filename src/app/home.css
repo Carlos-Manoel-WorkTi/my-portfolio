@@ -478,15 +478,18 @@
   
   .loader {
     font-size: 14px;
+    /* margin-left: -27px; */
     
   }
   .containerTyping{
     margin-bottom: 40px;
   }
   .devMsg{
+
     width: 100%;
     position: absolute;
     margin-top: 180px;
+    left: -8px;
   }
   .example-2{
     display: none !important;
@@ -536,6 +539,7 @@
   margin-left: -31px;
   margin-top: -77px;
 }
+
 } 
 @media screen and (max-width:550px) {
   .dark .containerSecond,.light .containerSecond {
