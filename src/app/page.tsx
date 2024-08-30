@@ -44,7 +44,7 @@ export default function Home() {
               </div>
             </span> 
       </div>
-      <div className="w-full text-white h-20 pt-5 pl-6 py-4 animate__animated animate__slideInLeft animate__delay-1s">
+      <div className="ct w-full text-white h-20 pt-5 pl-6 py-4 animate__animated animate__slideInLeft animate__delay-1s">
         <h4 className="flex items-center inf-full">
           Olá, meu nome é
           <strong className="flex items-center  ml-2 inf-name italic ">
@@ -60,8 +60,8 @@ export default function Home() {
           </h4>
           </div>
 
-    <div className="p-4  w-full flex justify-between items-center  mt-8 ml-5    animate__animated animate__rollIn animate__delay-1s" id="btn_explorer" >
-      <Link href={"/projects"}><Button_explorer/></Link>
+    <div className="p-4  w-full flex justify-between items-center  mt-8    animate__animated animate__rollIn animate__delay-1s" id="btn_explorer" >
+      <Link className="ml-3" href={"/projects"}><Button_explorer/></Link>
     </div>
     
     <ScrollingAuto/>  
