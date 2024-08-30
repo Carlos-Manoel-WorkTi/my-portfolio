@@ -23,7 +23,7 @@
 
 
 
-.root > header::before {
+/* .root > header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -80,7 +80,7 @@
   transition: 0s ease;
   animation: 3.5s glowing-stars linear alternate infinite;
   animation-delay: 0s;
-}
+} */
 
 .dark .root > header {
   background-color: transparent;
@@ -92,55 +92,7 @@
   position: relative;
   transition: 0.4s ease-in-out;
 }
-#home::before{
-  content: "";
-    position: absolute;
-    top: -100px;
-    left: 64%;
-    rotate: -40deg;
-    width: 4em;
-    height: 1px;
-    background: linear-gradient(90deg, #ffffff, transparent);
-    animation: 5s shootingStar3 ease-in-out infinite;
-    animation-delay: 7s;
-}
-#about::before{
-  content: "";
-    position: absolute;
-    top: 6%;
-    left: 128%;
-    rotate: -49deg;
-    width: 5em;
-    height: 1px;
-    background: linear-gradient(90deg, #ffffff, transparent);
-    animation: 7s shootingStar3 ease-in-out infinite;
-    animation-delay: 4s;
-}
-#service::before{
-  content: "";
-    position: absolute;
-    top: -80px;
-    left: 108%;
-    rotate: -43deg;
-    width: 5em;
-    height: 1px;
-    background: linear-gradient(90deg, #ffffff, transparent);
-    animation: 8s shootingStar1 ease-in-out infinite;
-    animation-delay: 10s;
-}
-#contact::before{
-  content: "";
-    position: absolute;
-    top: 48%;
-    top: -100px;
-    left: 98%;
-    rotate: -43deg;
-    width: 4em;
-    height: 1px;
-    background: linear-gradient(90deg, #ffffff, transparent);
-    animation: 4s shootingStar3 ease-in-out infinite;
-    animation-delay: 14s;
-}
+
 .dark .root > header > div > nav > ul > li::after{
   content: "";
     position: absolute;
