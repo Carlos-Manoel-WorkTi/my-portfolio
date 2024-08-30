@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html lang="pt-br" className="dark"  style={{ colorScheme: 'dark' }}>
       
       <body className="root">
         <Theme attribute="class"

@@ -9,7 +9,7 @@ export default function FieldContact() {
  
     
       return (
-        <section className="containerContact relative">
+        <section className="containerContact relative" data-aos="fade-right">
         <div className="contactInfo">
           <h3 id='subtd'>Entre em contato:</h3>
           <div className='flex align-middle' id='coImgNaIa'>

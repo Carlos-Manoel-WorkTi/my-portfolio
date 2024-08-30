@@ -16,12 +16,12 @@
       transform: translateX(10vw) translateY(-55vh)   rotate(154deg);
     }
     70%{
-      /* transform: translateX(-10vw) translateY(75vh)   rotate(173deg); */
+      
       transform: translateX(0vw) translateY(75vh)   rotate(156deg);
      
     }
     75%{
-      /* transform: translateX(-10vw) translateY(75vh)   rotate(173deg); */
+
       transform: translateX(-70vw) translateY(75vh)   rotate(38deg);
      
     }
@@ -30,7 +30,7 @@
     }
   }
   
-  /* Adiciona um atraso maior para o próximo ciclo de animação */
+
   
   
   
@@ -161,6 +161,9 @@
 #coImgNaIa{
   align-items: center;
   font-family: monospace;
+  border-bottom: 1px solid #909090;
+  margin-bottom: 10px;
+  width: 90%;
 }
 #coImgNaIa h3{
   font-size: 1.9em;
@@ -188,7 +191,7 @@
   height: 33px;
 }
   #img-autor{
-    border-radius: 50%;
+    border-radius: 30%;
     border: 3px solid white;
     margin: 11px;
     width: 75px;
@@ -217,6 +220,10 @@
     border-radius: 6px;
     font-size: 1.2em;
     width: 188px;
+}
+#coImgNaIa {
+
+  width: 100%;
 }
 }
 @media screen and (max-width:480px) {
@@ -261,7 +268,7 @@
   height: 33px;
 }
   #img-autor{
-    border-radius: 50%;
+    border-radius: 30%;
     border: 3px solid white;
     margin: 11px;
     width: 60px;

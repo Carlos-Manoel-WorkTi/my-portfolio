@@ -1,5 +1,5 @@
 /* From Uiverse.io by rubyreapergaming */ 
-@import url("s://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
+
 
 .btn_see_proj {
   display: flex;
@@ -24,7 +24,7 @@
     );
   background-origin: border-box;
   background-clip: content-box, border-box;
-  font-family: "Orbitron", sans-serif;
+  font-family: sans-serif;
 }
 .light .btn_see_proj {
   border-radius: 10px;
