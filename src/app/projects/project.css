@@ -14,3 +14,23 @@
     position: relative;
     z-index: 3;
 }
+
+.light .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: #ffffff;
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid #ffffff;
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px white;
+}
+.light .button .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px white);
+    border-right: none;
+    border-left: var(--border-right) solid white;
+    margin-left: -6px;
+}
