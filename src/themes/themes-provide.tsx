@@ -6,9 +6,15 @@ import { useEffect, useState } from 'react';
 import { type ThemeProviderProps } from 'next-themes/dist/types';
 
 export function Theme({ children, ...props }: ThemeProviderProps) {
-  return <ThemeProvider {...props}>{children}</ThemeProvider>;
+  const TD = getInitialTheme()
+  return <ThemeProvider defaultTheme={TD} {...props}>{children}</ThemeProvider>;
 }
-
+export const getInitialTheme = () => {
+  if (typeof window !== 'undefined') {
+    return localStorage.getItem('theme') || 'light';
+  }
+  return 'dark'; 
+};
 
 export const ThemeToggle = () => {
   const { theme, setTheme, resolvedTheme } = useTheme();

@@ -34,7 +34,7 @@ export default function Header() {
             <ThemeToggle/>
             </li>
           </ul>
-          <ul id='uls' className='ul-header  md:hidden flex space-x-4 items-center pb-3 animate__animated animate__backInDown'>
+          <ul id='uls' className='ul-header  md:hidden flex space-x-4 items-center  animate__animated animate__backInDown'>
             <li className='mr-8'>
 
             <ThemeToggle/> 

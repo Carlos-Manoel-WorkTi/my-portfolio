@@ -31,17 +31,17 @@ const ListBgs: ListBgsType = [
   {
     p2: {
       title: 'Planets Cards',
-      link_bg_light: '/bg_project/plc.png',
-      link_bg_dark: '/bg_project/plc.png',
+      link_bg_light: '/bg_project/plLight.png',
+      link_bg_dark: '/bg_project/plDark.png',
       description: 'Planets Cards is a captivating memory game that challenges players to match pairs of cards featuring beautifully illustrated planets from our solar system. ',
-      color:"red"
+      color:"#d33030"
     },
   },
 ];
 
 export default function Project() {
   return (
-  <main>
+  <main id='project'>
   
     <Slide list={ListBgs} />
     <section className='container-opt'> 
