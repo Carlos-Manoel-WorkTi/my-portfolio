@@ -1,0 +1,143 @@
+.container-slide {
+    border-top: 1px solid #131313;
+    position: relative;
+    width: 100vw;
+    height: 50vw;
+    background-size: contain; 
+    background-position:top; 
+    background-repeat: no-repeat; 
+    box-sizing: border-box;
+    padding: 100px 50px;
+    z-index: 2;
+}
+
+.slide-content{
+    width: 100%;
+    margin-left: 30px;
+
+    h2{
+        font-size: 3em;
+    }
+    p{
+        font-size: 1.2em;
+        width: 500px;
+    }
+}
+
+#container-btn{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+#btn-ctt{
+  width: auto;  
+  margin-left: 30px;
+  margin-top: 20px;
+  padding: 10px;    
+}
+
+#btn-fwd{
+    right: -12px;
+}
+#btn-bk{
+    left: -12px;
+}
+#btn-bk,#btn-fwd{
+    margin-top: -170px;
+}
+
+
+.current-slide-show{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.total_slides{
+    background-color: green;
+}
+
+@media screen and (max-width:770px) {
+    .container-slide {
+        padding: 59px 43px;
+    }
+}
+@media screen and (max-width:680px) {
+    .container-slide {
+        padding: 30px 33px;
+        min-height: 300px;
+    }
+    .slide-content{
+        width: 100%;
+        margin-left: 30px;
+    
+        h2{
+            font-size: 2.5em;
+        }
+        p{
+            font-size: 1.1em;
+            width: 400px;
+            font-weight: 400;
+        }
+    }
+}
+@media screen and (max-width:580px) {
+
+    #btn-bk, #btn-fwd {
+        margin-top: -394px;
+    }
+    #btn-fwd{
+        right: 0px;
+    }
+    #btn-bk{
+        left: 0px;
+    }
+    .slide-content {
+        h2 {
+            font-size: 3em;
+            margin-top: 191px;
+            margin-left: -32px;
+        }
+        p{
+            margin-left: -32px;
+        }
+    }
+    #ds{
+        width: 100%;
+        padding-left: 35px;
+    }
+    .container-slide {
+        border-top: 1px solid #131313;
+        position: relative;
+        width: 100vw;
+        height: auto;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+        padding: 100px 50px;
+        
+    }
+    .container-slide {
+        padding: 30px 33px;
+        min-height: 380px;
+    }
+    #btn-ctt {
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width:460px) {
+    .slide-content {
+        h2 {
+            font-size: 2.4em;
+            margin-top: 186px;
+            margin-left: -41px;
+        }
+        p{
+            margin-left: -41px; 
+        }
+    }
+    #btn-ctt {
+        margin-left: -10px;
+    }
+}

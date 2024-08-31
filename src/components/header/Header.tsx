@@ -1,13 +1,14 @@
 import React from 'react';
 import './Header.css';
-import Link from 'next/link';
+import ActiveLink from './activeLink/ActiveLink';
 import 'animate.css';
 import { ThemeToggle } from '@/themes/themes-provide';
+import Link from 'next/link';
 
 export default function Header() {
   return (
     <header className="  text-white p-2 pl-4  relative w-[100%] z-10">
-      <div className="w-full flex justify-between p-1.25 md:p-2.5">
+      <div className="w-full flex justify-between p-1.25 md:p-2.5 items-center">
         <h1 className="logo animate__animated animate__backInDown">
           <button className="button" data-text="Awesome">
             <span className="actual-text">&nbsp;Portfólio&nbsp;</span>
@@ -16,18 +17,18 @@ export default function Header() {
         </h1>
   
         <nav>
-          <ul className="ul-header items-center  hidden md:flex space-x-4 mr-5 animate__animated animate__backInDown">
+          <ul className="ul-header gap-4 items-center  hidden md:flex space-x-4 mr-5 animate__animated animate__backInDown">
             <li id='home' className='fw'>
-              <Link href="/" className="hover:text-green-400 ">Home</Link>
+              <ActiveLink href="/">Home</ActiveLink>
             </li>
             <li id='about' className='fw'>
-              <Link href="/about" className="hover:text-green-400 " >About</Link>
+              <ActiveLink href="/about">About</ActiveLink>
             </li>
             <li id='service' className='fw'>
-              <Link href="/service" className="hover:text-green-400 " >Services</Link>
+              <ActiveLink href="/projects">Projects</ActiveLink>
             </li>
             <li id='contact' className='fw'>
-              <Link href="/contacts" className="hover:text-green-400 " >Contact</Link>
+              <ActiveLink href="/contacts"  >Contact</ActiveLink>
             </li>
             <li className='pl-4 fw'>
             <ThemeToggle/>

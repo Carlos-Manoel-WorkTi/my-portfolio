@@ -4,6 +4,7 @@ import Button_explorer from "@/components/button_explorer/Button_explorer";
 import ScrollingAuto from "@/components/scrolling/Scrolling";
 import 'animate.css';
 import ServeEffect from "@/components/serverEffect/ServeEffect";
+import Bg from "@/components/bg/bg";
 
 
 
@@ -25,6 +26,7 @@ export default function Home() {
   return (
     <>
     <main className="flex  flex-col items-center  overflow-x- main">
+      <Bg/>
         <div className="w-full flex justify-between items-center p-5 py-2 containerTyping">
           <h2 className="typing-container text-white text-6xl mt-10 sm:mt-1 max-w-max msgInit">
           {getGreeting()}

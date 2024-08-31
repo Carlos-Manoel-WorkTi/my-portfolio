@@ -1,0 +1,16 @@
+.dark .container-opt{
+    width: 100%;
+    height: 50vh;
+    background: linear-gradient(to bottom, #090909, rgb(5, 5, 5));
+    top: -21px;
+    position: relative;
+    z-index: 3;
+}
+.container-opt{
+    width: 100%;
+    height: 50vh;
+    background: white;
+    top: -21px;
+    position: relative;
+    z-index: 3;
+}

@@ -172,7 +172,7 @@
 
     --bg-color: #21212100;
     background-color: var(--bg-color);
-    padding: 1rem 2rem;
+    padding: 1rem 0rem;
     border-radius: 1.25rem;
   }
   .light .card {

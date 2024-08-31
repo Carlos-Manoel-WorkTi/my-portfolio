@@ -36,7 +36,7 @@ export default function RootLayout({
         <Theme attribute="class"
                defaultTheme="dark"
                enableSystem>
-          <Bg/>
+          
             <Header/>
             <div className="stars"></div>
             <Contacts/>
