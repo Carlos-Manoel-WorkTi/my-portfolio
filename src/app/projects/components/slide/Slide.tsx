@@ -26,9 +26,11 @@ type SlideProps = {
 
 export default function Slide({ list}: SlideProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width, setWidth] = useState(0);
 
     useEffect(() => {
+      setWidth(window.innerWidth);
+      
       const handleResize = () => setWidth(window.innerWidth);
   
       window.addEventListener('resize', handleResize);
