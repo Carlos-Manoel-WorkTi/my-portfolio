@@ -3,7 +3,7 @@ import './Header.css';
 import ActiveLink from './activeLink/ActiveLink';
 import 'animate.css';
 import { ThemeToggle } from '@/themes/themes-provide';
-import Link from 'next/link';
+
 
 export default function Header() {
   return (

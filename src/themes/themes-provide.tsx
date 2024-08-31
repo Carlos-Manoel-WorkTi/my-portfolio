@@ -9,6 +9,7 @@ export function Theme({ children, ...props }: ThemeProviderProps) {
   return <ThemeProvider {...props}>{children}</ThemeProvider>;
 }
 
+
 export const ThemeToggle = () => {
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);

@@ -1,11 +1,24 @@
+/* .container-slide {
+    border-top: 1px solid #131313;
+    position: relative;
+    width: 100vw;
+
+    background-size: contain; 
+    background-position:top; 
+    background-repeat: no-repeat; 
+    box-sizing: border-box;
+    padding: 100px 50px;
+    z-index: 2;
+   
+} */
 .container-slide {
     border-top: 1px solid #131313;
     position: relative;
     width: 100vw;
-    height: 50vw;
-    background-size: contain; 
-    background-position:top; 
-    background-repeat: no-repeat; 
+    height: 50vw; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
     box-sizing: border-box;
     padding: 100px 50px;
     z-index: 2;
@@ -17,10 +30,13 @@
 
     h2{
         font-size: 3em;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
     }
     p{
         font-size: 1.2em;
         width: 500px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        
     }
 }
 
