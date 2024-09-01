@@ -8,8 +8,6 @@ import Contacts from "../components/contacts/Contacts";
 import 'aos/dist/aos.css';
 import FieldContact from "@/components/fieldContact/FieldContact";
 import {Theme }from "@/themes/themes-provide";
-import Bg from "@/components/bg/bg";
-
 
 
 

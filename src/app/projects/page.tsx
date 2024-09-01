@@ -1,51 +1,37 @@
+// src/app/project/page.tsx
+
 import React from 'react';
 import './project.css';
-import Slide from './components/slide/Slide';
+import { ListBgsType } from '@/types/types';
 
-type ProjectItem = {
-  title: string;
-  link_bg_light: string;
-  link_bg_dark: string;
-  description: string;
-  color:string;
-};
+import OptionTypeProject from './components/optionTypeProject/optionTypeProject';
 
-// Definindo o tipo para a lista de itens de projeto
-type ListItem = {
-  [key: string]: ProjectItem;
-};
+// Função para buscar projetos
+async function fetchProjects(): Promise<ListBgsType> {
+  const res = await fetch('http://localhost:3000/api/projects', {
+    cache: 'no-store', // Opcional, para garantir que os dados sejam sempre atualizados
+  });
 
-// Tipo para a lista de projetos
-type ListBgsType = ListItem[];
+  if (!res.ok) {
+    throw new Error('Failed to fetch projects');
+  } 
 
-const ListBgs: ListBgsType = [
-  {
-    p1: {
-      title: 'DuoWord',
-      link_bg_light: '/bg_project/duoLight.png',
-      link_bg_dark: '/bg_project/duoDark.png',
-      description: 'DuoWord is an innovative app designed to teach English through the immersive combination of music, interactive stories, and a personalized word-saving system.',
-      color:"cornflowerblue"
-    },
-  },
-  {
-    p2: {
-      title: 'Planets Cards',
-      link_bg_light: '/bg_project/plLight.png',
-      link_bg_dark: '/bg_project/plDark.png',
-      description: 'Planets Cards is a captivating memory game that challenges players to match pairs of cards featuring beautifully illustrated planets from our solar system. ',
-      color:"#d33030"
-    },
-  },
-];
+  return res.json();
+}
 
-export default function Project() {
+
+const Slide = React.lazy(() => import('./components/slide/Slide'));
+
+export default async function Project() {
+  const projects = await fetchProjects();
+
   return (
-  <main id='project'>
+    <main id="project">
+        <Slide list={projects} />
+      <section className="container-opt">
   
-    <Slide list={ListBgs} />
-    <section className='container-opt'> 
-        <h2>section 2</h2>
-    </section>
-  </main>
-)}
+        <OptionTypeProject/>
+      </section>
+    </main>
+  );
+}

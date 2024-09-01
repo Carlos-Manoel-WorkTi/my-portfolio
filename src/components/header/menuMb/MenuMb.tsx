@@ -36,6 +36,15 @@ export default function MenuMb() {
         }
     };
 
+    const handleMenuItemClick = () => {
+        setIsOpen(false);
+        setAnimationClass('animate__fadeOutRight');
+        setTimeout(() => {
+            setActiveMenu(false);
+        }, 1000);
+    };
+
+    
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -56,7 +65,7 @@ export default function MenuMb() {
     return (
     <>
         <label className="hamburger relative z-20" >
-            <input type="checkbox" onClick={alterState} checked={isOpen}/>
+            <input type="checkbox" onChange={alterState} checked={isOpen}/>
             <svg viewBox="0 0 32 32" className="custom-svg">
             <path
                 className="line line-top-bottom"
@@ -72,7 +81,7 @@ export default function MenuMb() {
             <ul ref={menuRef}  className={`menu-options animate__animated ${animationClass}`}>
              
                 <li>
-                <Link href="#home"><span className="nav-link">Inicio</span>   
+                <Link href="/" onClick={handleMenuItemClick}><span className="nav-link">Inicio</span>   
                 <svg
                         xmlns="http://www.w3.org/2000/svg"
                         enableBackground="new 0 0 24 24"
@@ -88,7 +97,7 @@ export default function MenuMb() {
                     </Link>
                 </li>
                 <li>
-                <Link href="#about" ><span className="nav-link">Meu perfil</span>
+                <Link href="/about" onClick={handleMenuItemClick}><span className="nav-link">Meu perfil</span>
                         
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +114,7 @@ export default function MenuMb() {
 
                 </li>
                 <li>
-                <Link href="/project"><span className="nav-link">Meus projetos</span>
+                <Link href="/projects" onClick={handleMenuItemClick}><span className="nav-link">Meus projetos</span>
 
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -128,7 +137,7 @@ export default function MenuMb() {
                 </li>
                 <li>
 
-                <Link href="#contact"><span className="nav-link">Entre em contato</span>
+                <Link href="/contact" onClick={handleMenuItemClick}><span className="nav-link">Entre em contato</span>
                 <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -150,7 +159,7 @@ export default function MenuMb() {
                     </svg>
                 </Link>
                 </li>
-                <li >
+                <li  >
                     <span  className="nav-link" id="tema-link" onClick={handleThemeToggle}>Escolha o tema</span>
                     <div id="theme-icon">
                         <ThemeToggle/>
