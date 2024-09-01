@@ -6,7 +6,6 @@ import "./home.css"
 import "../components/bg/bg.css"
 import Contacts from "../components/contacts/Contacts";
 import 'aos/dist/aos.css';
-import FieldContact from "@/components/fieldContact/FieldContact";
 import {Theme }from "@/themes/themes-provide";
 
 
@@ -40,7 +39,7 @@ export default function RootLayout({
             <Contacts/>
         
             {children}
-            <FieldContact/>
+      
             <Footer/>
         </Theme>
         </body>

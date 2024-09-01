@@ -11,6 +11,9 @@
     padding: 1px;
     border-radius: .25rem;
     clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 100%);
+    width: 30%;
+    max-width: 240px;
+    background-color: #5ef49a;
 }
 
 .option-content {
@@ -25,7 +28,7 @@
     color: #fff;
     clip-path: inherit; /* Herda o clip-path do pai */
     height: auto;
-    padding: 30px 50px;
+    padding: 10px 20px 10px 20px;
     font-size: 0.7rem;
     line-height: 14px;
     letter-spacing: 1.2px;
@@ -34,16 +37,19 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5%;
     text-align: center;
+    position: relative;
 }
 
-/* .option-content:hover {
+.option-wrap:hover {
     cursor: pointer;
-    transition: all .3s ease-in;
-    padding-right: 30px;
-    padding-left: 30px;
-} */
+    transform: translateY(-15px);
+    transition: 0.2s ease;
+    background-color: #0af468;
+}
  #sbt{
     font-size: 2em;
     padding-left: 34px;
@@ -57,51 +63,147 @@
     background-color: #69f47a;
     margin-left: -11px;
 }
+
 .option-content a{
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     height: 100%;
     display: flex;
     letter-spacing: 3px;
     line-height: 1.4;
-
+    font-weight: 800;
+    color: #d1eaff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 3;
+}
+.total_pr{
+    font-size: 1.5em;
+    padding-left: 11px;
+    color: #d2d2d2;
+}
+.svg-front,.svg-full,.svg-back{
+    width: 40px;
+    height: 40px;
+    fill: #d1eaff;
+    margin-top: -6px;
 }
 
+@media screen and (max-width:950px) {
+    .option-content a {
+        font-size: 1.7em;
+        letter-spacing: 4px;
+    }
+    .total_pr {
+        font-size: 1.3em;
+    }
+}
 @media screen and (max-width:800px) {
+    .total_pr {
+        font-size: 1.2em;
+    }
+    #container-opt-p {
+        width: 95%;
+        gap: 3%;
+        padding-left: 27px;
+    }
+}
+@media screen and (max-width:705px) {
 
     .option-content {
-        padding: 22px 44px;
-    }
-    #container-opt-p {
-        display: flex;
-        width: 100%;
-        padding: 0;
-        justify-content: center;
+        padding: 10px 10px 10px 20px;
     }
     .option-wrap {
-        width: 23%;
-    }
-}
-@media screen and (max-width:700px) {
-
-    #container-opt-p {
-        height: auto;
-        padding-top: 10px;
+        width: 195px;
     }
     .option-content a {
-        font-size: 1.1em;
+        font-size: 1.5em;
+        letter-spacing: 3px;
     }
-    .option-wrap {
-        width: 26%;
+    .svg-front, .svg-full, .svg-back {
+        width: 35px;
+        height: 35px;
+        fill: #d1eaff;
+        margin-top: -6px;
     }
     #sbt {
-        font-size: 1.6em;
-        padding-left: 21px;
+        padding-left: 28px;
+    }
+}
+@media screen and (max-width:650px) {
+    #container-opt-p {
+        width: 100%;
+        gap: 3%;
+        padding-left: 27px;
+        display: flex;
+        flex-wrap: wrap;
         padding-top: 27px;
+        column-gap: 9%;
+        justify-content: start;
+        height: 300px;
+
+    }
+    .option-wrap {
+        width: 44%;
+    }
+    .container-opt {
+        width: 100%;
+        height: 409px !important;
+    }
+}
+@media screen and (max-width:600px) {
+    #sbt {
+        padding-left: 28px;
+        font-size: 1.7em;
     }
     #sbt::before {
-        height: 34px;
+        content: '';
+        height: 36px;
         width: 6px;
-        margin-left: -9px;
+        position: absolute;
+        background-color: #69f47a;
+        margin-left: -11px;
+    }
+    #container-opt-p {
+        column-gap: 6%;
+    }
+    .option-content div{
+        justify-content: start;
+    }
+    .option-content a {
+        margin-left: 10px;
+    }
+    .total_pr {
+        padding-left: 3px;
+    }
+}
+@media screen and (max-width:460px){
+    .option-content a {
+        font-size: 1.3em;
+        letter-spacing: 3px;
+    }
+    .svg-front, .svg-full, .svg-back {
+        width: 30px;
+        height: 31px;
+        fill: #d1eaff;
+        margin-top: -6px;
+    }
+    .tt{
+        display: none;
+    }
+}
+@media screen and (max-width:415px){
+    .option-content a {
+        font-size: 1.3em;
+        letter-spacing: 3px;
+    }
+    .svg-front, .svg-full, .svg-back {
+        width: 30px;
+        height: 31px;
+        fill: #d1eaff;
+        margin-top: -6px;
+    }
+    .container-opt {
+        width: 100%;
+        height: 443px !important;
     }
 }

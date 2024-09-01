@@ -23,7 +23,7 @@ export default function FieldContact() {
           <ContactItem id="fieldTellCopy" label="Telefone" value="+55 99 99999-9999" />
         </div>
         <div className="imageContainer">
-          <Image id='fg' alt="Imagem de foguete" src="/foguete.png" width={300} height={300} />
+          <Image id='fgg' alt="Imagem de foguete" src="/foguete.png" width={300} height={300} />
         </div>
       </section>
 

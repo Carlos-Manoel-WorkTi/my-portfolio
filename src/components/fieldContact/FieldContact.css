@@ -1,6 +1,6 @@
 
 
-@keyframes float {
+@keyframes float1 {
     0% {
       transform: translateX(100vw) translateY(80vh) rotate(266deg);
       opacity: 1; /* Começa visível */
@@ -141,10 +141,10 @@
 }
 
 
-#fg {
+#fgg {
   position: absolute;
   transform: rotate(266deg);  
-  animation: float 15s ease-in-out infinite;
+  animation: float1 15s ease-in-out infinite;
 
 }
 

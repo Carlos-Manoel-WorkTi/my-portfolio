@@ -18,7 +18,8 @@
   --border-right: 6px;
   --text-stroke-color: rgba(255, 255, 255, 0.981);
   --animation-color: #37FF8B;
-  --fs-size: 2em;
+  --fs-size: 1.4em;
+  height: 30px;
   letter-spacing: 3px;
   text-decoration: none;
   font-size: var(--fs-size);

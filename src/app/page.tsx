@@ -5,6 +5,7 @@ import ScrollingAuto from "@/components/scrolling/Scrolling";
 import 'animate.css';
 import ServeEffect from "@/components/serverEffect/ServeEffect";
 import Bg from "@/components/bg/bg";
+import FieldContact from "@/components/fieldContact/FieldContact";
 
 
 
@@ -73,7 +74,7 @@ export default function Home() {
       <ServeEffect/>
     </section>
     </main>
-   
+    <FieldContact/>
     </>
   );
 }
