@@ -13,8 +13,8 @@
 
 .root > header{
   /* position: relative; */
-  overflow-x: hidden;
-  z-index: 0;
+  /* overflow-x: hidden; */
+  z-index: 2;
 }
 .main{
   z-index: 2;
@@ -29,14 +29,14 @@
   background-color: transparent;
 }
 .light .root > header {
-  background-color: #0864b4;
+  background-color: #0864b400;
 }
 .root > header > div > nav > li{
   position: relative;
   transition: 0.4s ease-in-out;
 }
 
-.dark .root > header > div > nav > ul > li::after{
+/* .dark .root > header > div > nav > ul > li::after{
   content: "";
     position: absolute;
     width: 0.5em;
@@ -47,19 +47,21 @@
     border-radius: 50%;
     z-index: -1;
     transition: 0.3s ease-in-out;
-}
-.light .root > header > div > nav > ul > li::after{
+} */
+/* .light .root > header > div > nav > ul > li::after{
   content: "";
     position: absolute;
     width: 0.5em;
     height: 0.5em;
+
+
     left: 0;
     background-color: white;
     box-shadow: 0px 0px 10px rgba(233, 233, 233, 0.5), 0px 0px 10px rgba(192, 192, 192, 0.5);
     border-radius: 50%;
     z-index: -1;
     transition: 0.3s ease-in-out;
-}
+} */
 @keyframes shootingStar1 {
   0% {
     transform: translateX(0) translateY(0);
@@ -434,7 +436,7 @@
       margin-left: -36px;
     } */
      .light .devMsg,.dark .devMsg{
-      width: 100%;
+      width: 70%;
       
      }
      .typing-container{

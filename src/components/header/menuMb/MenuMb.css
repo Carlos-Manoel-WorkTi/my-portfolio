@@ -1,0 +1,184 @@
+
+.custom-svg {
+    /* Define the size or other general SVG styles */
+    width: 40px;
+    height: 40px;
+  }
+  
+  .custom-svg .line {
+    stroke: #ffffff; 
+    fill: none;   
+  }
+  
+  .custom-svg .line-top-bottom {
+    stroke: #ffffff; 
+  }
+.light .custom-svg .line,.light .custom-svg .line-top-bottom{
+    stroke: #ffffff; 
+}
+
+.hamburger {
+    cursor: pointer;
+  }
+  
+  .hamburger input {
+    display: none;
+  }
+  
+  .hamburger svg {
+    margin-right: 23px;
+    height: 2.6em;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .line-top-bottom {
+    stroke-dasharray: 12 63;
+  }
+  
+  /* Rotação e alteração da cor quando o menu está aberto */
+  .hamburger input:checked + svg {
+    transform: rotate(-45deg);
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom,
+  .hamburger input:checked + svg .line {
+    stroke: red; /* Cor vermelha ao transformar em X */
+  }
+  
+  .hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+  }
+  
+
+  .menu-options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: rgba(24, 24, 24, 1);
+    margin-left: -181px;
+    padding: 10px;
+    z-index: 4;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    height: 52vh;
+    margin-top: -59px;
+    width: 256px;
+    text-align: end;
+    padding-right: 39px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 60px;
+}
+.menu-options li{
+    margin-bottom: 20px;
+}
+.light .menu-options {
+    color: #040404;
+    background-color: rgb(243, 243, 243);
+}
+.dark .menu-options li:hover{
+    a{
+        color: rgb(60, 223, 116);
+    }
+    .ic{
+        fill: rgb(60, 223, 116);
+    }
+    
+}
+.light .menu-options li:hover{
+    a{
+        color: rgb(8, 100, 180);
+    }
+    .ic{
+        fill: rgb(8, 100, 180);
+    }
+    
+}
+.dark .menu-options li #tema-link:hover{
+    color: rgb(60, 223, 116);
+}
+.light .menu-options li #tema-link:hover{
+    color: rgb(8, 100, 180);
+}
+.menu-options li a{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    z-index: 9999;
+}
+.my-icon {
+    pointer-events: none;
+    display: block;
+    width: 32px;
+    height: 20%;
+    fill: #ffffff;
+  }
+
+  .my-icon-project{
+    pointer-events: none;
+    display: block;
+    width: 29px;
+    height: 20%;
+    fill: #ffffff;
+  }
+  .my-icon-contact{
+    pointer-events: none;
+    display: block;
+    width: 27px;
+    height: 20%;
+    fill:white;
+  }
+  .light .my-icon ,.light .my-icon-project, .light .my-icon-contact{
+    fill: black;
+  }
+  .light .menu-options .moon{
+    fill: #e2a955;
+  }
+  .nav-link {
+    margin-right: 14px;
+    margin-top: 3px;
+}
+#theme-icon {
+    margin-top: -11px;
+    margin-right: -177px;
+}
+#tema-link{
+    margin-right: 40px;
+}
+@media screen and (max-width: 600px) {
+    .menu-options {
+        height: 100vh;
+        margin-left: -161px;
+        padding: 30px;
+        justify-content: start;
+        margin-top: -59px;
+        width: 228px;
+        padding-top: 70px;
+        height: 100vh;
+    }
+    #theme-icon {
+        margin-top: -13px;
+        margin-right: -145px;
+    }
+    #tema-link{
+        margin-right: 40px;
+    }
+    .menu-options li{
+        margin-bottom: 20px;
+    }
+}

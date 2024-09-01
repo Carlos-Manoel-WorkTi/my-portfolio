@@ -59,124 +59,12 @@
 .logo {
   margin-top: 5px !important;
 }
-/* .logo::before{
-  display: none;
-  content: "";
-  position: absolute;
-  top: 48%;
-  top: -100px;
-  left: 300%;
-  rotate: -43deg;
-  width: 5em;
-  height: 1px;
-  background: linear-gradient(90deg, #ffffff, transparent);
-  animation:9s shootingStar3 ease-in-out infinite;
-  animation-delay: 6s;
-}
-.logo::after{
-  display: none;
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: 246%;
-  rotate: -43deg;
-  width: 4em;
-  height: 1px;
-  background: linear-gradient(90deg, #ffffff, transparent);
-  animation: 12s shootingStar3 ease-in-out infinite;
-    animation-delay: 0s;
-  animation-delay: 6s;
-}
-.button::before{
-  display: none;
-  content: "";
-  position: absolute;
-  top: 48%;
-  top: -167px;
-  left: 300%;
-  rotate: -43deg;
-  width: 4em;
-  height: 1px;
-  background: linear-gradient(90deg, #ffffff, transparent);
-  animation: 12s shootingStar3 ease-in-out infinite;
-  animation-delay: 8s;
-}
-.button::after{
-  display: none;
-  content: "";
-  position: absolute;
-  top: -50px;
-  left: 288%;
-  rotate: -70deg;
-  width: 4em;
-  height: 1px;
-  background: linear-gradient(90deg, #ffffff, transparent);
-  animation: 4s shootingStar3 ease-in-out infinite;
-  animation-delay: 2s;
-}
-@keyframes shootingStar1 {
-  0% {
-    transform: translateX(0) translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(29em) translateY(0);
-    opacity: 1;
-    background: linear-gradient(90deg, #f5f5f5, transparent);
-  }
-  70% {
-    transform: translateX(43em) translateY(0);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-    opacity: 0;
-  }
-} */
 
-.hamburger {
-  cursor: pointer;
-}
-
-.hamburger input {
-  display: none;
-}
-
-.hamburger svg {
-  margin-right: 23px;
-  /* The size of the SVG defines the overall size */
-  height: 3em;
-  /* Define the transition for transforming the SVG */
-  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line {
-  fill: none;
-  stroke: white;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-  /* Define the transition for transforming the Stroke */
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-              stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.line-top-bottom {
-  stroke-dasharray: 12 63;
-}
-
-.hamburger input:checked + svg {
-  transform: rotate(-45deg);
-}
-
-.hamburger input:checked + svg .line-top-bottom {
-  stroke-dasharray: 20 300;
-  stroke-dashoffset: -32.42;
-}
 
 #uls > li::after{
   display: none;
 }
+
 .fw::after{
   display: none !important;
 }

@@ -6,7 +6,9 @@
   box-sizing: border-box;
 }
 
-
+.light{
+  background-color: #0864b4;
+}
 body {
   color: white;
   overflow-x: hidden !important;
@@ -15,7 +17,7 @@ body {
   position: relative;
 }
 .light .root{
-  background: rgba(252, 252, 252, 0.874);
+  background: #0864b4;
   overflow-x: hidden;
 }
 .dark .root{

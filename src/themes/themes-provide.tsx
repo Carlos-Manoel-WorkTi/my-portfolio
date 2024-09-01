@@ -17,7 +17,7 @@ export const getInitialTheme = () => {
 };
 
 export const ThemeToggle = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
