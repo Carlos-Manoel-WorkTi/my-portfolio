@@ -7,6 +7,7 @@ import "../components/bg/bg.css"
 import Contacts from "../components/contacts/Contacts";
 import 'aos/dist/aos.css';
 import {Theme }from "@/themes/themes-provide";
+import ContactMB from "@/components/contacts/ContactMB";
 
 
 
@@ -36,10 +37,10 @@ export default function RootLayout({
           
             <Header/>
             <div className="stars"></div>
+            <ContactMB/>
             <Contacts/>
         
             {children}
-      
             <Footer/>
         </Theme>
         </body>

@@ -19,9 +19,13 @@ body {
 .light .root{
   background: #0864b4;
   overflow-x: hidden;
+  --i: 0;
+  --clr: #ffffff71;
 }
 .dark .root{
 background: rgb(9, 9, 11);
+--i: 0;
+--clr: #37fe8bab;
 
 }
 /* Para navegadores Webkit (Chrome, Safari, Edge) */
