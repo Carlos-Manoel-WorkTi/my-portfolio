@@ -10,7 +10,7 @@ const ListBgs:ListBgsType = [
       link_bg_light: "/bg_project/duoLight.png",
       link_bg_dark: "/bg_project/duoDark.png",
       description:
-        "DuoWord is an innovative app designed to teach English through the immersive combination of music, interactive stories, and a personalized word-saving system.",
+        "DuoWord é um aplicativo inovador projetado para ensinar inglês através da imersiva combinação de música, histórias interativas e um sistema personalizado de salvamento de palavras.",
       color: "cornflowerblue",
     },
   },
@@ -20,7 +20,7 @@ const ListBgs:ListBgsType = [
       link_bg_light: "/bg_project/plLight.png",
       link_bg_dark: "/bg_project/plDark.png",
       description:
-        "Planets Cards is a captivating memory game that challenges players to match pairs of cards featuring beautifully illustrated planets from our solar system.",
+      "Planets Cards é um jogo de memória cativante que desafia os jogadores a combinar pares de cartas com planetas lindamente ilustrados do nosso sistema solar.",
       color: "#d33030",
     },
   },
