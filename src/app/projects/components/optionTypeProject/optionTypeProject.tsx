@@ -12,7 +12,7 @@ const mainFontChakra = Chakra_Petch({
 export default function OptionTypeProject() {
   return (
     <div className={mainFontChakra.className}>
-     <h2 id="sbt">Escolha uma área para explorar:</h2>
+     <h2 id="sbt"><span id="t-sbt-g">Escolha uma área para explorar:</span><span id="t-sbt-s">Explore uma area:</span></h2>
 
 
     <div id="container-opt-p" >
@@ -42,7 +42,7 @@ export default function OptionTypeProject() {
     </svg>
             <Link href={""}> Fullstack</Link>
             </div>
-            <div className="flex items-start justify-start w-full mt-3 mb-3">
+            <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
             </div>
           </div>
@@ -71,7 +71,7 @@ export default function OptionTypeProject() {
             </svg>
             <Link href={""}> Frontend</Link>
             </div>
-            <div className="flex items-start justify-start w-full mt-3 mb-3">
+            <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function OptionTypeProject() {
           </svg>
             <Link href={""}> Backend</Link>
             </div>
-            <div className="flex items-start justify-start w-full mt-3 mb-3">
+            <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
             </div>
           </div>

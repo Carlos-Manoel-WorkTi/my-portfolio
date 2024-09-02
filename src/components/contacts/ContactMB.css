@@ -1,7 +1,13 @@
 #container-aside{
   float: right;
-  width: 174px;
-  margin-top: 38vh;
+  width: auto;
+  right: 0;
+  margin-top: 50vh;
+  position: fixed;
+  margin-right: -100px;
+  /* display: flex;
+  justify-content: end; */
+  z-index: 999;
 }
 #container-aside .menu {
   position: relative;

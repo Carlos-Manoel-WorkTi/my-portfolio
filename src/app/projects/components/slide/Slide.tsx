@@ -133,6 +133,12 @@ export default function Slide({ list }: { list: ListBgsType }) {
             </svg>
           </button>
         </div>
+      <div className='container-slides-total'>
+
+          {list.map((_, i) => (
+            <span key={i} className={`total_slides ${currentIndex === i ? "currentSlideActive" : ""}`}></span>
+          ))}
+      </div>
       </div>
     </>
   );
