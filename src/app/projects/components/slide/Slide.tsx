@@ -79,7 +79,7 @@ export default function Slide({ list }: { list: ListBgsType }) {
     if (isAuto) {
       interval = setInterval(() => {
         setCurrentIndex(prevIndex => (prevIndex + 1) % list.length);
-      }, 3000);
+      }, 4500);
     }
 
     return () => {
