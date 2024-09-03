@@ -4,6 +4,7 @@ import ActiveLink from './activeLink/ActiveLink';
 import 'animate.css';
 import { ThemeToggle } from '@/themes/themes-provide';
 import MenuMb from './menuMb/MenuMb';
+import Link from 'next/link';
 
 
 export default function Header() {
@@ -11,10 +12,12 @@ export default function Header() {
     <header className="  text-white p-2 pl-4  relative w-[100%] z-10">
       <div className="w-full flex justify-between p-1.25 md:p-2.5 items-center">
         <h1 className="logo animate__animated animate__backInDown">
+          <Link href={"/"}>
           <button className="button" data-text="Awesome">
             <span className="actual-text">&nbsp;Portfólio&nbsp;</span>
             <span aria-hidden="true" className="hover-text">&nbsp;Portfólio&nbsp;</span>
           </button>
+          </Link>
         </h1>
   
         <nav>

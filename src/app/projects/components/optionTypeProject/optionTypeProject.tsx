@@ -16,7 +16,7 @@ export default function OptionTypeProject() {
 
 
     <div id="container-opt-p" >
-      <Link href={"/projects/fullstack"} className="option-wrap ">     
+      <div className="option-wrap ">     
         <div className="option-content">
           <div className="flex items-center justify-around w-full">
           <svg
@@ -40,15 +40,15 @@ export default function OptionTypeProject() {
         transform="matrix(.1 0 0 -.1 0 190)"
       ></path>
     </svg>
-            <Link href={""}> Fullstack</Link>
+            <span className="area"> Fullstack</span>
             </div>
             <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
             </div>
           </div>
-      </Link>  
+      </div>  
 
-      <Link href={"/projects/front"} className="option-wrap ">     
+      <div className="option-wrap ">     
         <div className="option-content">
           <div className="flex items-center justify-around w-full">
             <svg
@@ -69,14 +69,14 @@ export default function OptionTypeProject() {
                 transform="matrix(.1 0 0 -.1 0 164)"
               ></path>
             </svg>
-            <Link href={""}> Frontend</Link>
+            <span className="area"> Frontend</span>
             </div>
             <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
             </div>
           </div>
-      </Link>  
-      <Link href={"/projects/back"} className="option-wrap ">     
+      </div>  
+      <Link href="/" className="option-wrap ">     
         <div className="option-content">
           <div className="flex items-center justify-around w-full">
           <svg
@@ -100,7 +100,7 @@ export default function OptionTypeProject() {
               transform="matrix(.1 0 0 -.1 0 108)"
             ></path>
           </svg>
-            <Link href={""}> Backend</Link>
+            <span className="area"> Backend</span>
             </div>
             <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>

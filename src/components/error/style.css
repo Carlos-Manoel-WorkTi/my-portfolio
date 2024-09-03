@@ -1,0 +1,40 @@
+.container-error{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("/error/404.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    h2{
+        font-size: 2em;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    a {
+        padding: 10px;
+        background-color: rgb(100, 38, 157);
+        margin-top: 10px;
+        margin-left: 285px;
+        margin-top: 316px;
+        border-radius: 10px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .container-error{
+    
+        h2{
+            font-size: 1.5em;
+            margin-top: 38px;
+
+        }
+        a {
+            padding: 10px;
+            background-color: rgb(100, 38, 157);
+            margin-left: 191px;
+            margin-top: 297px;
+        }
+    }
+}

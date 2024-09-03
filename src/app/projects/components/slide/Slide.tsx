@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import './slide.css';
 import { useTheme } from 'next-themes';
-import Loading from '../../feed/loading';
+import Loading from '../../../../components/feed/loading';
 import { ListBgsType } from "@/types/types"; 
 
 export default function Slide({ list }: { list: ListBgsType }) {
