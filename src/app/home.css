@@ -573,7 +573,7 @@
     height: 60px;
    }
 }
-  @media screen and (max-width:502px){
+  @media screen and (max-width:512px){
     .inf-full {
       font-size: 1.4em;
     }
@@ -588,7 +588,7 @@
     height: 7.5em;
 }
   }
-  @media screen and (max-width:465px){
+  @media screen and (max-width:475px){
   
     .typing-container {
       font-size: 2.8em;
@@ -600,4 +600,14 @@
       margin-top: 0px; 
      }
    
+  }
+  @media screen and (max-width:400px){
+    .inf-full {
+      font-size: 1.1em;
+      width: 90%;
+  }
+  #btn-exp{
+    margin-top: 35px;
+    margin-left: 7px;
+  }
   }

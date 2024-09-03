@@ -66,7 +66,7 @@ export default function Home() {
           </div>
 
     <div className="p-4  w-full flex justify-between items-center  mt-8    animate__animated animate__rollIn animate__delay-1s" id="btn_explorer" >
-      <Link className="ml-3" href={"/projects"}><Button_explorer/></Link>
+      <Link id="btn-exp" className="ml-3" href={"/projects"}><Button_explorer/></Link>
     </div>
     
     <ScrollingAuto/>  

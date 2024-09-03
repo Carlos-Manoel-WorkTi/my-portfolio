@@ -16,7 +16,7 @@ export default function OptionTypeProject() {
 
 
     <div id="container-opt-p" >
-      <div className="option-wrap ">     
+      <Link href={"/projects/fullstack"} className="option-wrap ">     
         <div className="option-content">
           <div className="flex items-center justify-around w-full">
           <svg
@@ -46,9 +46,9 @@ export default function OptionTypeProject() {
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
             </div>
           </div>
-      </div>  
+      </Link>  
 
-      <div className="option-wrap ">     
+      <Link href={"/projects/front"} className="option-wrap ">     
         <div className="option-content">
           <div className="flex items-center justify-around w-full">
             <svg
@@ -75,8 +75,8 @@ export default function OptionTypeProject() {
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
             </div>
           </div>
-      </div>  
- <div className="option-wrap ">     
+      </Link>  
+      <Link href={"/projects/back"} className="option-wrap ">     
         <div className="option-content">
           <div className="flex items-center justify-around w-full">
           <svg
@@ -106,7 +106,7 @@ export default function OptionTypeProject() {
               <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
             </div>
           </div>
-      </div>  
+      </Link>  
     </div>
   </div>
   )

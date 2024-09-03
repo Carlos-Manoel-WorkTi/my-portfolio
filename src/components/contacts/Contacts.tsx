@@ -12,7 +12,7 @@ export default function Contacts() {
             <a
             data-social="linkedin"
             aria-label="LinkedIn"
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/carlos-manoel-7a051127b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             >
             <div className="filled"></div>
             <svg
@@ -33,7 +33,7 @@ export default function Contacts() {
             <div className="tooltip">LinkedIn</div>
         </li>
         <li className="icon-content">
-            <Link data-social="github" aria-label="GitHub" href="https://www.github.com/">
+            <Link data-social="github" aria-label="GitHub" href="https://github.com/Carlos-Manoel-WorkTi">
             <div className="filled"></div>
             <svg
                 xmlSpace="preserve"
@@ -56,7 +56,7 @@ export default function Contacts() {
             <Link
             data-social="instagram"
             aria-label="Instagram"
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/carlos_man0el_?igsh=MXIwNjhrZjI1ZXkzag=="
             >
             <div className="filled"></div>
             <svg
@@ -76,7 +76,7 @@ export default function Contacts() {
             </Link>
             <div className="tooltip">Instagram</div>
         </li>
-        <li className="icon-content">
+        {/* <li className="icon-content">
             <Link data-social="youtube" aria-label="Youtube" href="https://wa.me/+5575998016444">
             <div className="filled"></div>
             <svg
@@ -95,7 +95,7 @@ export default function Contacts() {
             </svg>
             </Link>
             <div className="tooltip">Youtube</div>
-        </li>
+        </li> */}
         </ul>
 
     </div>

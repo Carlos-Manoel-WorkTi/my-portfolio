@@ -18,7 +18,9 @@
   justify-content: center;
   display: none;
 }
-
+.icon-mb{
+  opacity: 0;
+}
 .menu li {
   position: absolute;
   left: 0;
@@ -29,14 +31,14 @@
   transition-delay: calc(0.1s * var(--i));
 }
 
-.menu.active .item-0 { --clr: #ff2972; transform: rotate(calc(360deg / 8 * 0)); }
-.menu.active .item-1 { --clr: #fee800; transform: rotate(calc(360deg / 8 * 1)); }
-.menu.active .item-2 { --clr: #04fc43; transform: rotate(calc(360deg / 8 * 2)); }
-.menu.active .item-3 { --clr: #fe00f1; transform: rotate(calc(360deg / 8 * 3)); }
+.menu.active .item-0 { --clr: rgb(56, 254, 140); transform: rotate(calc(360deg / 8 * 0)); }
+.menu.active .item-1 { --clr: #07F; transform: rotate(calc(360deg / 8 * 1)); }
+.menu.active .item-2 { --clr: rgb(33, 33, 33); transform: rotate(calc(360deg / 8 * 2)); }
+.menu.active .item-3 { --clr: rgb(142, 53, 205); transform: rotate(calc(360deg / 8 * 3)); }
 .menu.active .item-4 { --clr: #00b0fe; transform: rotate(calc(360deg / 8 * 4)); }
 .menu.active .item-5 { --clr: #fea600; transform: rotate(calc(360deg / 8 * 5)); }
 .menu.active .item-6 { --clr: #a529ff; transform: rotate(calc(360deg / 8 * 6)); }
-.menu.active .item-7 { --clr: #01bdab; transform: rotate(calc(360deg / 8 * 7)); }
+.menu.active .item-7 { --clr: rgb(88, 101, 242); transform: rotate(calc(360deg / 8 * 7)); }
 
 .menu a {
   display: flex;
@@ -54,16 +56,41 @@
   filter: drop-shadow(0 0 2px var(--clr));
 }
 
+#icon-mb-facebook{
+  transform: rotate(270deg);
+  width: 46px;
+  height: 46px;
+}
+.st0 {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #ffffff;
+}
+
+#icon-mb-discord{
+  transform: rotate(0deg);
+}
+#icon-mb-github{
+  transform: rotate(270deg);
+  border-radius: 10px;
+}
 .menu.active a {
   color: var(--clr);
+  .icon-mb{
+    opacity: 1;
+    transition: 1s ease-out;
+    transition-delay: 1.8s;
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .menu a::before {
   content: "";
   position: absolute;
-  width: 20px;
+  width: 28px;
   height: 2px;
-  border-radius: 2px;
+  border-radius: 12px;
   background: var(--clr);
   transform: rotate(calc(90deg * var(--i))) translate(0, 25px);
   transition: width 0.5s, height 0.5s, transform 0.5s;
@@ -71,20 +98,25 @@
 }
 
 .menu.active a::before {
-  width: 50px;
-  height: 50px;
-  background: #161616;    
+  width: 51px;
+  height: 51px;
+  background: #16161600;    
   border: 2px solid var(--clr);
   transform: rotate(calc(0 * var(--i)));
   transition: transform 0.5s, height 0.5s, width 0.5s;
   transition-delay: 0.5s, 1.5s, 1.5s;
-  border-radius: 10px;
+  border-radius: 12px;
   filter: drop-shadow(0 0 5px var(--clr));
-}
 
-.menu.active li:hover a::before {
-  background: var(--clr);
 }
+.menu.active #hsd::before{
+  width: 54px;
+  height: 54px;
+}
+/* .menu.active li:hover a::before {
+  background: var(--clr);
+  
+} */
 
 .menu.active li:hover a ion-icon {
   color: #161616;
