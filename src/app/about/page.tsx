@@ -27,7 +27,7 @@ export default function Home() {
       </Head>
       <div style={relativeStyle}>
         <h1 className="text-center text-4xl mt-10">Bem-vindo ao meu projeto!</h1>
-        <Stars />
+        <Stars bg={"/galaxy2.jpg"} total={10000} />
       </div>
     </div>
   );

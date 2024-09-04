@@ -1,17 +1,32 @@
 'use client';
 
-
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
-const Stars = () => {
+const Stars = ({bg, total = 10000}:{bg:string,total:number}) => {
+  const [adjustedTotal, setAdjustedTotal] = useState(total);
+
   const mainStyle: React.CSSProperties = {
-    backgroundImage: 'url("/galaxy2.jpg")',
-  }
+    backgroundImage: `url("${bg}")`
+  };
 
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Função para ajustar o total com base na largura da tela
+    const adjustTotalStars = () => {
+      if (window.innerWidth < 600) {
+        setAdjustedTotal(1000);
+      } else if (window.innerWidth < 800) {
+        setAdjustedTotal(5000);
+      } else {
+        setAdjustedTotal(total);
+      }
+    };
+
+    // Ajustar o total na inicialização
+    adjustTotalStars();
+
     // Cena
     const scene = new THREE.Scene();
 
@@ -26,9 +41,9 @@ const Stars = () => {
 
     // Geometria e material das estrelas
     const starsGeometry = new THREE.BufferGeometry();
-    const starCount = 1000; // Número reduzido de estrelas
+    const starCount = adjustedTotal; // Número ajustado de estrelas
     const starVertices = [];
-    const starSizes = []; // Array para armazenar os tamanhos das estrelas
+    const starSizes = [];
 
     for (let i = 0; i < starCount; i++) {
       const x = (Math.random() - 0.5) * 2000;
@@ -37,38 +52,36 @@ const Stars = () => {
 
       starVertices.push(x, y, z);
 
-      // Gerar um tamanho aleatório para cada estrela
-      const size = Math.random() * 0.5 + 0.1; // Ajustar o intervalo do tamanho das estrelas
+      const size = Math.random() * 0.5 + 0.1;
       starSizes.push(size);
     }
 
     starsGeometry.setAttribute('position', new THREE.Float32BufferAttribute(starVertices, 3));
-    starsGeometry.setAttribute('size', new THREE.Float32BufferAttribute(starSizes, 1)); // Atributo de tamanho
+    starsGeometry.setAttribute('size', new THREE.Float32BufferAttribute(starSizes, 1));
 
     const starsMaterial = new THREE.PointsMaterial({
       color: 0xffffff,
-      size: 0.5, // Tamanho padrão ajustado
-      sizeAttenuation: true, // Faz com que o tamanho das estrelas diminua com a distância
+      size: 0.5,
+      sizeAttenuation: true,
     });
 
     const stars = new THREE.Points(starsGeometry, starsMaterial);
     scene.add(stars);
 
-    // Animação
     const animate = () => {
       requestAnimationFrame(animate);
-      stars.rotation.x += 0.0005; // Ajuste a velocidade de rotação
+      stars.rotation.x += 0.0005;
       stars.rotation.y += 0.0005;
       renderer.render(scene, camera);
     };
 
     animate();
 
-    // Redimensionamento
     const handleResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      adjustTotalStars(); // Ajustar o total de estrelas ao redimensionar
     };
 
     window.addEventListener('resize', handleResize);
@@ -77,7 +90,7 @@ const Stars = () => {
       mountRef.current?.removeChild(renderer.domElement);
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [adjustedTotal, total]);
 
   return <div style={mainStyle} ref={mountRef} className="fixed inset-0 z-1" />;
 };

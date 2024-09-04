@@ -16,7 +16,7 @@ export default function FieldContact() {
             <Image id='img-autor' alt="Imagem autor" src="/autor.png" width={80} height={80} />
             <div>
               <h3>Carlos Manoel</h3>
-              <span>20 anos</span>
+              <span>disponivel</span>
             </div>
           </div>
           <ContactItem id="fieldEmailCopy" label="Email" value="email@gmail.com" />

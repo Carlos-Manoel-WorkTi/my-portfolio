@@ -29,7 +29,7 @@ export default function Home() {
     <>
     <main className="flex  flex-col items-center  overflow-x- main">
       <Bg/>
-      {/* <Stars/> */}
+      <Stars bg="" total={9000}/>
         <div className="w-full flex justify-between items-center p-5 py-2 containerTyping">
           <h2 className="typing-container text-white text-6xl mt-10 sm:mt-1 max-w-max msgInit">
           {getGreeting()}
