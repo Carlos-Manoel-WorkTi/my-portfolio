@@ -6,6 +6,7 @@ import 'animate.css';
 import ServeEffect from "@/components/serverEffect/ServeEffect";
 import Bg from "@/components/bg/bg";
 import FieldContact from "@/components/fieldContact/FieldContact";
+import Stars from "@/components/universeBg/universe";
 
 
 
@@ -28,6 +29,7 @@ export default function Home() {
     <>
     <main className="flex  flex-col items-center  overflow-x- main">
       <Bg/>
+      {/* <Stars/> */}
         <div className="w-full flex justify-between items-center p-5 py-2 containerTyping">
           <h2 className="typing-container text-white text-6xl mt-10 sm:mt-1 max-w-max msgInit">
           {getGreeting()}
