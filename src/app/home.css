@@ -21,7 +21,7 @@
 }
 
 
-
+  
 
 
 
@@ -36,32 +36,6 @@
   transition: 0.4s ease-in-out;
 }
 
-/* .dark .root > header > div > nav > ul > li::after{
-  content: "";
-    position: absolute;
-    width: 0.5em;
-    height: 0.5em;
-    left: 0;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(233, 233, 233, 0.5), 0px 0px 10px rgba(192, 192, 192, 0.5);
-    border-radius: 50%;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
-} */
-/* .light .root > header > div > nav > ul > li::after{
-  content: "";
-    position: absolute;
-    width: 0.5em;
-    height: 0.5em;
-
-
-    left: 0;
-    background-color: white;
-    box-shadow: 0px 0px 10px rgba(233, 233, 233, 0.5), 0px 0px 10px rgba(192, 192, 192, 0.5);
-    border-radius: 50%;
-    z-index: -1;
-    transition: 0.3s ease-in-out;
-} */
 @keyframes shootingStar1 {
   0% {
     transform: translateX(0) translateY(0);
@@ -286,7 +260,8 @@
   }
   .dark .containerSecond{
     width: 100%;
-    background: linear-gradient(to bottom, transparent, rgb(9 17 35));
+    /* background: linear-gradient(to bottom, transparent, rgb(9 17 35)); */
+    background: linear-gradient(to bottom, transparent, rgb(11 40 107 / 64%), rgb(11 40 107));
     /* padding-left: 50px; */
     position: relative;
     display: flex;

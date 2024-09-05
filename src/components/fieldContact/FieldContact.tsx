@@ -9,8 +9,8 @@ export default function FieldContact() {
  
     
       return (
-        <section className="containerContact relative" data-aos="fade-right">
-        <div className="contactInfo">
+        <section className="containerContact relative" >
+        <div className="contactInfo" data-aos="fade-right">
           <h3 id='subtd'>Entre em contato:</h3>
           <div className='flex align-middle' id='coImgNaIa'>
             <Image id='img-autor' alt="Imagem autor" src="/autor.png" width={80} height={80} />

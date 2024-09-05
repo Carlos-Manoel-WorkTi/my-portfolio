@@ -40,6 +40,9 @@
   overflow: hidden;
   align-items: flex-start;
 }
+.dark .containerContact {
+  background-color: rgb(9, 9, 11);
+}
 .light .containerContact, .light .contactInfo{
   /* background-color: white; */
   background: linear-gradient(to right, white 80%, rgb(32, 147, 239) 20%);
