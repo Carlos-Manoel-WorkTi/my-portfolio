@@ -21,7 +21,7 @@
 }
 
 
-  
+
 
 
 
@@ -262,7 +262,7 @@
     width: 100%;
     /* background: linear-gradient(to bottom, transparent, rgb(9 17 35)); */
     background: linear-gradient(to bottom, transparent, rgb(11 40 107 / 64%), rgb(11 40 107));
-    /* padding-left: 50px; */
+    padding-left: 50px;
     position: relative;
     display: flex;
     height: 440px;
