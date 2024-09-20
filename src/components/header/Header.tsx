@@ -26,7 +26,7 @@ export default function Header() {
               <ActiveLink href="/">Home</ActiveLink>
             </li>
             <li id='about' className='fw'>
-              <ActiveLink href="/about">About</ActiveLink>
+              <ActiveLink href="/about" >About</ActiveLink>
             </li>
             <li id='service' className='fw'>
               <ActiveLink href="/projects">Projects</ActiveLink>

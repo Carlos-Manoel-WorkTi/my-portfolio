@@ -261,7 +261,7 @@
   .dark .containerSecond{
     width: 100%;
     /* background: linear-gradient(to bottom, transparent, rgb(9 17 35)); */
-    background: linear-gradient(to bottom, transparent, rgb(11 40 107 / 64%), rgb(11 40 107));
+    background: linear-gradient(to bottom, transparent, rgb(11 40 107 / 64%), rgb(4 16 44) );
     padding-left: 50px;
     position: relative;
     display: flex;
@@ -279,6 +279,7 @@
   /* padding-left: 50px; */
   position: relative;
   display: flex;
+  padding-left: 50px;
   height: 440px;
 
    img{
@@ -390,6 +391,13 @@
       padding-top: 93px;
       justify-content: center !important;
   }
+}
+  @media screen and (min-width:1000px) {
+    .dark .containerSecond, .light .containerSecond {
+      padding-left: 130px;
+     
+    }
+
   }
   @media screen and (max-width:980px){
  

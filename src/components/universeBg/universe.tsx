@@ -7,7 +7,7 @@ const Stars = ({bg, total = 10000}:{bg:string,total:number}) => {
   const [adjustedTotal, setAdjustedTotal] = useState(total);
 
   const mainStyle: React.CSSProperties = {
-    backgroundImage: `url("${bg}")`
+    backgroundImage: `url("${bg}")`,
   };
 
   const mountRef = useRef<HTMLDivElement>(null);
@@ -18,7 +18,7 @@ const Stars = ({bg, total = 10000}:{bg:string,total:number}) => {
       if (window.innerWidth < 600) {
         setAdjustedTotal(1500);
       } else if (window.innerWidth < 800) {
-        setAdjustedTotal(5000);
+        setAdjustedTotal(2000);
       } else {
         setAdjustedTotal(total);
       }

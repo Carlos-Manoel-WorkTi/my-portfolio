@@ -15,7 +15,7 @@ export default function ActiveLink({href,children,...rest}:ActiveProps) {
         <Link href={href} {...rest} 
             className={`hover:text-green-400  -z-50
                 ${activeLink ? ' font-bold border-b-2 border-green-400 act': 'text-white '}
-                `}
+                ` }
         >
         {children}
         </Link>

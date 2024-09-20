@@ -1,4 +1,278 @@
-.main{
-    height: 90vh;
-    background-image: url("/space3.jpg");
+/* Definindo o estilo para a altura e fundo da seção principal */
+#main_about {
+  height: 90vh;
+  position: relative;
+  overflow: hidden; /* Certificando-se de que o conteúdo permaneça dentro da área */
+  /* background-color: black;  */
+}
+
+/* Animação do foguete */
+
+/* Container do foguete e estrelas */
+.container_ {
+  position: absolute;
+  /* right: 10%;  */
+  /* top: 14vh; */
+  left: 15%;
+  top: 35vh;
+  bottom: 10%; /* Ajusta a altura */
+  width: 300px; /* Aumenta o tamanho do container para mais espaço */
+  height: 300px; /* Ajuste a altura */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden; /* Garante que as estrelas não saiam do container */
+}
+
+/* Foguete */
+#rk {
+  animation: moveAround 4s linear infinite;
+  width: 354px;
+  height: 244px;
+}
+
+/* Campo de estrelas */
+.star-field {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden; /* Garante que as estrelas não saiam do campo */
+}
+
+/* Estrelas */
+.star {
+  position: absolute;
+  width: 10px; /* Tamanho pequeno das estrelas */
+  height: 1px;
+  background-color: white;
+  border-radius: 50%; /* Tornando as estrelas arredondadas */
+  animation: moveStar 10s linear infinite;
+}
+@keyframes moveAround {
+  0% {
+    transform: translateY(0px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(90deg); /* Movimento reduzido */
+  }
+  100% {
+    transform: translateY(0px) rotate(90deg);
+  }
+}
+
+/* Animação de movimento das estrelas da direita para a esquerda */
+@keyframes moveStar {
+  0% {
+    transform: translateX(100vw); /* Começa fora da tela à direita */
+    opacity: 0.2;
+  }
+  30%{
+    opacity: 1;
+    background-color: white;
+  }
+  100% {
+    transform: translateX(-100px); /* Move para fora da tela à esquerda */
+    opacity: 0.4;
+    background-color: rgb(206, 203, 241);
+  }
+}
+@keyframes glitch {
+  0% {
+    transform: translate(0px,0px);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(5px,3px) ; 
+    opacity: 0.9; 
+  }
+  50% {
+    transform: translate(0px,5px); 
+    opacity: 0.8; 
+  }
+  75% {
+    transform: translate(1px,3px); 
+    opacity: 0.9; 
+  }
+  100% {
+    transform: translate(0px,0px);
+    opacity: 1; 
+  }
+}
+
+/* Variando o posicionamento e velocidade das estrelas */
+.star:nth-child(1) { top: 28%; left: 10%; animation-duration: 2s; }
+.star:nth-child(2) { top: 65%; left: 30%; animation-duration: 5s; }
+.star:nth-child(3) { top: 30%; left: 50%; animation-duration: 6s; }
+.star:nth-child(4) { top: 40%; left: 70%; animation-duration: 4s; }
+.star:nth-child(5) { top: 70%; left: 50%; animation-duration: 6s; }
+.star:nth-child(6) { top: 80%; left: 50%; animation-duration: 3s; }
+.star:nth-child(7) { top: 85%; left: 50%; animation-duration: 5s; }
+
+/* Adicionando um container de estrelas para criar um efeito de loop contínuo */
+.star-field::before, .star-field::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+}
+
+/* Ajuste para duplicar o campo de estrelas e garantir um loop contínuo */
+.star-field::before {
+  left: 100%;
+}
+
+.star-field::after {
+  left: -100%;
+}
+
+
+
+
+#b-1{
+  width: 50%;
+  padding-left: 35px;
+  margin-top: 20px;
+  font-family: "Chakra Petch";
+
+  h2{
+    font-size: 2.5em;
+    color: rgb(55, 255, 139);
+    letter-spacing: 2px;
+    
+  }
+  p{
+    font-size: 1.5em;
+    margin-left: 10px;
+  }
+}
+#ef{
+  position: absolute;
+  /* background-color: rgb(255, 255, 255); */
+  background: linear-gradient(to bottom,white,white, rgb(46, 214, 46));
+  width: 1px;
+  height: 290px;
+  margin-top: -295px;
+  margin-left: 26px;
+}
+
+#ef::after {
+  position: absolute;
+  content: "";
+  background-color: rgb(255, 255, 255);
+  width: 17px;
+  height: 17px;
+  margin-top: -10px;
+  margin-left: -8px;
+  
+  /* Define o formato de estrela */
+  clip-path: polygon(
+    50% 0%, 
+    61% 35%, 
+    98% 35%, 
+    68% 57%, 
+    79% 91%, 
+    50% 70%, 
+    21% 91%, 
+    32% 57%, 
+    2% 35%, 
+    39% 35%
+  );
+
+  /* Efeitos de sombra */
+  box-shadow: 
+    0 0 5px rgba(255, 255, 255, 0.5), /* Sombra interna */
+    0 0 15px rgba(255, 255, 255, 0.3), /* Sombra média */
+    0 0 25px rgba(255, 255, 255, 0.2); /* Sombra externa */
+  
+  transition: box-shadow 0.3s ease;
+  animation: pointStars 5s infinite linear ;
+}
+@keyframes pointStars{
+  0%{
+    margin-top: -10px;
+    background-color: #fffffff2;;
+    opacity: 0;
+  }
+  5%{
+    opacity: 0.5;
+  }
+  10%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0;
+    margin-top: 290px;
+    background-color: #ffffff;;
+  }
+}
+  #tx {
+    position: absolute;
+    margin-top: 20vh;
+    font-size: 1.1em;
+    width: 100%;
+    /* font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+    font-feature-settings: normal;
+    font-variation-settings: normal;
+    margin-left: 1px;
+    color: #deeaf7; /* Mantenha a cor desejada */
+    text-align: center; /* Centraliza o texto */
+    animation: glitch 5s infinite linear; /* Aplica a animação */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(255, 255, 255, 0.2);
+  }
+
+  
+  #tx::after, #tx::before {
+    content: "";
+    width: 10px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  top: 20px;
+  right: -2px;
+  opacity: 0;
+  transform: rotate(-45deg) translateX(0px);
+  box-sizing: border-box;
+  animation: coli1 0.4s linear infinite;
+}
+  #tx::before {
+    top: 10px;
+    transform: rotate(45deg);
+    animation: coli2 0.4s linear infinite;
+}
+@keyframes coli1 {
+  0% {
+    transform: rotate(-45deg) translateX(0px);
+    opacity: 0.7;
+    background-color: rgba(255, 255, 255, 0.664);
+  }
+
+  100% {
+    transform: rotate(-45deg) translateX(-45px);
+    background-color: rgb(250, 189, 79);
+    opacity: 0;
+  }
+}
+
+@keyframes coli2 {
+  0% {
+    transform: rotate(45deg) translateX(0px);
+    background-color: white;
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(45deg) translateX(-45px);
+    opacity: 0;
+    background-color: rgb(250, 189, 79);
+  }
 }

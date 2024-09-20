@@ -4,14 +4,16 @@
     color: white;
     padding: 1rem; /* py-4 em Tailwind */
     margin: 0;
+    z-index: 1;
     text-align: center;
     border-radius: 0;
+    background: black;
   }
 .light footer{
     background-color: #3b82f6;
 }  
 .dark footer{
-    background-color: transparent;
+    background-color: black;
     border-top: 1px solid #3b82f6;
 }  
   .footer-content {
