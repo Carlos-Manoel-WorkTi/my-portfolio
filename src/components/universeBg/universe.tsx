@@ -16,9 +16,9 @@ const Stars = ({bg, total = 10000}:{bg:string,total:number}) => {
     // Função para ajustar o total com base na largura da tela
     const adjustTotalStars = () => {
       if (window.innerWidth < 600) {
-        setAdjustedTotal(1500);
+        setAdjustedTotal(300);
       } else if (window.innerWidth < 800) {
-        setAdjustedTotal(2000);
+        setAdjustedTotal(1000);
       } else {
         setAdjustedTotal(total);
       }

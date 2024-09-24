@@ -1,38 +1,34 @@
-/* Definindo o estilo para a altura e fundo da seção principal */
+
 #main_about {
   height: 90vh;
   position: relative;
-  overflow: hidden; /* Certificando-se de que o conteúdo permaneça dentro da área */
-  /* background-color: black;  */
+  overflow: hidden; 
+
 }
 
-/* Animação do foguete */
 
-/* Container do foguete e estrelas */
 .container_ {
   position: absolute;
-  /* right: 10%;  */
-  /* top: 14vh; */
   left: 15%;
   top: 35vh;
-  bottom: 10%; /* Ajusta a altura */
-  width: 300px; /* Aumenta o tamanho do container para mais espaço */
-  height: 300px; /* Ajuste a altura */
+  bottom: 10%; 
+  width: 300px;
+  height: 300px; 
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
-  overflow: hidden; /* Garante que as estrelas não saiam do container */
+  overflow: hidden; 
 }
 
-/* Foguete */
+
 #rk {
   animation: moveAround 4s linear infinite;
   width: 354px;
   height: 244px;
 }
 
-/* Campo de estrelas */
+
 .star-field {
   position: absolute;
   width: 100%;
@@ -40,7 +36,7 @@
   top: 0;
   left: 0;
   z-index: 0;
-  overflow: hidden; /* Garante que as estrelas não saiam do campo */
+  overflow: hidden;
 }
 
 /* Estrelas */
@@ -155,11 +151,12 @@
 #ef{
   position: absolute;
   /* background-color: rgb(255, 255, 255); */
-  background: linear-gradient(to bottom,white,white, rgb(46, 214, 46));
+  background: linear-gradient(to bottom,white,white, rgb(7, 74, 7));
   width: 1px;
-  height: 290px;
-  margin-top: -295px;
+  /* height: 290px; */
+  margin-top: 20px;
   margin-left: 26px;
+  animation: longEf 10s linear forwards;
 }
 
 #ef::after {
@@ -192,7 +189,15 @@
     0 0 25px rgba(255, 255, 255, 0.2); /* Sombra externa */
   
   transition: box-shadow 0.3s ease;
-  animation: pointStars 5s infinite linear ;
+  animation: pointStars 10s forwards linear ;
+}
+@keyframes longEf{
+  0%{
+    height: 0px;
+  }
+  100%{
+    height: 80vh;
+  }
 }
 @keyframes pointStars{
   0%{
@@ -210,8 +215,8 @@
     opacity: 0.5;
   }
   100%{
-    opacity: 0;
-    margin-top: 290px;
+    opacity: 0.5;
+    margin-top: 80vh;
     background-color: #ffffff;;
   }
 }

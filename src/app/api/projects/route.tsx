@@ -10,7 +10,7 @@ const ListBgs:ListBgsType = [
       link_bg_light: "/bg_project/duoLight.png",
       link_bg_dark: "/bg_project/duoDark.png",
       description:
-        "DuoWord é um aplicativo inovador projetado para ensinar inglês através da imersiva combinação de música, histórias interativas e um sistema personalizado de salvamento de palavras.",
+        "DuoWord foi projetado para ensinar inglês através da imersiva combinação de música, histórias interativas e um sistema personalizado de salvamento de palavras.",
       color: "cornflowerblue",
     },
   },
@@ -20,7 +20,37 @@ const ListBgs:ListBgsType = [
       link_bg_light: "/bg_project/plLight.png",
       link_bg_dark: "/bg_project/plDark.png",
       description:
-      "Planets Cards é um jogo de memória cativante que desafia os jogadores a combinar pares de cartas com planetas lindamente ilustrados do nosso sistema solar.",
+      "Planets Cards é um jogo de memória que desafia os jogadores a combinar pares de cartas sobre planetas.",
+      color: "#d33030",
+    },
+  },
+  {
+    p3: {
+      title: "Decode",
+      link_bg_light: "/bg_project/DecLight.png",
+      link_bg_dark: "/bg_project/DecDark.png",
+      description:
+      "O 'Decode' é um app para cifrar e decifrar textos de forma simples e rápida.",
+      color: "#5d1ea5",
+    },
+  },
+  {
+    p4: {
+      title: "Talk Learning",
+      link_bg_light: "/bg_project/TalkLight.png",
+      link_bg_dark: "/bg_project/TalkDark.png",
+      description:
+      "O 'Talk Learning' é um app onde uma IA ensina inglês por meio de conversas interativas e personalizadas.",
+      color: "#48d330",
+    },
+  },
+  {
+    p5: {
+      title: "Tec Notícias",
+      link_bg_light: "/bg_project/TecLight.png",
+      link_bg_dark: "/bg_project/TecDark.png",
+      description:
+      "O projeto 'TEC Notícias' é um site de notícias sobre tecnologia, com o objetivo de oferecer informações atualizadas e acessíveis sobre o setor.",
       color: "#d33030",
     },
   },

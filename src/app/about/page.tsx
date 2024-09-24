@@ -26,6 +26,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Bg/>
+      <span id='ef'></span>
       <div id="main_about">
       <div id='b-1'>
         <h2 className={chakra.className}>Sobre mim</h2>
@@ -33,7 +34,6 @@ export default function About() {
           
         </p>
       </div>
-      <span id='ef'></span>
 
 
       <CircleSkils/>
