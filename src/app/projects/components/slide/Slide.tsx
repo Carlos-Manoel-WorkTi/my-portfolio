@@ -136,7 +136,7 @@ export default function Slide({ list }: { list: ListBgsType }) {
       <div className='container-slides-total'>
 
           {list.map((_, i) => (
-            <span key={i} className={`total_slides ${currentIndex === i ? "currentSlideActive" : ""}`}></span>
+            <span key={i} className={`total_slides ${currentIndex === i ? "currentSlideActive" : ""}`} onClick={() => setCurrentIndex(i)}></span>
           ))}
       </div>
       </div>

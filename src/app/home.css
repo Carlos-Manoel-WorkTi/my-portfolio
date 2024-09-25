@@ -261,7 +261,8 @@
   .dark .containerSecond{
     width: 100%;
     /* background: linear-gradient(to bottom, transparent, rgb(9 17 35)); */
-    background: linear-gradient(to bottom, transparent, rgb(11 40 107 / 64%), rgb(4 16 44) );
+    /* background: linear-gradient(to bottom, transparent, rgb(11 40 107 / 64%), rgb(4 16 44) ); */
+    background: linear-gradient(to bottom, transparent, rgba(9, 9, 11, 0.867), rgb(9, 9, 11));
     padding-left: 50px;
     position: relative;
     display: flex;

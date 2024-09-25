@@ -1,0 +1,26 @@
+#container_Inf_buttons_about{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    height: auto;
+    position: absolute;
+    justify-content: center;
+    margin-top: -80px;
+    gap:40px;
+}
+
+.buttons_inf{
+    font-size: 1.5em;
+    color: white;
+    width: 130px;
+    height: auto;
+    padding: 10px;
+  }
+  
+  .button_section {
+    
+    span{
+      font-family: '__Chakra_Petch_cf6273';
+
+  }
+}

@@ -5,6 +5,9 @@ import './style.css'; // Certifique-se de que este arquivo existe e está no lug
 import Bg from '@/components/bg/bg';
 import { Chakra_Petch } from 'next/font/google'
 import CircleSkils from './components/circle/CircleSkils';
+import InfField from './components/InfField/InfField';
+import Skill from './components/skills/Skill';
+import Certicado from './components/certificado/Certicado';
  
 const chakra = Chakra_Petch({
   weight: '400',
@@ -59,6 +62,9 @@ export default function About() {
       </div>
       {/* <Stars total={400} bg=''/>   */}
     </div>
+    <InfField/>
+    <Skill/>
+    <Certicado/>
     </>
   );
 }
