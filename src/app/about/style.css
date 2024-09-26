@@ -1,4 +1,23 @@
-
+.dark{
+  --bd-sub-title: #4682B4;
+  --bg-color: #121212;
+  --text-color: #171717;
+  --bg-skill: rgb(9, 9, 11);;
+  --bg-first-skill: #313131;
+  --bg-second-skill: #252525;
+  --bg-second-skill-in: #1c1c1c;
+  --text-skill: white;
+}
+.light{
+  --bd-sub-title: #b1dbf8;
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --bg-skill: rgb(8, 100, 180);
+  --bg-first-skill: #ffffff;
+  --bg-second-skill: #eaeaea;
+  --bg-second-skill-in: #b7b7b7;
+  --text-skill: black;
+} 
 #main_about {
   height: 90vh;
   position: relative;

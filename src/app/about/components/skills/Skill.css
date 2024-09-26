@@ -2,10 +2,11 @@
     height: 300px;
     width: 100%;
     padding-left: 26px;
+    margin-top: 15px;
 }
 #subTitleSkill{
     font-size: 1.6em;
-    border-left: 4px solid #4682B4;
+    border-left: 4px solid var(--bd-sub-title);
     padding-left: 4px;
     font-family: '__Chakra_Petch_cf6273';
     width: auto;

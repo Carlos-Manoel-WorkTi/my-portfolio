@@ -9,6 +9,7 @@ import InfField from './components/InfField/InfField';
 import Skill from './components/skills/Skill';
 import Certicado from './components/certificado/Certicado';
 import Footer from '@/components/footer/Footer';
+import SkillBloco from './components/skill_bloco/SkillBloco';
  
 const chakra = Chakra_Petch({
   weight: '400',
@@ -64,7 +65,9 @@ export default function About() {
       {/* <Stars total={400} bg=''/>   */}
     </div>
     <InfField/>
-    <Skill/>
+    <Skill>
+      <SkillBloco/>
+    </Skill>
     <Certicado/>
     <Footer/>
     </>

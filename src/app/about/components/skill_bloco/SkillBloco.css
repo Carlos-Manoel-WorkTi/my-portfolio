@@ -1,0 +1,158 @@
+    
+#container_skills{
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    column-gap: 100px;
+    margin-left: 35px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.loader {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 6rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    z-index: 10;
+  }
+  
+  .loader:before,
+    .loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    animation: pulsOut 1.8s ease-in-out infinite;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+  }
+  
+  .loader:before {
+    width: 100%;
+    padding-bottom: 100%;
+    box-shadow: inset 0 0 0 1rem #fff;
+    animation-name: pulsIn;
+  }
+  
+  .loader:after {
+    width: calc(100% - 2rem);
+    padding-bottom: calc(100% - 2rem);
+    box-shadow: 0 0 0 0 #fff;
+  }
+  
+  @keyframes pulsIn {
+    0% {
+      box-shadow: inset 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+  
+    50%, 100% {
+      box-shadow: inset 0 0 0 0 #fff;
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulsOut {
+    0%, 50% {
+      box-shadow: 0 0 0 0 #fff;
+      opacity: 0;
+    }
+  
+    100% {
+      box-shadow: 0 0 0 1rem #fff;
+      opacity: 1;
+    }
+  }
+
+  .skill{
+    content: "";
+    position: absolute;
+    width: 134px;
+    height: 35px;
+    background-color: var( --bg-first-skill);
+    top: 55px;
+    margin-left: 1px;
+    border-bottom-right-radius: 20px;
+    z-index: 12;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-skill);
+}
+
+.part_skill{
+    content: "";
+    position: absolute;
+    width: 135px;
+    height: 65px;
+    background-color: var(--bg-skill);
+    top: 54px;
+    margin-left: 0px;
+    z-index: 8 !important;
+}
+
+.icon_skill{
+    width: 84px;
+    height: 90px;
+    z-index: 10;
+}
+#skill_ts{
+    width: 120px;
+    height: 120px;
+}
+#skill_py{
+    width: 115px;
+    height: 98px;
+}
+#skill_git{
+    width: 122px;
+    height: 126px;
+}
+/* #skill_spr{
+    background-color: white;
+    border-radius: 50%;
+} */
+.part_skill::before {
+    content: "";
+    position: absolute;
+    width: 82px;
+    height: 25px;
+    /* background-color: var(--bg-second-skill); */
+    background: radial-gradient( var(--bg-second-skill-in) , var(--bg-second-skill) 60%);
+    top: -13px;
+    margin-left: 1px;
+    z-index: 9;
+    border-top-left-radius: 62%;
+}
+.part_skill::after{
+    content: "";
+    position: absolute;
+    width: 52px;
+    height: 25px;
+    /* background-color: var(--bg-second-skill); */
+    background: radial-gradient( var(--bg-second-skill-in) , var(--bg-second-skill) 60%);;
+    top: -13px;
+    margin-left: 83px;
+    z-index: 9;
+    border-top-right-radius: 62%;
+}
+
+@media screen and (max-width:1200px) {
+    #container_skills{
+        width: 100%;
+        column-gap: 90px;
+        margin-left: -30px;
+    }
+}
+@media screen and (max-width:1070px) {
+
+    #container_skills{
+        width: 90%;
+        column-gap: 90px;
+        margin-left: 1%;
+    }
+}
