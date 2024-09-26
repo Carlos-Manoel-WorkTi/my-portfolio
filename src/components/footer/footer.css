@@ -8,7 +8,9 @@
     text-align: center;
     border-radius: 0;
     background: black;
+    position: absolute;
   }
+  
 .light footer{
     background-color: #3b82f6;
 }  

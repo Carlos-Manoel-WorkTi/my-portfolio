@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function Certicado() {
   return (
-    <div id="container_certificado">
+    <div id="s_certificados">
       
     </div>
   )

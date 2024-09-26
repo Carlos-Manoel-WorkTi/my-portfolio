@@ -5,6 +5,7 @@ import './project.css';
 import { ListBgsType } from '@/types/types';
 
 import OptionTypeProject from './components/optionTypeProject/optionTypeProject';
+import Footer from '@/components/footer/Footer';
 
 
 async function fetchProjects(): Promise<ListBgsType> {
@@ -37,6 +38,7 @@ export default async function Project() {
           <OptionTypeProject/>
         </section>
       </main>
+      <Footer/>
     </>
     
   );

@@ -7,6 +7,7 @@
     justify-content: center;
     margin-top: -80px;
     gap:40px;
+    z-index: 9999;
 }
 
 .buttons_inf{
@@ -19,8 +20,62 @@
   
   .button_section {
     
-    span{
+    a{
       font-family: '__Chakra_Petch_cf6273';
 
   }
+}
+
+.uiverse {
+  font-size: 1.1em;
+  color: white;
+  /* width: 130px; */
+  height: auto;
+  padding: 0 2px;
+  opacity: 1; /* Inicialmente completamente opaco */
+  /* animation: op 2s ease-in-out infinite;  */
+  border-bottom: 1px solid green;
+}
+
+.uiverse:hover {
+  opacity: 0.7; /* Aumenta o efeito ao passar o mouse */
+}
+
+.button_section span {
+  font-family: '__Chakra_Petch_cf6273';
+}
+
+
+@keyframes op {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.curriculo {
+  border-bottom: 1px solid #FFD700; /* Dourado */
+}
+
+.idiomas {
+  border-bottom: 1px solid #32CD32; /* Verde Lima */
+}
+
+.certificados {
+  border-bottom: 1px solid #ff7847; /* Laranja Vermelho */
+}
+
+.projetos {
+  border-bottom: 1px solid #8A2BE2; /* Roxo */
+}
+
+.habilidades {
+  border-bottom: 1px solid #4682B4; /* Azul Aço */
 }

@@ -1,4 +1,12 @@
-#skills{
+#s_habilidades{
     height: 300px;
     width: 100%;
+    padding-left: 26px;
+}
+#subTitleSkill{
+    font-size: 1.6em;
+    border-left: 4px solid #4682B4;
+    padding-left: 4px;
+    font-family: '__Chakra_Petch_cf6273';
+    width: auto;
 }

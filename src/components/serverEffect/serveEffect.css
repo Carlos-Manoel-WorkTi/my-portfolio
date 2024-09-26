@@ -325,8 +325,12 @@
 
 
 
-.curso{
+.dark .curso{
   color: rgb(165 231 164);
+  font-style: italic;
+}
+.light .curso{
+  color: rgb(3 159 244);
   font-style: italic;
 }
 
@@ -340,7 +344,7 @@
   height: 25px;
   border-radius: 5px;
   border: none;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   font-size: 0.8em;
   display: flex;
   align-items: center;
@@ -434,8 +438,8 @@
     .div-connector::after {
       width: 33px;
       height: 9px;
-      margin-left: 571px;
-      margin-top: 17px;
+      margin-left: 573px;
+      margin-top: 60px;
   }
     #inf {
       height: 270px;

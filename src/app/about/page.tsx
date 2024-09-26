@@ -8,6 +8,7 @@ import CircleSkils from './components/circle/CircleSkils';
 import InfField from './components/InfField/InfField';
 import Skill from './components/skills/Skill';
 import Certicado from './components/certificado/Certicado';
+import Footer from '@/components/footer/Footer';
  
 const chakra = Chakra_Petch({
   weight: '400',
@@ -65,6 +66,7 @@ export default function About() {
     <InfField/>
     <Skill/>
     <Certicado/>
+    <Footer/>
     </>
   );
 }
