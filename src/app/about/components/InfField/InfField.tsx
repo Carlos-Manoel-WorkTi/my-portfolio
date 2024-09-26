@@ -36,19 +36,19 @@ export default function InfField() {
           <Link 
             key={index} 
             href="/projects" 
-            className={`uiverse ${button.className}`}
+            className={`uiverse`}
           >
-            <div className="button_section">
+            <div className={`button_section ${button.className}`}>
               {button.text}
             </div>
           </Link>
         ) : (
           <button 
             key={index} 
-            className={`uiverse ${button.className}`} 
+            className={`uiverse`} 
             onClick={() => handleScroll(button.className)} // Rolagem suave para as seções
           >
-            <div className="button_section">
+            <div className={`button_section ${button.className}`}>
               {button.text}
             </div>
           </button>

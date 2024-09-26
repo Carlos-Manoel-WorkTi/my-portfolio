@@ -112,6 +112,12 @@
     width: 122px;
     height: 126px;
 }
+#skill_IA{
+  background: rgb(255 255 255 / 0%);
+  fill: #fafafa;
+  width: 122px;
+  height: 126px;
+}
 /* #skill_spr{
     background-color: white;
     border-radius: 50%;

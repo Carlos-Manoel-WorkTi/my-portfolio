@@ -8,6 +8,7 @@
     margin-top: -80px;
     gap:40px;
     z-index: 9999;
+    flex-wrap: wrap;
 }
 
 .buttons_inf{
@@ -78,4 +79,42 @@
 
 .habilidades {
   border-bottom: 1px solid var(--bd-sub-title); /* Azul Aço */
+}
+
+@media screen and (max-width:690px){
+  .uiverse {
+    font-size: 1em;
+    color: white;
+    height: auto;
+    padding: 0 0px;
+    opacity: 1;
+}
+}
+@media screen and (max-width:600px){
+  .uiverse {
+    width: 40%;
+    display: flex;
+    text-align: center;
+    justify-self: center;
+    border-bottom:none;
+  }
+  .button_section {
+    padding: 0 30px;
+    margin-left: 16%;
+    font-size: 1.1em;
+}
+}
+@media screen and (max-width:490px){
+  #b-1 {
+    width: 95%; 
+    p {
+        font-size: 1em;
+        margin-left: 8px;
+    }
+}
+  .button_section {
+    padding: 0 30px;
+    margin-left: 2%;
+    font-size: 1.1em;
+}
 }

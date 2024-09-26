@@ -300,3 +300,89 @@
     background-color: rgb(250, 189, 79);
   }
 }
+
+
+@media screen and (max-width:1200px) {
+
+}
+@media screen and (max-width:1070px) {
+  #b-1 {
+    p {
+        font-size: 1.4em;
+        margin-left: 8px;
+    }
+}
+
+}
+@media screen and (max-width:900px) {
+  .orbit{
+    display: none;
+  }
+  #b-1 {
+    width: 81%;
+    padding-left: 33px;
+    margin-top: 20px;
+    font-family: "Chakra Petch";
+}
+.container_ {
+  left: 33%;
+  top: 28vh;
+}
+}
+@media screen and (max-width:750px) {
+  .orbit{
+    display: none;
+  }
+  #b-1 {
+    width: 81%;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-family: "Chakra Petch";
+}
+.container_ {
+  left: 25%;
+  top: 32vh;
+}
+#ef {
+  margin-top: 23px;
+  margin-left: 16px;
+  height: 372px !important;
+}
+#container_Inf_buttons_about {
+  width: 97%;
+  margin-top: -110px;
+  gap: 24px;
+}
+}
+@media screen and (max-width:600px) {
+  .orbit{
+    display: none;
+  }
+  #b-1 {
+    width: 81%;
+    padding-left: 21px;
+    margin-top: 20px;
+    font-family: "Chakra Petch";
+    p {
+      font-size: 1.2em;
+      margin-left: 8px;
+  }
+  h2 {
+    font-size: 2.2em;
+}
+}
+#rk {
+  animation: moveAround 4s linear infinite;
+  width: 230px;
+  height: 165px;
+} 
+.container_ {
+  left: 25%;
+  top: 26vh;
+}
+#ef {
+  margin-top: 23px;
+  margin-left: 16px;
+  height: 372px !important;
+}
+}
