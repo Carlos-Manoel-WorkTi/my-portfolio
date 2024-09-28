@@ -10,6 +10,8 @@ import Skill from './components/skills/Skill';
 import Certicado from './components/certificado/Certicado';
 import Footer from '@/components/footer/Footer';
 import SkillBloco from './components/skill_bloco/SkillBloco';
+import Idioma from './components/idiomas/Idioma';
+import Curriculo from './components/curriculo/Curriculo';
  
 const chakra = Chakra_Petch({
   weight: '400',
@@ -65,6 +67,8 @@ export default function About() {
     <Skill>
       <SkillBloco/>
     </Skill>
+    <Curriculo/>
+    <Idioma/>
     <Certicado/>
     <Footer/>
     </>

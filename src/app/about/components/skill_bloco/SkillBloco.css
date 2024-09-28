@@ -104,7 +104,8 @@
 #skill_ts{
     width: 120px;
     height: 120px;
-    
+    margin-left: -7px;
+    margin-top: -9px;
 }
 #skill_py{
     width: 115px;
@@ -163,4 +164,70 @@
         column-gap: 90px;
         margin-left: 1%;
     }
+}
+@media screen and (max-width:750px) {
+  #s_habilidades {
+    padding-left: 15px;
+  }
+  #container_skills{
+      width: 90%;
+      column-gap: 90px;
+      margin-left: 1%;
+  }
+}
+@media screen and (max-width:600px) {
+  #skill_ts {
+    width: 111px;
+    height: 138px;
+    margin-left: -12px;
+    margin-top: 7px;
+    margin-right: -4px;
+}
+.skill {
+  width: 108px;
+  height: 30px;
+  font-size: 0.9em;
+  margin-left: 2px;
+}
+.part_skill::after {
+  width: 39px;
+  height: 23px;
+  top: -11px;
+}
+.part_skill::before {
+  width: 76px;
+  height: 23px;
+  top: -11px;
+  margin-left: 15px;
+  
+}
+.loader {
+  max-width: 4rem;
+  margin-bottom: 2.4rem;
+  
+}
+.icon_skill {
+  
+  margin-top: 20px;
+}
+.loader:before, .loader:after  {
+  margin-bottom: -20px;
+}
+}
+@media screen and (max-width:480px) {
+  #container_skills {
+    column-gap: 64px;
+}
+}
+@media screen and (max-width:400px) {
+  #container_skills {
+    column-gap: 59px;
+}
+}
+@media screen and (max-width:380px) {
+  #container_skills {
+    width: 96%;
+    column-gap: 90px;
+    margin-left: 0%;
+}
 }

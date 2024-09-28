@@ -19,7 +19,7 @@
   --text-skill: black;
 } 
 #main_about {
-  height: 450px;
+  height: 490px;
   position: relative;
   overflow: hidden; 
   scroll-behavior: smooth;
@@ -170,8 +170,6 @@
   height: 17px;
   margin-top: -10px;
   margin-left: -8px;
-  
-  /* Define o formato de estrela */
   clip-path: polygon(
     50% 0%, 
     61% 35%, 
@@ -184,15 +182,13 @@
     2% 35%, 
     39% 35%
   );
-
-  /* Efeitos de sombra */
   box-shadow: 
     0 0 5px rgba(255, 255, 255, 0.5), /* Sombra interna */
     0 0 15px rgba(255, 255, 255, 0.3), /* Sombra média */
     0 0 25px rgba(255, 255, 255, 0.2); /* Sombra externa */
   
   transition: box-shadow 0.3s ease;
-  animation: pointStars 10s forwards linear ;
+  animation: pointStarsL 10s forwards linear ;
 }
 @keyframes longEf{
   0%{
@@ -202,7 +198,7 @@
     height: 80vh;
   }
 }
-@keyframes pointStars{
+@keyframes pointStarsL{
   0%{
     margin-top: -10px;
     background-color: #fffffff2;;
@@ -220,6 +216,28 @@
   100%{
     opacity: 0.5;
     margin-top: 80vh;
+    background-color: #ffffff;;
+  }
+}
+@keyframes pointStarsM{
+  0%{
+    bottom-top: -10px;
+    background-color: #fffffff2;;
+    opacity: 0;
+  }
+  5%{
+    opacity: 0.5;
+  }
+  10%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 0.5;
+    /* bottom-top: auto; */
+    margin-top: 371px;
     background-color: #ffffff;;
   }
 }
@@ -286,21 +304,30 @@
 }
 
 
-@media screen and (max-width:1200px) {
-
+@media screen and (min-width:600px) {
+  #main_about {
+    height: 90vh;
+    position: relative;
+    overflow: hidden; 
+    scroll-behavior: smooth;
+  }
+  
 }
 
 @media screen and (max-width:900px) {
-  .orbit{
+  .orbit .orbit-wrap{
     display: none;
   }
- 
+
 .container_ {
   left: 29%;
   top: 28vh;
 }
 }
 @media screen and (max-width:750px) {
+  #ef::after {
+    animation: pointStarsM 10s forwards linear ;
+  }
   .orbit{
     display: none;
   }
@@ -344,7 +371,9 @@
     left: 10%;
     top: 26vh;
 }
-
+#main_about {
+  margin-bottom: 10px;
+}
 }
 @media screen and (max-width:400px) {
   .container_ {

@@ -1,0 +1,86 @@
+#s_curriculo{
+    height: 20vh;
+    width: 100%;
+    padding-left: 26px;
+    margin-top: 35px;
+    padding-top: 20px;
+}
+#subTitleCurriculo{
+    font-size: 1.7em;
+    border-left: 4px solid #FFD700;
+    padding-left: 10px;
+    font-family: '__Chakra_Petch_cf6273';
+    width: auto;
+}
+#container_button_curriculo{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    padding-top: 2px
+}
+
+#text-cr{
+    padding-left: 20px;
+    font-size: 1.2em;
+    margin-top: 15px;
+    font-family: '__Chakra_Petch_cf6273';
+}
+/* From Uiverse.io by andrew-demchenk0 */ 
+.button_cr {
+    position: relative;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(43, 166, 94);
+    background-color: rgb(3 179 77);
+    overflow: hidden;
+  }
+  
+  .button_cr, .button__icon, .button__text {
+    transition: all 0.3s;
+  }
+  
+  .button_cr .button__text {
+    transform: translateX(22px);
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .button_cr .button__icon {
+    position: absolute;
+    transform: translateX(109px);
+    height: 100%;
+    width: 39px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button_cr .svg {
+    width: 20px;
+    fill: rgb(3 179 77);;
+  }
+  
+  .button_cr:hover {
+    background: #17795E;
+  }
+  
+  .button_cr:hover .button__text {
+    color: transparent;
+  }
+  
+  .button_cr:hover .button__icon {
+    width: 148px;
+    transform: translateX(0);
+  }
+  
+  .butto_crn:active .button__icon {
+    background-color: #146c54;
+  }
+  
+  .button_cr:active {
+    border: 1px solid #146c54;
+  }

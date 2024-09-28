@@ -3,6 +3,7 @@
     width: 100%;
     padding-left: 26px;
     margin-top: 15px;
+    padding-top: 10px;
 }
 #subTitleSkill{
     font-size: 1.6em;
@@ -10,4 +11,12 @@
     padding-left: 10px;
     font-family: '__Chakra_Petch_cf6273';
     width: auto;
+}
+@media screen and (max-width:600px) {
+    #subTitleSkill {
+        font-size: 1.3em;
+        height: 30px;
+        padding-left: 6px;
+
+    }
 }
