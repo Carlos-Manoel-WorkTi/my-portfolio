@@ -35,7 +35,7 @@
   padding: 0 2px;
   opacity: 1; /* Inicialmente completamente opaco */
   /* animation: op 2s ease-in-out infinite;  */
-  border-bottom: 1px solid green;
+  /* border-bottom: 1px solid green; */
 }
 
 .uiverse:hover {
@@ -81,6 +81,58 @@
   border-bottom: 1px solid var(--bd-sub-title); /* Azul Aço */
 }
 
+#b-1{
+  width: 50%;
+  padding-left: 35px;
+  margin-top: 20px;
+  font-family: "Chakra Petch";
+
+  h2{
+    font-size: 2.5em;
+    color: rgb(55, 255, 139);
+    letter-spacing: 2px;
+    
+  }
+  p{
+    font-size: 1.5em;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width:1070px) {
+  #b-1 {
+    p {
+        font-size: 1.4em;
+        margin-left: 8px;
+    }
+}
+
+}
+
+@media screen and (max-width:900px) {
+  #b-1 {
+    width: 81%;
+    padding-left: 33px;
+    margin-top: 20px;
+    font-family: "Chakra Petch";
+}
+
+}
+
+@media screen and (max-width:750px) {
+  #b-1 {
+    width: 81%;
+    padding-left: 20px;
+    margin-top: 20px;
+    font-family: "Chakra Petch";
+}
+#container_Inf_buttons_about {
+  width: 97%;
+  margin-top: -110px;
+  gap: 24px;
+}
+}
+
 @media screen and (max-width:690px){
   .uiverse {
     font-size: 1em;
@@ -91,30 +143,52 @@
 }
 }
 @media screen and (max-width:600px){
-  .uiverse {
-    width: 40%;
-    display: flex;
-    text-align: center;
-    justify-self: center;
-    border-bottom:none;
+  
+  #container_Inf_buttons_about {
+    min-width: 430px;
+    width: 100%;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 70px;
+    margin-top: 0;
+    overflow-x: hidden;
   }
+ 
   .button_section {
-    padding: 0 30px;
-    margin-left: 16%;
-    font-size: 1.1em;
+
+    font-size: 0.9em;
+}
+
+#b-1 {
+  width: 95%;
+  padding-left: 25px;
+  margin-top: 49px;
+  p {
+      font-size: 1.2em;
+      margin-left: 8px;
+  }
+  h2{
+    font-size: 2em;
+  }
 }
 }
-@media screen and (max-width:490px){
+@media screen and (max-width:510px){
   #b-1 {
     width: 95%; 
     p {
-        font-size: 1em;
+        font-size: 1.1em;
         margin-left: 8px;
     }
 }
   .button_section {
-    padding: 0 30px;
-    margin-left: 2%;
-    font-size: 1.1em;
+    /* padding: 0 30px;
+    margin-left: 2%; */
+    font-size: 0.8em;
 }
 }
+@media screen and (max-width:455px){
+  
+  #container_Inf_buttons_about {
+    /* margin-left: 17px; */
+  }}
+  

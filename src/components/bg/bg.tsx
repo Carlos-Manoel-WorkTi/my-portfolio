@@ -19,7 +19,7 @@ export default function Bg() {
 
   return (
     <div id='container-bg'>
-      <div id="bg" style={{ transform: `translateY(${offsetY}px);` }}></div>
+      <div id="bg" style={{ transform: `translateY(${offsetY}px)` }}></div>
       <span id='star1'></span>
       <span id='star2'></span>
       <span id='star3'></span>

@@ -17,11 +17,8 @@ const chakra = Chakra_Petch({
 })
 
 export default function About() {
-  // Estilos inline para o conteúdo
-  const relativeStyle: React.CSSProperties = {
-    position: 'relative',
-    zIndex: 1,
-  };
+  
+
 
   return (
     <>
