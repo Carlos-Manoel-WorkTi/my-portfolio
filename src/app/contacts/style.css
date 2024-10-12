@@ -43,6 +43,7 @@ main{
 
 #formContact{
     width: 77%;
+    max-width: 700px;
     height: 330px;
     display: flex;
     flex-direction: column;
@@ -52,6 +53,8 @@ main{
     border-radius: 3px;
     padding: 4px 9px;
     padding-top: 20px;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 .light #formContact{
     background-color: rgb(237, 237, 237);
@@ -74,9 +77,14 @@ main{
     font-family: '__Chakra_Petch_cf6273';
     padding: 4px;
     font-size: 1.1em;
+    border-radius: 4px;
 }
 .light #containerSubmit button{
     background: #18b025;
+}
+#containerSubmit button:hover{
+    transform: scale(1.01);
+    font-size: 1.19em;
 }
 #message{
     width: 100%;
@@ -85,8 +93,14 @@ main{
     padding: 4px 9px;
     border-radius: 3px;
     background-color: #232323;
+    outline: none;
 }
-
+#message:focus, #formContact input:focus{
+    border: 1px solid #18b02540;
+}
+#message:hover, #formContact input:hover{
+    border: 1px solid #59ee495b;
+}
 #formContact label{
     /* font-family: '__Chakra_Petch_cf6273'; */
     font-size: 1em;
@@ -109,6 +123,66 @@ main{
 .light #formContact input, .light #message{
     background: white;
 }
+#rk_contact {
+    position: absolute;
+    animation: fly 20s infinite ease-in-out, scaleUpDown 20s infinite ease-in-out;
+}
+
+@keyframes fly {
+    0% {
+        left: -140px;
+        top: 50%;
+
+    }
+    15% {
+        left: 25%;
+        top: 25%;
+    }
+    50% {
+        left: 50%;
+        top: 10%;
+    }
+    85% {
+        left: 75%;
+        top: -20%;
+        
+    }
+    100% {
+        left: 100%;
+        top: 5%;
+    }
+}
+
+@keyframes scaleUpDown {
+    0%, 100% {
+        transform: rotate(90deg) scale(1) ;
+        /* transform: ; */
+    }
+    50% {
+        transform: scale(1.5) rotate(360deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:770px){
     #titleContact {
         font-size: 2.3em;

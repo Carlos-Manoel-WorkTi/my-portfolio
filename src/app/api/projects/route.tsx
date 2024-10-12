@@ -7,6 +7,7 @@ const ListBgs:ListBgsType = [
   {
     p1: {
       title: "DuoWord",
+      area: "fullstack",
       link_bg_light: "/bg_project/duoLight.png",
       link_bg_dark: "/bg_project/duoDark.png",
       description:
@@ -17,6 +18,7 @@ const ListBgs:ListBgsType = [
   {
     p2: {
       title: "Planets Cards",
+      area: "fullstack",
       link_bg_light: "/bg_project/plLight.png",
       link_bg_dark: "/bg_project/plDark.png",
       description:
@@ -27,6 +29,7 @@ const ListBgs:ListBgsType = [
   {
     p3: {
       title: "Decode",
+      area: "front-end",
       link_bg_light: "/bg_project/DecLight.png",
       link_bg_dark: "/bg_project/DecDark.png",
       description:
@@ -37,6 +40,7 @@ const ListBgs:ListBgsType = [
   {
     p4: {
       title: "Talk Learning",
+      area: "front-end",
       link_bg_light: "/bg_project/TalkLight.png",
       link_bg_dark: "/bg_project/TalkDark.png",
       description:
@@ -47,11 +51,12 @@ const ListBgs:ListBgsType = [
   {
     p5: {
       title: "Tec Notícias",
+      area: "front-end",
       link_bg_light: "/bg_project/TecLight.png",
       link_bg_dark: "/bg_project/TecDark.png",
       description:
       "O projeto 'TEC Notícias' é um site de notícias sobre tecnologia, com o objetivo de oferecer informações atualizadas e acessíveis sobre o setor.",
-      color: "#d33030",
+      color: "rgb(155, 90, 229)",
     },
   },
 ];

@@ -7,8 +7,9 @@ const Footer = () => {
       <div className="footer-content">
         <p className="footer-text">&copy; {new Date().getFullYear()} My Portfolio</p>
         <p className="footer-links">
-          <a href="/about" className="footer-link">About</a>
-          |
+          <a href="/home" className="footer-link">Home</a> |
+          <a href="/about" className="footer-link">About</a> |
+          <a href="/projects" className="footer-link">Projects</a> |
           <a href="/contact" className="footer-link">Contact</a>
         </p>
       </div>

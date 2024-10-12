@@ -258,6 +258,9 @@
   .light .main{
     background-color: #0864b4;
   }
+  .main{
+    min-height: 1035px;
+  }
   .dark .containerSecond{
     width: 100%;
     /* background: linear-gradient(to bottom, transparent, rgb(9 17 35)); */

@@ -3,6 +3,7 @@
 // Define o tipo para um item de projeto
 export type ProjectItem = {
     title: string;
+    area: string;
     link_bg_light: string;
     link_bg_dark: string;
     description: string;

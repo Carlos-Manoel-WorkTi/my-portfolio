@@ -73,13 +73,16 @@
     margin-left: -50px;
 }
 .total_slides {
+    transition: linear 0.2s;
     background-color: #ffffff;
-    width: 47px;
+    width: 23px;
     height: 10px;
     border-radius: 10px;
 }
 .currentSlideActive{
     background-color: #3ac42d;
+    width: 50px;
+
 }
 @media screen and (max-width:770px) {
     .container-slide {
