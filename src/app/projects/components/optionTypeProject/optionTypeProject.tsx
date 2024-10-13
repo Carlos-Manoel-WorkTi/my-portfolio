@@ -16,7 +16,7 @@ export default function OptionTypeProject() {
 
 
     <div id="container-opt-p" >
-      <Link href="/projects/fullstack" className="option-wrap ">     
+      <Link href="/projects/area?fullstack" className="option-wrap ">     
           <div className="option-content">
             <div className="flex items-center justify-around w-full">
             <svg
@@ -48,7 +48,7 @@ export default function OptionTypeProject() {
             </div>
         </Link>
 
-        <Link href="/projects/front-end" className="option-wrap ">      
+        <Link href="/projects/area?front-end" className="option-wrap ">      
           <div className="option-content">
             <div className="flex items-center justify-around w-full">
               <svg
@@ -76,7 +76,7 @@ export default function OptionTypeProject() {
               </div>
             </div>
         </Link>  
-        <Link href="/projects/back-end" className="option-wrap ">     
+        <Link href="/projects/area?back-end" className="option-wrap ">     
           <div className="option-content">
             <div className="flex items-center justify-around w-full">
             <svg

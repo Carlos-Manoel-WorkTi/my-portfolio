@@ -8,6 +8,7 @@ export type ProjectItem = {
     link_bg_dark: string;
     description: string;
     color: string;
+    date: string;
   };
   
   // Define o tipo para um item na lista de projetos

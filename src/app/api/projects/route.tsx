@@ -13,6 +13,7 @@ const ListBgs:ListBgsType = [
       description:
         "DuoWord foi projetado para ensinar inglês através da imersiva combinação de música, histórias interativas e um sistema personalizado de salvamento de palavras.",
       color: "cornflowerblue",
+      date: "2024"
     },
   },
   {
@@ -24,6 +25,7 @@ const ListBgs:ListBgsType = [
       description:
       "Planets Cards é um jogo de memória que desafia os jogadores a combinar pares de cartas sobre planetas.",
       color: "#d33030",
+      date: "2024"
     },
   },
   {
@@ -34,7 +36,8 @@ const ListBgs:ListBgsType = [
       link_bg_dark: "/bg_project/DecDark.png",
       description:
       "O 'Decode' é um app para cifrar e decifrar textos de forma simples e rápida.",
-      color: "#5d1ea5",
+      color: "#7a27d8",
+      date: "2023"
     },
   },
   {
@@ -46,6 +49,7 @@ const ListBgs:ListBgsType = [
       description:
       "O 'Talk Learning' é um app onde uma IA ensina inglês por meio de conversas interativas e personalizadas.",
       color: "#48d330",
+      date: "2023"
     },
   },
   {
@@ -57,6 +61,7 @@ const ListBgs:ListBgsType = [
       description:
       "O projeto 'TEC Notícias' é um site de notícias sobre tecnologia, com o objetivo de oferecer informações atualizadas e acessíveis sobre o setor.",
       color: "rgb(155, 90, 229)",
+      date: "2023"
     },
   },
 ];

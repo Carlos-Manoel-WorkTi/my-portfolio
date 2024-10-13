@@ -1,12 +1,32 @@
 #titleArea{
-    font-size: 2.5em;
     color: rgb(28, 235, 111);
-    margin: 4px 4px 4px 25px;
-    width: 30%;
+    width: auto;
     display: inline-flex;
     line-height: 1.5;
     padding-top: 10px;
+    font-size: 1.7em;
+    z-index: 1;
 }
+#containerOpt{
+    display: flex;
+    margin: 4px 4px 4px 25px;
+}
+#selectOpt {
+    font-size: 1em;
+    width: 115px;
+    z-index: 2;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: -90px;
+    margin-top: 15px;
+}
+
+#selectOpt option {
+    font-size: 1em;
+    color: forestgreen;
+}
+
 #searchProject{
     display: inline-flex;
     width: 60%;
@@ -63,8 +83,66 @@
     margin: 10px;
     border-radius: 6px;
     background-color: rgba(53, 52, 52, 0.957);
+    position: relative;
+    border: 1px solid white;
 }
 
+.bgProject{
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    border-radius: 6px;
+}
+.infProject{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+    z-index: 2;
+    margin-top: auto;
+    bottom: 0;
+    border-radius: 6px;
+    padding: 3px;
+}
+.nameProject{
+    color: white;
+    font-size: 1.1em;
+    text-shadow: 2px 2px 4px rgba(87, 86, 86, 0.5);
+}
+.dateProject{
+    color: rgba(255, 255, 255, 0.811);
+    font-size: 0.8em;
+    display: inline-flex;
+}
+.areaProject{
+    color: rgb(28, 235, 111);
+    /* color: white; */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0);
+    font-size: 0.8em;
+    display: inline-flex;
+    float: right;
+    margin-top:4px;
+}
+@media screen and (max-width:1024px) {
+    #containerProject{
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        column-gap: 5px;
+        row-gap: 20px;
+        box-sizing: border-box; 
+        width: 100%;
+        padding-left: 16px;
+    }
+    .blockProject{
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        border-radius: 6px;
+        background-color: rgba(53, 52, 52, 0.957);
+    }
+}
 @media screen and (max-width:840px) {
     #containerProject{
         margin-top: 30px;
@@ -86,7 +164,17 @@
     }
     
 }
+@media screen and (max-width:768px) {
+    #containerOpt {
+        margin: 4px 4px 4px 0px;
+      }
+      #titleArea {
+        font-size: 1.6em !important;
+        margin: 4px 4px 4px 15px;
+      }
+}
 @media screen and (max-width:726px) {
+
     #containerProject{
         margin-top: 30px;
         display: flex;
@@ -153,8 +241,19 @@
         justify-content: space-between;
         flex-direction: column;
     }
+    #selectOpt {
+        font-size: 1em;
+        /* width: 115px; */
+        z-index: 2;
+        margin-right: 33px;
+        margin-top: 6px;
+    }
+    #containerOpt {
+        width: 100%;
+        justify-content: center;
+    }   
     #titleArea {
-        font-size: 2em;
+        font-size: 1.5em !important;
         margin: 4px 4px 20px 15px !important;
         width: 100%;
         padding-left: 8px;
@@ -189,11 +288,4 @@
         justify-content: center;
         margin-left: 25px;
     }
-}
-@media screen and (max-width:767px) {
-    #titleArea{
-        font-size: 2em;
-        margin: 4px 4px 4px 15px;
-    }
-    
 }
