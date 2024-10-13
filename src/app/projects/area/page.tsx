@@ -3,7 +3,6 @@
 import Footer from '@/components/footer/Footer';
 import React, { useState, useEffect } from 'react';
 import './style.css';
-import { fetchProjects } from '../page';
 import { ListBgsType} from '@/types/types';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
@@ -11,6 +10,19 @@ import Link from 'next/link';
 
 export default function Page() {
 
+  async function fetchProjects(): Promise<ListBgsType> {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
+      cache: 'no-store',
+    });
+  
+  
+    if (!res.ok) {
+      throw new Error('Failed to fetch projects');
+    } 
+  
+    return res.json();
+  }
+  
   const searchParams = useSearchParams();
   const router = useRouter();
   const area = searchParams.toString().replace('=','');
