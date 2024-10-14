@@ -16,7 +16,34 @@ export default function OptionTypeProject() {
 
 
     <div id="container-opt-p" >
-      <Link href="/projects/area?fullstack" className="option-wrap ">     
+        <Link href="/projects/area?Todos" className="option-wrap ">     
+          <div className="option-content">
+            <div className="flex items-center justify-around w-full">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="173.333"
+            height="152"
+            version="1"
+            viewBox="0 0 130 114"
+            className="svg-full"
+          >
+            <path
+              d="M82 978c-18-18-17-544 1-555 6-4 30-10 52-13 35-4 40-8 40-30s5-25 43-28c39-3 42-5 42-33v-29h180v120h36c31 0 35-3 29-17-4-10-10-44-13-76-11-134 84-237 218-237 74 1 162 65 195 143 20 49 52 52 57 5l3-33h180l3 33c3 29 6 32 37 32 21 0 35 6 39 16 12 31 7 469-6 482-8 8-53 12-135 12H960v98c0 63-4 102-12 110-17 17-849 17-866 0zm848-48v-30H100v60h830v-30zm0-110v-49l-62-3-63-3-3-130-3-130h-88c-85 0-91-2-136-33-38-27-55-32-89-30-38 3-41 5-44 36-3 30-6 32-43 32s-39 2-39 30v31l-92-3-93-3V445h-70l-3 213-2 212h830v-50zm268-112l3-28H830v60l183-2 182-3 3-27zm2-238V290h-25c-24 0-25 3-25 60v60H960v-60c0-53-2-60-20-60-15 0-20 7-20 25 0 37-23 86-59 127-30 34-31 40-31 122v86h370V470zm-870-10v-80H210v160h120v-80zm80-63v-84l-62 1c-51 1-63 4-66 19-3 14 4 17 37 17h41v58c0 64 4 72 32 72 16 0 18-9 18-83zm377 66c104-49 132-194 55-285-98-116-282-72-321 77-19 75 16 160 84 201 49 29 129 32 182 7zm333-163v-80H990v160h130v-80z"
+              transform="matrix(.1 0 0 -.1 0 114)"
+            ></path>
+            <path
+              d="M370 725c0-13 21-15 125-15s125 2 125 15-21 15-125 15-125-2-125-15zM657 734c-15-15-6-24 24-24 20 0 29 4 27 13-5 14-40 21-51 11zM537 653c-18-18 0-23 83-23 73 0 90 3 90 15s-16 15-83 15c-46 0-87-3-90-7zM866 582c-2-4-1-14 3-20 5-9 38-12 117-10 89 2 109 6 109 18s-20 16-112 18c-61 1-114-1-117-6zM1134 579c-11-18 11-32 25-16 9 12 8 16-3 20-9 4-18 1-22-4zM1032 504c-28-12 3-24 64-24 48 0 65 3 62 13-5 12-101 21-126 11zM740 310c-18-27-34-50-36-50s-17 14-33 32-33 28-39 24c-14-8 52-96 72-96 11 0 96 117 96 133 0 23-32 0-60-43z"
+              transform="matrix(.1 0 0 -.1 0 114)"
+            ></path>
+          </svg>
+              <span className="area">Projetos</span>
+              </div>
+              <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
+                <span className="total_pr"><span className="tt"></span> 5 projetos</span>
+              </div>
+            </div>
+        </Link>
+        <Link href="/projects/area?fullstack" className="option-wrap ">     
           <div className="option-content">
             <div className="flex items-center justify-around w-full">
             <svg
@@ -43,7 +70,7 @@ export default function OptionTypeProject() {
               <span className="area"> Fullstack</span>
               </div>
               <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
-                <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
+                <span className="total_pr"><span className="tt"></span> 2 projetos</span>
               </div>
             </div>
         </Link>
@@ -72,7 +99,7 @@ export default function OptionTypeProject() {
               <span className="area"> Frontend</span>
               </div>
               <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
-                <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
+                <span className="total_pr"><span className="tt"></span> 2 projetos</span>
               </div>
             </div>
         </Link>  
@@ -103,7 +130,7 @@ export default function OptionTypeProject() {
               <span className="area"> Backend</span>
               </div>
               <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
-                <span className="total_pr"><span className="tt">TOTAL:</span> 2 projetos</span>
+                <span className="total_pr"><span className="tt"></span> 2 projetos</span>
               </div>
             </div>
         </Link>  

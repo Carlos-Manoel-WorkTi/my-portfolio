@@ -4,6 +4,7 @@ import { ListBgsType } from '@/types/types';
 
 import OptionTypeProject from './components/optionTypeProject/optionTypeProject';
 import Footer from '@/components/footer/Footer';
+import NavBottom from '@/components/navBottom/NavBottom';
 
 
 
@@ -33,7 +34,11 @@ export default async function Project() {
           <OptionTypeProject/>
         </section>
       </main>
-      <Footer/>
+      <NavBottom place='projects'/>
+      <div className="navBottomFooter">
+        <Footer />
+      </div>
+      
     </>
     
   );

@@ -1,3 +1,4 @@
+
 #titleArea{
     color: rgb(28, 235, 111);
     width: auto;
@@ -59,6 +60,7 @@
 #containerArea{
     width: 100vw;
     min-height: 80vh;
+    padding-bottom: 30px;
 }
 #headerArea{
     display: flex;

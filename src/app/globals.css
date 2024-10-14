@@ -50,7 +50,9 @@ background: rgb(9, 9, 11);
 }
 
 
-
+.navBottomFooter{
+  margin-bottom: 50px;
+}
 
 @layer utilities {
   .text-balance {

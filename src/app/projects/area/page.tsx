@@ -7,6 +7,7 @@ import { ListBgsType} from '@/types/types';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavBottom from '@/components/navBottom/NavBottom';
 
 export default function Page() {
 
@@ -115,7 +116,10 @@ export default function Page() {
           )}
         </div>
       </main>
-      <Footer />
+      <NavBottom place='projects'/>
+      <div className="navBottomFooter">
+        <Footer />
+      </div>
     </>
   );
 }

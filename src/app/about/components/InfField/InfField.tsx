@@ -35,7 +35,7 @@ export default function InfField() {
         button.isLink ? (
           <Link 
             key={index} 
-            href="/projects" 
+            href="/projects/area?Todos" 
             className={`uiverse`}
           >
             <div className={`button_section ${button.className}`}>

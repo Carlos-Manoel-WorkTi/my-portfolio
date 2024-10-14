@@ -3,6 +3,7 @@ import "./style.css"
 import Footer from '@/components/footer/Footer'
 import Bg from '@/components/bg/bg'
 import Image from 'next/image'
+import NavBottom from '@/components/navBottom/NavBottom'
 
 export default function page() {
   return (
@@ -32,7 +33,10 @@ export default function page() {
           </form>
         </div>
       </main>
-      <Footer/>
+      <NavBottom place='contacts'/>
+      <div className="navBottomFooter">
+        <Footer />
+      </div>
     </>
   )
 }

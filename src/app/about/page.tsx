@@ -12,6 +12,7 @@ import Footer from '@/components/footer/Footer';
 import SkillBloco from './components/skill_bloco/SkillBloco';
 import Idioma from './components/idiomas/Idioma';
 import Curriculo from './components/curriculo/Curriculo';
+import NavBottom from '@/components/navBottom/NavBottom';
  
 const chakra = Chakra_Petch({
   weight: '400',
@@ -70,7 +71,11 @@ export default function About() {
     <Curriculo/>
     <Idioma/>
     <Certicado/>
-    <Footer/>
+    
+    <NavBottom place='about'/>
+      <div className="navBottomFooter">
+        <Footer />
+      </div>
     </>
   );
 }
