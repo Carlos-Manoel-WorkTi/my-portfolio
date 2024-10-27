@@ -81,7 +81,7 @@ export default function MenuMb() {
             <ul ref={menuRef}  className={`menu-options animate__animated ${animationClass}`}>
              
                 <li>
-                <Link href="/" onClick={handleMenuItemClick}><span className="nav-link">Inicio</span>   
+                <Link href="/" onClick={handleMenuItemClick}>  
                 <svg
                         xmlns="http://www.w3.org/2000/svg"
                         enableBackground="new 0 0 24 24"
@@ -94,10 +94,11 @@ export default function MenuMb() {
                     >
                         <path d="M12 4.44l7 6.09V20h-4v-6H9v6H5v-9.47l7-6.09m0-1.32l-8 6.96V21h6v-6h4v6h6V10.08l-8-6.96z"></path>
                     </svg>
+                    <span className="nav-link">Inicio</span> 
                     </Link>
                 </li>
                 <li>
-                <Link href="/about" onClick={handleMenuItemClick}><span className="nav-link">Meu perfil</span>
+                <Link href="/about" onClick={handleMenuItemClick}>
                         
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -110,11 +111,12 @@ export default function MenuMb() {
                     >
                         <path d="M4 20h14v1H3V6h1v14zM6 3v15h15V3H6zm2.02 14c.36-2.13 1.93-4.1 5.48-4.1s5.12 1.97 5.48 4.1H8.02zM11 8.5a2.5 2.5 0 015 0 2.5 2.5 0 01-5 0zm3.21 3.43A3.507 3.507 0 0017 8.5C17 6.57 15.43 5 13.5 5S10 6.57 10 8.5c0 1.69 1.2 3.1 2.79 3.43-3.48.26-5.4 2.42-5.78 5.07H7V4h13v13h-.01c-.38-2.65-2.31-4.81-5.78-5.07z"></path>
                     </svg>
+                    <span className="nav-link">Sobre mim</span>
                 </Link>
 
                 </li>
                 <li>
-                <Link href="/projects" onClick={handleMenuItemClick}><span className="nav-link">Meus projetos</span>
+                <Link href="/projects" onClick={handleMenuItemClick}>
 
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -133,11 +135,12 @@ export default function MenuMb() {
                             d="M35.879 8.629L29.5 15.008l-1.379-1.38a3 3 0 00-4.242 4.243l3.5 3.5a3.013 3.013 0 004.242 0l8.5-8.5a3 3 0 00-4.242-4.242zm2.828 2.828l-8.5 8.5a1.025 1.025 0 01-1.414 0l-3.5-3.5a1 1 0 011.414-1.414l2.086 2.086a.998.998 0 001.414 0l7.086-7.086a1 1 0 011.414 1.414z"
                             ></path>
                         </svg>
+                        <span className="nav-link">Ver Projetos</span>
                 </Link>
                 </li>
                 <li>
 
-                <Link href="/contact" onClick={handleMenuItemClick}><span className="nav-link">Entre em contato</span>
+                <Link href="/contact" onClick={handleMenuItemClick}>
                 <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -157,10 +160,11 @@ export default function MenuMb() {
                         </clipPath>
                         </defs>
                     </svg>
+                    <span className="nav-link">Entre em contato</span>
                 </Link>
                 </li>
                 <li  >
-                    <span  className="nav-link" id="tema-link" onClick={handleThemeToggle}>Escolha o tema</span>
+                    <span  className="nav-link" id="tema-link" onClick={handleThemeToggle}>Alterar o tema</span>
                     <div id="theme-icon">
                         <ThemeToggle/>
                     </div>

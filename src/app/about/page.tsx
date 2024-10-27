@@ -66,7 +66,7 @@ export default function About() {
     </div>
     <InfField/>
     <Skill>
-      <SkillBloco/>
+      <SkillBloco/> 
     </Skill>
     <Curriculo/>
     <Idioma/>

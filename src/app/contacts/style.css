@@ -143,13 +143,13 @@ main{
         top: 10%;
     }
     85% {
-        left: 75%;
+        left: 40%;
         top: -20%;
         
     }
     100% {
-        left: 100%;
-        top: 5%;
+        left: 0%;
+        top: -20%;
     }
 }
 
@@ -159,7 +159,7 @@ main{
         /* transform: ; */
     }
     50% {
-        transform: scale(1.5) rotate(360deg);
+        transform: scale(1.5) rotate(340deg);
     }
 }
 
@@ -208,9 +208,14 @@ main{
     #formContact{
         width: 90%;
         margin-left: 0px;
+        height: 350px;
     }
     #containerContact {
         margin-top: 10px;
+    }
+    #formContact input {
+        height: 63px;
+        width: 100%;
     }
     
 }
@@ -225,10 +230,12 @@ main{
     }
     #formContact{
         width: 90%;
-        margin-left: 0px;
+        margin-left: 0px;   
+      
     }
     #containerContact {
         margin-top: 1px;
     }
+  
     
 }

@@ -100,23 +100,27 @@
     width: 100%;
     height: auto;
     background: linear-gradient(to top, rgb(0, 0, 0), transparent);
-    z-index: 2;
+    z-index: 1;
     margin-top: auto;
     bottom: 0;
     border-radius: 6px;
     padding: 3px;
 }
 .nameProject{
+    position:sticky;
     color: white;
     font-size: 1.1em;
     text-shadow: 2px 2px 4px rgba(87, 86, 86, 0.5);
+    z-index: 1;
 }
 .dateProject{
     color: rgba(255, 255, 255, 0.811);
     font-size: 0.8em;
     display: inline-flex;
+    z-index: 2;
 }
-.areaProject{
+.areaProject{  
+    position: relative; 
     color: rgb(28, 235, 111);
     /* color: white; */
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0);
@@ -124,6 +128,7 @@
     display: inline-flex;
     float: right;
     margin-top:4px;
+    z-index: 2;
 }
 @media screen and (max-width:1024px) {
     #containerProject{
