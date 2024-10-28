@@ -1,23 +1,29 @@
 #containerNavBottom{
     transition: transform 0.3s ease-in-out;
     width: 100vw;
-    height: 65px;
+    height: 67px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     position: fixed;
     bottom: 0;
-    background-color: #111111;
+    background-color: #111111f5;
     z-index: 999;
     border-top: 1px solid #6fed6a;
     margin-top: 20px;
 }   
 
+.light #containerNavBottom{
+    background-color: #ffffffcc;
+}
 #containerNavBottom li{
     list-style: none;
 }
 #containerNavBottom li a span {
-    font-size: 0.8em;
+    font-size: 0.7em;
+}
+.light #containerNavBottom li a span {
+    color:black;
 }
 #containerNavBottom li a{
     text-decoration: none;

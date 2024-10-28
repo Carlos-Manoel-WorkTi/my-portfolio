@@ -8,6 +8,7 @@ import Bg from "@/components/bg/bg";
 // import FieldContact from "@/components/fieldContact/FieldContact";
 import Stars from "@/components/universeBg/universe";
 import Footer from "@/components/footer/Footer";
+import NavBottom from "@/components/navBottom/NavBottom";
 
 
 
@@ -78,7 +79,11 @@ export default function Home() {
     </section>
     </main>
     {/* <FieldContact/> */}
+    <NavBottom place='home'/>
+    <div className="navBottomFooter">
+
     <Footer/>
+    </div>
     </>
   );
 }
