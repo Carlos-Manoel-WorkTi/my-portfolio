@@ -140,7 +140,7 @@ export default function MenuMb() {
                 </li>
                 <li>
 
-                <Link href="/contact" onClick={handleMenuItemClick}>
+                <Link href="/contacts" onClick={handleMenuItemClick}>
                 <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
