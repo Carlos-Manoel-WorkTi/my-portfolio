@@ -9,6 +9,7 @@ import Bg from "@/components/bg/bg";
 import Stars from "@/components/universeBg/universe";
 import Footer from "@/components/footer/Footer";
 import NavBottom from "@/components/navBottom/NavBottom";
+import GetTimeCurrent from "@/utils/getTimeCurrent";
 
 
 
@@ -33,9 +34,7 @@ export default function Home() {
       <Bg/>
       <Stars bg="" total={1000}/>
         <div className="w-full flex justify-between items-center p-5 py-2 containerTyping">
-          <h2 className="typing-container text-white text-6xl mt-10 sm:mt-1 max-w-max msgInit">
-          {getGreeting()}
-          </h2>
+          <GetTimeCurrent/>
           <span className=" text-white devMsg z-10">
               <div className="card">
                 <div className="loader">
