@@ -37,4 +37,7 @@
     #containerNavBottom{
         display: none;
     }
+    .navBottomFooter {
+    margin-bottom: 0px;
+}
 }
