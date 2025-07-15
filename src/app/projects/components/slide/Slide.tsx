@@ -7,6 +7,8 @@ import Loading from '../../../../components/feed/loading';
 import { ListBgsType } from "@/types/types"; 
 
 export default function Slide({ list }: { list: ListBgsType }) {
+  console.log(list);
+  
   const [currentIndex, setCurrentIndex] = useState(0);
   const [width, setWidth] = useState<number>(0);
   const [backgroundImage, setBackgroundImage] = useState<string>('');
@@ -22,6 +24,7 @@ export default function Slide({ list }: { list: ListBgsType }) {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
 
   useEffect(() => {
     // Pre-load all images

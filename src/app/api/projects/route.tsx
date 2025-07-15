@@ -71,6 +71,19 @@ const ListBgs: ListBgsType = [
       date: "2023",
     },
   },
+  {
+    p6: {
+  title: "Agric",
+  area: "front-end",
+  link_bg_light: "/bg_project/AgricLight.png",
+  link_bg_dark: "/bg_project/AgricDark.png",
+  description:
+    "Agric é uma plataforma moderna de gerenciamento agrícola com interface intuitiva e suporte a tema claro e escuro. Ela oferece funcionalidades como controle de terras, culturas, finanças, estatísticas e integração com assistente IA.",
+  color: "rgb(81 137 72)",
+  date: "2025",
+},
+
+  }
 ];
 
 

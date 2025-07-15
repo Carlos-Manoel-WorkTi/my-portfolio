@@ -26,6 +26,7 @@ export default async function Project() {
   }
   const projects = await fetchProjects();
 
+  
   return (
     <>
       <main id="project">
