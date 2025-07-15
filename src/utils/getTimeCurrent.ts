@@ -1,6 +1,6 @@
 'use client'
 
-export default function getTimeCurrent() {
+export default function GetTimeCurrent() {
   const getGreeting = () => {
     const hours = new Date().getHours();   
     if (hours >= 0 && hours < 6) {
@@ -13,12 +13,6 @@ export default function getTimeCurrent() {
       return 'Boa Noite';
     }
   };
-  console.log(getGreeting());
-  console.log('getTimeCurrent function called');
   
-  return (
-    <h2 className="typing-container text-white text-6xl mt-10 sm:mt-1 max-w-max msgInit">
-          {getGreeting()}
-    </h2>
-  )
+  return getGreeting()
 }
