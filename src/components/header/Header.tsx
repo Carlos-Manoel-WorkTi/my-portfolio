@@ -28,11 +28,15 @@ export default function Header() {
             <li id='about' className='fw'>
               <ActiveLink href="/about" >About</ActiveLink>
             </li>
+            <li id='contact' className='fw'>
+              <ActiveLink href="/contacts"  >Contact</ActiveLink>
+            </li>
             <li id='service' className='fw'>
               <ActiveLink href="/projects">Projects</ActiveLink>
             </li>
-            <li id='contact' className='fw'>
-              <ActiveLink href="/contacts"  >Contact</ActiveLink>
+       
+             <li id='contact' className='fw'>
+              <ActiveLink href="/projects/area?Todos"  >All</ActiveLink>
             </li>
             <li className='pl-4 fw'>
             <ThemeToggle/>
