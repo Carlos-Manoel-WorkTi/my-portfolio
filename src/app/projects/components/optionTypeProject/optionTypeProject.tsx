@@ -2,14 +2,45 @@ import Link from "next/link"
 import "./optionTypeProject.css"
 import React from 'react'
 import {Chakra_Petch} from "next/font/google"
+import { ListBgsType } from "@/types/types"
 
 const mainFontChakra = Chakra_Petch({
   weight:['300'],
   subsets:["latin"]
 })
+ interface AreasProjects {
+  total: number;
+  front: number;
+  back: number;
+  full: number;
+ }
 
+export default function OptionTypeProject({ list }: { list: ListBgsType }) {
+    function filterByArea():AreasProjects {
 
-export default function OptionTypeProject() {
+      const total = list.length;
+
+      const front = list.filter((project: any) => {
+        const key = Object.keys(project)[0];
+        return project[key].area === 'front-end';
+      }).length;
+
+      const back = list.filter((project: any) => {
+        const key = Object.keys(project)[0];
+        return project[key].area === 'back-end';
+      }).length;
+
+      const full = list.filter((project: any) => {
+        const key = Object.keys(project)[0];
+        return project[key].area === 'fullstack';
+      }).length;
+      console.log(list);
+      console.log("Total de projetos: ");
+      
+      return {total, front, back, full};
+    }
+    const projects = filterByArea();
+
   return (
     <div className={mainFontChakra.className}>
      <h2 id="sbt"><span id="t-sbt-g">Escolha uma área para explorar:</span><span id="t-sbt-s">Explore uma area:</span></h2>
@@ -39,7 +70,7 @@ export default function OptionTypeProject() {
               <span className="area">Projetos</span>
               </div>
               <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
-                <span className="total_pr"><span className="tt"></span> 5 projetos</span>
+                <span className="total_pr"><span className="tt"></span> {projects.total} projetos</span>
               </div>
             </div>
         </Link>
@@ -70,7 +101,7 @@ export default function OptionTypeProject() {
               <span className="area"> Fullstack</span>
               </div>
               <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
-                <span className="total_pr"><span className="tt"></span> 2 projetos</span>
+                <span className="total_pr"><span className="tt"></span> {projects.full} projetos</span>
               </div>
             </div>
         </Link>
@@ -99,7 +130,7 @@ export default function OptionTypeProject() {
               <span className="area"> Frontend</span>
               </div>
               <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
-                <span className="total_pr"><span className="tt"></span> 2 projetos</span>
+                <span className="total_pr"><span className="tt"></span> {projects.front} projetos</span>
               </div>
             </div>
         </Link>  
@@ -130,7 +161,7 @@ export default function OptionTypeProject() {
               <span className="area"> Backend</span>
               </div>
               <div className="flex items-start justify-start w-full mt-3 mb-3 dgd">
-                <span className="total_pr"><span className="tt"></span> 2 projetos</span>
+                <span className="total_pr"><span className="tt"></span> {projects.back} projetos</span>
               </div>
             </div>
         </Link>  

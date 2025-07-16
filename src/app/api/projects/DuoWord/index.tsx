@@ -5,6 +5,10 @@ const DuoWord =
         area: "fullstack",
         link_bg_light: "/bg_project/duoLight.png",
         link_bg_dark: "/bg_project/duoDark.png",
+         images:[
+        "/bg_project/agric/agric01.png",
+        "/bg_project/agric/agric02.png"
+    ],
         description:
             "DuoWord foi projetado para ensinar inglês através da imersiva combinação de vídeo, historias interativas e um sistema personalizado de salvamento de palavras.",
         color: "cornflowerblue",

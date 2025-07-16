@@ -9,6 +9,7 @@ import Decode from "./Decode";
 import PlanetsCards from "./Planets Cards";
 import TalkingLearning from "./Talking Learning";
 import TecNoticias from "./Tec Noticias";
+import Agric from "./Agric";
 
 const ListBgs: ListBgsType = [
   {
@@ -107,6 +108,7 @@ const projectMap: Record<string, ProjectData> = {
   'Planets%20Cards': PlanetsCards,
   'Talk%20Learning': TalkingLearning,
   'Tec%20Not%C3%ADcias': TecNoticias,
+  Agric: Agric
   
 };
 

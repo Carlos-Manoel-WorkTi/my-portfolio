@@ -5,6 +5,10 @@ const PlanetsCards =
         area: "front-end",
         link_bg_light: "/bg_project/PlanetsCardsLight.png",
         link_bg_dark: "/bg_project/PlanetsCardsDark.png",
+        images:[
+            "/bg_project/planetsCards/planetsCards01.png",
+            "/bg_project/planetsCards/planetsCards02.png"
+        ],
         description:
         "Planets Cards é um jogo de memória que desafia os jogadores a combinar pares de cartas sobre planetas.",
         color: "#a9a9a9",

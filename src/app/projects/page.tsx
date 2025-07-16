@@ -21,7 +21,7 @@ export default async function Project() {
     if (!res.ok) {
       throw new Error('Failed to fetch projects');
     } 
-  
+    
     return res.json();
   }
   const projects = await fetchProjects();
@@ -32,7 +32,7 @@ export default async function Project() {
       <main id="project">
           <Slide list={projects} />
         <section className="container-opt">
-          <OptionTypeProject/>
+          <OptionTypeProject list={projects}/>
         </section>
       </main>
       <NavBottom place='projects'/>

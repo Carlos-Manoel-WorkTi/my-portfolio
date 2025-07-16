@@ -20,6 +20,7 @@ type ProjectData = {
   area: string;
   link_bg_light: string;
   link_bg_dark: string;
+  images: string[];
   description: string;
   color: string;
   date: string;
@@ -59,6 +60,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       const data = await fetchProjects(project);
       console.log(data);
       setProjectData(data);
+      console.log('Project data loaded:', data);
+      
       
     }
     loadData();
@@ -67,7 +70,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   if (!projectData) return <Loading/>;
 
   return (
-    <>
+    <div className='w-full lg:max-w-6xl lg:mx-auto'>
       <div id="subHeader">
         <h2 id="title_project">{projectData.title}</h2>
         <div className="card">
@@ -101,19 +104,19 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <div id="context">
           <p>{projectData.description}</p>
           <Image className='imageShow'
-          src={projectData.link_bg_light}alt={projectData.title}width={500}  height={500}/>
+          src={projectData.images[0]}alt={projectData.title}width={500}  height={500}/>
           <p>Contexto: {projectData.context}</p>
         </div>
         <div style={{display: 'flex', gap: '40px', marginTop: '40px'}}>
           <Image
-          src={projectData.link_bg_light}alt={projectData.title}width={500}  height={500}/>
+          src={projectData.images[1]}alt={projectData.title}width={500}  height={500}/>
           <Image
-          src={projectData.link_bg_dark}alt={projectData.title}width={500}  height={500}/>
+          src={projectData.images[0]}alt={projectData.title}width={500}  height={500}/>
 
         </div>
       </div>
       <NavBottom place='projects'/>
       <Footer/>
-    </>
+    </div>
   );
 }

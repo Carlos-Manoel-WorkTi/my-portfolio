@@ -4,6 +4,10 @@ const Decode =
         area: "front-end",
         link_bg_light: "/bg_project/DecLight.png",
         link_bg_dark: "/bg_project/DecDark.png",
+         images:[
+        "/bg_project/agric/agric01.png",
+        "/bg_project/agric/agric02.png"
+    ],
         description:
         "Decode é um jogo de memória que desafia os jogadores a combinar pares de cartas sobre palavras.",
         color: "#d33030",

@@ -4,6 +4,10 @@ const TalkingLearning =
         area: "front-end",
         link_bg_light: "/bg_project/TalkingLearningLight.png",
         link_bg_dark: "/bg_project/TalkingLearningDark.png",
+        images:[
+            "/bg_project/TalkingLearning/TalkingLearning01.png",
+            "/bg_project/TalkingLearning/TalkingLearning02.png"
+        ],
         description:
         "Talking Learning é um jogo de memória que desafia os jogadores a combinar pares de cartas sobre palavras.",
         color: "#d33030",
