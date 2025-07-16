@@ -3,6 +3,10 @@ const Agric = {
     area: "front-end",
     link_bg_light: "/bg_project/AgricLight.png",
     link_bg_dark: "/bg_project/AgricDark.png",
+    images:[
+        "/bg_project/agric/agric01.png",
+        "/bg_project/agric/agric02.png"
+    ],
     description:
         "Agric é uma aplicação web para gerenciamento agrícola, oferecendo controle sobre terras, culturas, inventário, finanças e muito mais, com modo claro/escuro e assistente inteligente.",
     color: "#3c9c5a",
