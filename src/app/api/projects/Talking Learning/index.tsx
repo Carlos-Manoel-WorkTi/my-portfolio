@@ -15,6 +15,7 @@ const TalkingLearning =
         link: "https://talking-learning.vercel.app/",
         github: "https://github.com/CarlosCavalcanti/talking-learning",
         context: "O jogo Talking Learning foi desenvolvido para o projeto 'TEC Notícias'. Atraves dele o usuário pode combinar cartas sobre palavras e tentar desmembrar palavras.",
+        preview: "",
     }
 
 
