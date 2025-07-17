@@ -15,6 +15,7 @@ const Agric = {
     github: "https://github.com/CarlosCavalcanti/agric", // Altere para o repositório correto
     context:
         "A aplicação Agric foi criada como uma solução completa para produtores rurais, integrando funcionalidades como controle de terras, culturas, inventário, finanças, geração de relatórios e até um assistente com IA para suporte. Interface moderna, responsiva, com modo claro e escuro, construída com Vite, React, TypeScript e Tailwind (shadcn-ui).",
+        preview: "",
 };
 
 export default Agric;

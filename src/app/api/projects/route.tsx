@@ -10,6 +10,7 @@ import PlanetsCards from "./Planets Cards";
 import TalkingLearning from "./Talking Learning";
 import TecNoticias from "./Tec Noticias";
 import Agric from "./Agric";
+import Lumo from "./Lumo";
 
 const ListBgs: ListBgsType = [
   {
@@ -84,6 +85,19 @@ const ListBgs: ListBgsType = [
   date: "2025",
 },
 
+  },
+  {
+    p7: {
+  title: "Lumo",
+  area: "fullstack",
+  link_bg_light: "/bg_project/AgricLight.png",
+  link_bg_dark: "/bg_project/AgricDark.png",
+  description:
+    "Lumo é um assistente virtual com IA generativa, criado para oferecer conversas naturais, produtivas e personalizadas diretamente no navegador.",
+  color: "#236bd8",
+  date: "2025",
+},
+
   }
 ];
 
@@ -99,6 +113,7 @@ type ProjectData = {
   link: string;
   github: string;
   context: string;
+  preview: string | null;
 };
 
 // Mapeamento de títulos para constantes
@@ -108,7 +123,8 @@ const projectMap: Record<string, ProjectData> = {
   'Planets%20Cards': PlanetsCards,
   'Talk%20Learning': TalkingLearning,
   'Tec%20Not%C3%ADcias': TecNoticias,
-  Agric: Agric
+  Agric: Agric,
+  Lumo: Lumo  
   
 };
 

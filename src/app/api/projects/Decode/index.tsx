@@ -15,6 +15,7 @@ const Decode =
         link: "https://decode-game.vercel.app/",
         github: "https://github.com/CarlosCavalcanti/decode",
         context: "O jogo Decode foi desenvolvido para o projeto 'TEC Notícias'. Atraves dele o usuário pode combinar cartas sobre palavras e tentar desmembrar palavras.",
+        preview: "",
     }
 
 

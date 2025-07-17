@@ -16,6 +16,7 @@ const PlanetsCards =
         link: "https://planets-cards.vercel.app/",
         github: "https://github.com/CarlosCavalcanti/planets-cards",
         context: "O jogo Planets Cards foi desenvolvido para o projeto 'TEC Notícias'. Atraves dele o usuário pode combinar cartas sobre planetas e tentar desmembrar planetas.",
+        preview: "", // Pode ser uma URL de vídeo ou imagem de pré-visualização
     }
 
 

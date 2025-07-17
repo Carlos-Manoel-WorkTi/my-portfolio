@@ -15,6 +15,7 @@ const TecNoticias =
         link: "https://tec-noticias.vercel.app/",
         github: "https://github.com/CarlosCavalcanti/tec-noticias",
         context: "O projeto 'TEC Notícias' foi desenvolvido para o projeto 'TEC Notícias'. Atraves dele o usuário pode combinar cartas sobre palavras e tentar desmembrar palavras.",
+        preview: "",
     }
 
 export default TecNoticias;
