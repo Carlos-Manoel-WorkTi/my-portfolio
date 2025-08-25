@@ -1,241 +1,176 @@
-main{
-    height: 90vh;
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-#titleContact{
-    text-align: start;
-    font-family: '__Chakra_Petch_cf6273';
-    font-size: 2.5em;
-    margin-top: 30px;
-    margin-left: 24px;
-    padding-left: 8px;
-     font-family: '__Chakra_Petch_cf6273';
-}
-#titleContact::after{
-    content: '';
-    display: inline-block;
-    width: 5px;
-    height: 5px;
-    background-color: #1ed78a80;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-#titleContact::before{
-    content: '';
-    position: absolute;
-    width: 5px;
-    height: 45px;
-    background-color: #1ed78a80;
-    border-radius: 2%;
-    margin-left: -7px;
-    margin-top: 7px;
+#titleContact {
+  text-align: start;
+  font-family: '__Chakra_Petch_cf6273';
+  font-size: 2.6em;
+  margin: 40px 0 20px 24px;
+  padding-left: 10px;
+  font-weight: 600;
+  position: relative;
+  color: var(--title-color);
 }
 
-#containerContact{
-    width: 100vw;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
+#titleContact::after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  margin-left: 8px;
 }
 
-#formContact{
-    width: 77%;
-    max-width: 700px;
-    height: 330px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-    background-color: rgb(19, 19, 19);
-    margin-left: -50px;
-    border-radius: 3px;
-    padding: 4px 9px;
-    padding-top: 20px;
-    z-index: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-.light #formContact{
-    background-color: rgb(237, 237, 237);
-
-}
-#containerSubmit{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 6px 20px;
-    height: 80px;
-    border-radius: 3px;
+#titleContact::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 45px;
+  background-color: #22c55e;
+  border-radius: 3px;
+  left: -12px;
+  top: 6px;
 }
 
-#containerSubmit button{
-    width: 50%;
-    background: green;
-    font-family: '__Chakra_Petch_cf6273';
-    padding: 4px;
-    font-size: 1.1em;
-    border-radius: 4px;
-}
-.light #containerSubmit button{
-    background: #18b025;
-}
-#containerSubmit button:hover{
-    transform: scale(1.01);
-    font-size: 1.19em;
-}
-#message{
-    width: 100%;
-    height: 100px;
-    min-height: 80px;
-    padding: 4px 9px;
-    border-radius: 3px;
-    background-color: #232323;
-    outline: none;
-}
-#message:focus, #formContact input:focus{
-    border: 1px solid #18b02540;
-}
-#message:hover, #formContact input:hover{
-    border: 1px solid #59ee495b;
-}
-#formContact label{
-    /* font-family: '__Chakra_Petch_cf6273'; */
-    font-size: 1em;
-    color: #ffffff94;
-    margin-top: 4px;
+#containerContact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-.light #formContact label,.light #formContact textarea{
-    color: #5c5c5c;
+#formContact {
+  width: 90%;
+  max-width: 700px;
+  padding: 30px 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  background: rgba(30, 30, 30, 0.85);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1;
 }
-#formContact input{
-    width: 100%;
-    height: 30px;
-    border-radius: 3px;
-    padding: 4px 9px;
-    margin-top: 4px;
-    outline: none;
-    background: #232323
+
+.light #formContact {
+  background: rgba(250, 250, 250, 0.9);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
-.light #formContact input, .light #message{
-    background: white;
+
+#formContact label {
+  font-size: 0.95em;
+  font-weight: 500;
+  color: var(--label-color);
 }
+
+#formContact input,
+#formContact textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background: var(--input-bg);
+  color: var(--text-color);
+  transition: all 0.25s ease;
+  font-size: 0.95em;
+}
+
+#formContact input:focus,
+#formContact textarea:focus {
+  border: 1px solid #22c55e;
+  box-shadow: 0 0 8px #22c55e60;
+  outline: none;
+}
+
+#formContact input:hover,
+#formContact textarea:hover {
+  border: 1px solid #22c55e50;
+}
+
+#containerSubmit {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#containerSubmit button {
+  width: 60%;
+  padding: 12px;
+  font-size: 1.1em;
+  border-radius: 12px;
+  border: none;
+  font-family: '__Chakra_Petch_cf6273';
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+}
+
+.light #containerSubmit button {
+  background: linear-gradient(135deg, #22c55e, #4ade80);
+}
+
+#containerSubmit button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(34, 197, 94, 0.4);
+}
+
+#message {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Efeito foguete - Mantido */
 #rk_contact {
-    position: absolute;
-    animation: fly 20s infinite ease-in-out, scaleUpDown 20s infinite ease-in-out;
+  position: absolute;
+  animation: fly 20s infinite ease-in-out, scaleUpDown 20s infinite ease-in-out;
 }
 
 @keyframes fly {
-    0% {
-        left: -140px;
-        top: 50%;
-
-    }
-    15% {
-        left: 25%;
-        top: 25%;
-    }
-    50% {
-        left: 50%;
-        top: 10%;
-    }
-    85% {
-        left: 40%;
-        top: -20%;
-        
-    }
-    100% {
-        left: 0%;
-        top: -20%;
-    }
+  0% { left: -140px; top: 50%; }
+  15% { left: 25%; top: 25%; }
+  50% { left: 50%; top: 10%; }
+  85% { left: 40%; top: -20%; }
+  100% { left: 0%; top: -20%; }
 }
 
 @keyframes scaleUpDown {
-    0%, 100% {
-        transform: rotate(90deg) scale(1) ;
-        /* transform: ; */
-    }
-    50% {
-        transform: scale(1.5) rotate(340deg);
-    }
+  0%, 100% { transform: rotate(90deg) scale(1); }
+  50% { transform: scale(1.5) rotate(340deg); }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width:770px){
-    #titleContact {
-        font-size: 2.3em;
-        margin-left: 15px;
-    }
-    #titleContact::before {
-        width: 5px;
-        height: 40px;
-    }
-    #containerContact {
-        margin-top: 10px;
-    }
+/* Variáveis de tema */
+:root {
+  --title-color: #f1f5f9;
+  --label-color: #e2e8f0;
+  --text-color: #f8fafc;
+  --input-bg: #232323;
 }
-@media screen and (max-width:600px){
-    #titleContact::before {
-        width: 5px;
-        height: 32px;
-    }
-    #titleContact {
-        font-size: 1.8em;
-        margin-left: 15px;
-    }
-    #formContact{
-        width: 90%;
-        margin-left: 0px;
-        height: 350px;
-    }
-    #containerContact {
-        margin-top: 10px;
-    }
-    #formContact input {
-        height: 63px;
-        width: 100%;
-    }
-    
+.light {
+  --title-color: #1e293b;
+  --label-color: #475569;
+  --text-color: #111827;
+  --input-bg: #ffffff;
 }
-@media screen and (max-width:400px){
-    #titleContact::before {
-        width: 5px;
-        height: 23px;
-    }
-    #titleContact {
-        font-size: 1.5em;
-        margin-left: 15px;
-    }
-    #formContact{
-        width: 90%;
-        margin-left: 0px;   
-      
-    }
-    #containerContact {
-        margin-top: 1px;
-    }
-  
-    
+
+/* Responsividade */
+@media screen and (max-width: 600px) {
+  #formContact {
+    padding: 20px;
+    gap: 12px;
+  }
+  #containerSubmit button {
+    width: 100%;
+  }
+  #titleContact {
+    font-size: 1.9em;
+  }
 }

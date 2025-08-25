@@ -108,7 +108,9 @@ export default function Page() {
 
   return (
     <>
-      <h2 id='titleContact'>Entre em contato comigo</h2>
+      {/* <h2 id='titleContact'>Entre em contato comigo</h2> */}
+      
+        
       <main>
         <Bg />
         <Image
@@ -119,37 +121,81 @@ export default function Page() {
           height={200}
           unoptimized={true}
         />
+          {/* Título estilizado */}
+      <div className="text-center mb-2">
+        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-800 dark:text-slate-100">
+          Entre em contato
+        </h2>
+        <p className="text-slate-600 dark:text-slate-400 mt-2 text-lg">
+          Vamos conversar ✨
+        </p>
+      </div>
         <div id="containerContact">
           <form onSubmit={handleSubmit} id='formContact'>
-            <label htmlFor="name">Nome</label>
-            <input 
-              type="text" 
-              id="name" 
-              name="name" 
-              value={formData.name}
-              onChange={handleChange} 
-              required
-            />
-            <label htmlFor="email">Email</label>
-            <input 
-              type="email" 
-              id="email" 
-              name="email" 
-              value={formData.email}
-              onChange={handleChange} 
-              required
-            />
-            <label htmlFor="message">Mensagem</label>
-            <textarea 
-              name="message" 
-              id="message" 
-              value={formData.message}
-              onChange={handleChange} 
-              required
-            ></textarea>
-            <div id='containerSubmit'>
-              <button type="submit">Enviar</button>
-            </div>
+            <div className="flex flex-col">
+        <label htmlFor="name" className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+          Nome
+        </label>
+        <div className="flex items-center gap-2">
+          <span className="text-slate-500 dark:text-slate-400">👤</span>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Digite seu nome completo"
+            required
+            className="flex-1 rounded-md px-3 py-2 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-green-500 outline-none"
+          />
+        </div>
+      </div>
+
+      {/* Email */}
+      <div className="flex flex-col">
+        <label htmlFor="email" className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+          Email
+        </label>
+        <div className="flex items-center gap-2">
+          <span className="text-slate-500 dark:text-slate-400">📧</span>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Seu melhor email"
+            required
+            className="flex-1 rounded-md px-3 py-2 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-green-500 outline-none"
+          />
+        </div>
+      </div>
+
+      {/* Mensagem */}
+      <div className="flex flex-col">
+        <label htmlFor="message" className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+          Mensagem
+        </label>
+        <textarea
+          name="message"
+          id="message"
+          value={formData.message}
+          onChange={handleChange}
+          placeholder="Escreva sua mensagem aqui..."
+          required
+          rows={5}
+          className="rounded-md px-3 py-2 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-green-500 outline-none"
+        ></textarea>
+      </div>
+{/* Botão */}
+      <div className="flex justify-center mt-4">
+        <button
+          type="submit"
+          className="w-1/2 py-3 rounded-lg bg-gradient-to-r from-green-600 to-green-400 text-white font-semibold shadow-md hover:scale-105 hover:shadow-lg transition"
+        >
+          Enviar 🚀
+        </button>
+      </div>
           </form>
 
           {/* Toopup 1 */}
@@ -168,7 +214,7 @@ export default function Page() {
         </div>
       </main>
       <NavBottom place='contacts' />
-      <div className="navBottomFooter">
+      <div className="navBottomFooter pt-5">
         <Footer />
       </div>
     </>
