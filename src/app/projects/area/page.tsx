@@ -124,8 +124,8 @@ export default function Page() {
             {/* Imagem preenchendo todo o card */}
             <Image
               src={
-                document.documentElement.classList.contains("dark")
-                  ? item.link_bg_dark
+                item.cover
+                  ?  item.cover
                   : item.link_bg_light
               }
               alt={item.title}

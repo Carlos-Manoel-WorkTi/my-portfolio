@@ -7,6 +7,7 @@ export type ProjectItem = {
     link_bg_light: string;
     link_bg_dark: string;
     description: string;
+    cover: string;
     color: string;
     date: string;
     technologies: string[];
