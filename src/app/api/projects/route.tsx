@@ -19,7 +19,7 @@ const ListBgs: ListBgsType = [
       area: "fullstack",
       link_bg_light: "/bg_project/duoLight.png",
       link_bg_dark: "/bg_project/duoDark.png",
-      cover: "/bg_project/duoWord/coverDuoWord.png",
+      cover: "/bg_project/duoWord/cover.png",
       description:
         "DuoWord foi projetado para ensinar inglês através da imersiva combinação de música, histórias interativas e um sistema personalizado de salvamento de palavras.",
       color: "cornflowerblue",
@@ -163,7 +163,7 @@ const ListBgs: ListBgsType = [
   area: "frontend",
   link_bg_light: "/bg_project/NovaRevealLight.png",
   link_bg_dark: "/bg_project/NovaRevealDark.png",
-  cover: "/bg_project/NovaRevealCover.png",
+  cover: "/bg_project/novaReveal/cover.png",
   description:
     "Nova Reveal é uma landing page interativa construída com foco em animações suaves e experiência do usuário. Utiliza scroll reveal para destacar seções como portfólio, depoimentos e benefícios, além de navegação com rolagem suave para âncoras internas.",
   color: "#7C3AED", // Roxo vibrante para dar vibe moderna
@@ -225,6 +225,130 @@ const ListBgs: ListBgsType = [
     "React Query",
     "Socket.IO",
     "Express",
+    "Node.js"
+  ],
+},
+
+},{
+  p13: {
+  title: "tvz_guide",
+  area: "backend",
+  link_bg_light: "/bg_project/tvzGuideLight.png",
+  link_bg_dark: "/bg_project/tvzGuideDark.png",
+  cover: "/bg_project/tvz_guide/cover.png",
+  description:
+    "tvz_guide é uma API que lista os horários dos programas de TV do dia, obtidos através de web scraping com Cheerio. O backend foi construído em Node.js com Express, fornecendo dados atualizados de forma simples e acessível para consumo em aplicações externas.",
+  color: "#1d72b8", // azul representando tecnologia e confiança
+  date: "2024",
+  technologies: [
+    "Node.js",
+    "Express",
+    "Cheerio",
+    "Node-Fetch"
+  ],
+},
+
+},
+{
+  p14: {
+  title: "Encontre seu GitHub",
+  area: "frontend",
+  link_bg_light: "/bg_project/githubFinderLight.png",
+  link_bg_dark: "/bg_project/githubFinderDark.png",
+  cover: "/bg_project/githubFinder/cover.png",
+  description:
+    "Encontre seu GitHub é uma aplicação frontend desenvolvida em React que permite adicionar repositórios do GitHub a uma lista personalizada e visualizar detalhes de cada repositório, incluindo informações sobre o perfil do usuário. A aplicação é simples, intuitiva e prática para explorar projetos no GitHub de forma rápida.",
+  color: "#24292e", // cor inspirada no GitHub
+  date: "2022",
+  technologies: [
+    "React",
+    "JavaScript",
+    "Node.js",
+    "CSS",
+    "Vite"
+  ],
+},
+
+},{
+  p15: {
+  title: "Conversor de Moedas",
+  area: "backend",
+  link_bg_light: "/bg_project/currencyConverterLight.png",
+  link_bg_dark: "/bg_project/currencyConverterDark.png",
+  cover: "/bg_project/currencyConverter/cover.png",
+  description:
+    "Conversor de Moedas é um aplicativo simples em Java que permite converter entre diferentes moedas utilizando as taxas de câmbio mais recentes. Ele consome a API v6.exchangerate-api e utiliza a biblioteca GSON para manipulação de dados JSON, garantindo precisão e facilidade no processamento dos valores.",
+  color: "#1abc9c", // verde água, remetendo a dinheiro e finanças
+  date: "2024",
+  technologies: [
+    "Java",
+    "GSON",
+    "Exchangerate-API"
+  ],
+},
+
+},{
+  p16: {
+  title: "java_poster",
+  area: "backend",
+  link_bg_light: "/bg_project/javaPosterLight.png",
+  link_bg_dark: "/bg_project/javaPosterDark.png",
+  cover: "/bg_project/javaPoster/cover.png",
+  description:
+    "java_poster é uma aplicação backend desenvolvida em Java com Spring Boot, que permite postagens e gerenciamento de comentários. O sistema conta com autenticação via Spring Security e JWT, integração com banco PostgreSQL, versionamento de banco com Flyway, e validações de dados. Os posts podem ser categorizados em diferentes tópicos, como tecnologia, ciência, música, entre outros.",
+  color: "#f39c12", // laranja vibrante para representar dinamismo e interação
+  date: "2024",
+  technologies: [
+    "Java",
+    "Spring Boot",
+    "Spring Security",
+    "JPA / Hibernate",
+    "Flyway",
+    "PostgreSQL",
+    "JWT",
+    "Lombok"
+  ],
+},
+
+},{
+  p17: {
+  title: "booksjava",
+  area: "backend",
+  link_bg_light: "/bg_project/booksJavaLight.png",
+  link_bg_dark: "/bg_project/booksJavaDark.png",
+  cover: "/bg_project/booksJava/cover.png",
+  description:
+    "desafio-booksjava é uma aplicação backend desenvolvida em Java com Spring Boot, que gerencia informações de livros. O sistema utiliza PostgreSQL para persistência de dados, Jackson Databind para manipulação de JSON, e JPA para o mapeamento objeto-relacional. Ideal para estudos e demonstração de integração entre API REST, banco de dados e serialização de dados.",
+  color: "#8e44ad", // roxo para remeter a conhecimento/livros
+  date: "2024",
+  technologies: [
+    "Java",
+    "Spring Boot",
+    "Spring Data JPA",
+    "Jackson Databind",
+    "PostgreSQL"
+  ],
+},
+
+},{
+  p18: {
+  title: "TVZ",
+  area: "fullstack",
+  link_bg_light: "/bg_project/tvzLight.png",
+  link_bg_dark: "/bg_project/tvzDark.png",
+  cover: "/bg_project/tvz/cover.png",
+  description:
+    "TVZ é um aplicativo de streaming que oferece canais de TV ao vivo e conteúdos sob demanda, com interface intuitiva e funcionalidades como favoritos e notificações. Desenvolvido com Next.js para frontend e backend, com versão em React Native permitindo acesso a todos os formatos de transmissão. Autenticação via JSON Web Tokens (JWT) e integração com APIs de provedores de conteúdo.",
+  color: "#e74c3c", // vermelho vibrante, chamativo e tecnológico
+  date: "2024",
+  technologies: [
+    "Next.js",
+    "React",
+    "React Native",
+    "HLS.js",
+    "Styled Components",
+    "JWT",
+    "APIs",
     "Node.js"
   ],
 },
