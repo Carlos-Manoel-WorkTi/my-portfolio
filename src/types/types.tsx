@@ -9,6 +9,7 @@ export type ProjectItem = {
     description: string;
     color: string;
     date: string;
+    technologies: string[];
   };
   
   // Define o tipo para um item na lista de projetos

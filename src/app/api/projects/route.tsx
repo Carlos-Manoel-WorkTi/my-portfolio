@@ -23,6 +23,7 @@ const ListBgs: ListBgsType = [
         "DuoWord foi projetado para ensinar inglês através da imersiva combinação de música, histórias interativas e um sistema personalizado de salvamento de palavras.",
       color: "cornflowerblue",
       date: "2024",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth.js", "Vercel" ],
     },
   },
   {
@@ -35,6 +36,8 @@ const ListBgs: ListBgsType = [
         "Planets Cards é um jogo de memória que desafia os jogadores a combinar pares de cartas sobre planetas.",
       color: "#d33030",
       date: "2024",
+      technologies: ["JavaScript", "Bootstrap", "PHP", "WAMP", "Vercel" ],
+      
     },
   },
   {
@@ -47,6 +50,7 @@ const ListBgs: ListBgsType = [
         "O 'Decode' é um app para cifrar e decifrar textos de forma simples e rápida.",
       color: "#7a27d8",
       date: "2023",
+            technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL", "NextAuth.js", "Vercel" ],
     },
   },
   {
@@ -59,6 +63,7 @@ const ListBgs: ListBgsType = [
         "O 'Talk Learning' é um app onde uma IA ensina inglês por meio de conversas interativas e personalizadas.",
       color: "#48d330",
       date: "2023",
+            technologies: ["React", "TypeScript", "Tailwind CSS", "StyledComponents", "Vercel" ],
     },
   },
   {
@@ -71,6 +76,7 @@ const ListBgs: ListBgsType = [
         "O projeto 'TEC Notícias' é um site de notícias sobre tecnologia, com o objetivo de oferecer informações atualizadas e acessíveis sobre o setor.",
       color: "rgb(155, 90, 229)",
       date: "2023",
+            technologies: ["VLibras", "TypeScript", "BootStrap", "Vercel" ],
     },
   },
   {
@@ -83,6 +89,7 @@ const ListBgs: ListBgsType = [
     "Agric é uma plataforma moderna de gerenciamento agrícola com interface intuitiva e suporte a tema claro e escuro. Ela oferece funcionalidades como controle de terras, culturas, finanças, estatísticas e integração com assistente IA.",
   color: "rgb(81 137 72)",
   date: "2025",
+        technologies: ["React", "TypeScript", "Tailwind CSS", "NextAu", "Vercel", "Shadow CDN" ],
 },
 
   },
@@ -96,6 +103,7 @@ const ListBgs: ListBgsType = [
     "Lumo é um assistente virtual com IA generativa, criado para oferecer conversas naturais, produtivas e personalizadas diretamente no navegador.",
   color: "#236bd8",
   date: "2025",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "OpenIA", "NextAuth.js", "Vercel" ],
 },
 
   }
