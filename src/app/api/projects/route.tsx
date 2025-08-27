@@ -19,6 +19,7 @@ const ListBgs: ListBgsType = [
       area: "fullstack",
       link_bg_light: "/bg_project/duoLight.png",
       link_bg_dark: "/bg_project/duoDark.png",
+      cover: "/bg_project/duoWord/coverDuoWord.png",
       description:
         "DuoWord foi projetado para ensinar inglês através da imersiva combinação de música, histórias interativas e um sistema personalizado de salvamento de palavras.",
       color: "cornflowerblue",
@@ -32,6 +33,7 @@ const ListBgs: ListBgsType = [
       area: "fullstack",
       link_bg_light: "/bg_project/plLight.png",
       link_bg_dark: "/bg_project/plDark.png",
+      cover: "/bg_project/planetsCards/cover.png",
       description:
         "Planets Cards é um jogo de memória que desafia os jogadores a combinar pares de cartas sobre planetas.",
       color: "#d33030",
@@ -46,6 +48,7 @@ const ListBgs: ListBgsType = [
       area: "front-end",
       link_bg_light: "/bg_project/DecLight.png",
       link_bg_dark: "/bg_project/DecDark.png",
+      cover: "/bg_project/decode/cover.png",
       description:
         "O 'Decode' é um app para cifrar e decifrar textos de forma simples e rápida.",
       color: "#7a27d8",
@@ -59,6 +62,7 @@ const ListBgs: ListBgsType = [
       area: "front-end",
       link_bg_light: "/bg_project/TalkLight.png",
       link_bg_dark: "/bg_project/TalkDark.png",
+      cover: "/bg_project/talkLearning/cover.png",
       description:
         "O 'Talk Learning' é um app onde uma IA ensina inglês por meio de conversas interativas e personalizadas.",
       color: "#48d330",
@@ -72,6 +76,7 @@ const ListBgs: ListBgsType = [
       area: "front-end",
       link_bg_light: "/bg_project/TecLight.png",
       link_bg_dark: "/bg_project/TecDark.png",
+      cover: "/bg_project/tecNoticias/cover.png",
       description:
         "O projeto 'TEC Notícias' é um site de notícias sobre tecnologia, com o objetivo de oferecer informações atualizadas e acessíveis sobre o setor.",
       color: "rgb(155, 90, 229)",
@@ -85,6 +90,7 @@ const ListBgs: ListBgsType = [
   area: "front-end",
   link_bg_light: "/bg_project/AgricLight.png",
   link_bg_dark: "/bg_project/AgricDark.png",
+  cover: "/bg_project/agric/cover.png",
   description:
     "Agric é uma plataforma moderna de gerenciamento agrícola com interface intuitiva e suporte a tema claro e escuro. Ela oferece funcionalidades como controle de terras, culturas, finanças, estatísticas e integração com assistente IA.",
   color: "rgb(81 137 72)",
@@ -99,6 +105,7 @@ const ListBgs: ListBgsType = [
   area: "fullstack",
   link_bg_light: "/bg_project/AgricLight.png",
   link_bg_dark: "/bg_project/AgricDark.png",
+  cover: "/bg_project/lumo/cover.png",
   description:
     "Lumo é um assistente virtual com IA generativa, criado para oferecer conversas naturais, produtivas e personalizadas diretamente no navegador.",
   color: "#236bd8",
@@ -106,7 +113,123 @@ const ListBgs: ListBgsType = [
         technologies: ["Next.js", "TypeScript", "Tailwind CSS", "OpenIA", "NextAuth.js", "Vercel" ],
 },
 
-  }
+  },
+  {
+    p8: {
+  title: "Nag",
+  area: "backend",
+  link_bg_light: "/bg_project/nag/bgNag.png",
+  link_bg_dark: "/bg_project/nag/bgNag.png",
+  cover: "/bg_project/nag/cover.png",
+  description:
+    "Nag é um chatbot inteligente para WhatsApp, desenvolvido para atuar como atendente virtual e assistente multifuncional. Ele permite baixar vídeos e músicas, extrair áudios, realizar pesquisas na internet, gerar figurinhas e muito mais.",
+  color: "#25D366", // verde WhatsApp
+  date: "2025",
+  technologies: [
+    "Baileys",
+    "Flask",
+    "TypeScript",
+    "Python",
+    "Selenium",
+    "BeautifulSoup",
+    "FFmpeg",
+    "Node.js"
+  ],
+}},{
+  p9: {
+  title: "FireBurg",
+  area: "frontend",
+  link_bg_light: "/bg_project/FireBurgLight.png",
+  link_bg_dark: "/bg_project/FireBurgDark.png",
+  cover: "/bg_project/fireBurg/cover.png",
+  description:
+    "FireBurg é um site moderno para divulgação de um restaurante, focado em performance e experiência do usuário. O projeto foi construído com Vite, React, Shadcn e Tailwind CSS, trazendo animações fluidas, responsividade e integração com formulários de contato e menus interativos.",
+  color: "#E63946", // tom vermelho "burguer flame"
+  date: "2025",
+  technologies: [
+    "Vite",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn/UI",
+    "Radix UI",
+    "React Router",
+    "Zod"
+  ],
+},
+},{
+  p10: {
+  title: "Nova Reveal",
+  area: "frontend",
+  link_bg_light: "/bg_project/NovaRevealLight.png",
+  link_bg_dark: "/bg_project/NovaRevealDark.png",
+  cover: "/bg_project/NovaRevealCover.png",
+  description:
+    "Nova Reveal é uma landing page interativa construída com foco em animações suaves e experiência do usuário. Utiliza scroll reveal para destacar seções como portfólio, depoimentos e benefícios, além de navegação com rolagem suave para âncoras internas.",
+  color: "#7C3AED", // Roxo vibrante para dar vibe moderna
+  date: "2025",
+  technologies: [
+    "Vite",
+    "React",
+    "TypeScript",
+    "Shadcn/UI",
+    "Tailwind CSS",
+    "Radix UI"
+  ],
+},
+
+},
+{
+  p11: {
+  title: "Primeon",
+  area: "frontend",
+  link_bg_light: "/bg_project/PrimeonLight.png",
+  link_bg_dark: "/bg_project/PrimeonDark.png",
+  cover: "/bg_project/primeon/cover.png",
+  description:
+    "Primeon é uma landing page de ecommerce premium construída com React, Vite e Shadcn/UI. O projeto destaca produtos de alto padrão com efeitos de parallax, animações reveal e experiência de navegação fluida.",
+  color: "#8B5CF6", // roxo elegante, premium vibe
+  date: "2025",
+  technologies: [
+    "Vite",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn/UI",
+    "Radix UI",
+    "Lucide React",
+  ],
+},
+
+},
+{
+  p12: {
+  title: "GameUp",
+  area: "fullstack",
+  link_bg_light: "/bg_project/GameUpLight.png",
+  link_bg_dark: "/bg_project/GameUpDark.png",
+  cover: "/bg_project/gameUp/cover.png",
+  description:
+    "GameUp é uma plataforma de mini-games multiplayer em tempo real, com lobby interativo, sistema de pronto, modo solo e suporte a diversos jogos rápidos. Desenvolvido com React, Vite e Shadcn/UI no frontend, e Express + Socket.IO no backend para comunicação em tempo real.",
+  color: "#e76225", // verde vibrante gamer
+  date: "2025",
+  technologies: [
+    "Vite",
+    "React",
+    "TypeScript",
+    "Tailwind CSS",
+    "Shadcn/UI",
+    "Radix UI",
+    "Zustand",
+    "Zod",
+    "React Query",
+    "Socket.IO",
+    "Express",
+    "Node.js"
+  ],
+},
+
+}
 ];
 
 
