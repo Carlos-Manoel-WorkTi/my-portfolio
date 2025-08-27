@@ -149,7 +149,7 @@ export default function Page() {
                 <p className="text-sm text-gray-200 truncate">{item.description}</p>
               )}
 
-              {item.technologies && (
+              {item.area && (
                 <div className="flex flex-wrap gap-2 mt-1">
                   {item.technologies.map((tech, idx) => (
                     <span
