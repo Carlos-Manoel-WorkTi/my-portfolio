@@ -11,16 +11,47 @@ import ContactMB from "@/components/contacts/ContactMB";
 
 
 
+import { Metadata } from 'next';
+
 export const metadata: Metadata = {
   title: 'CRL Portfolio',
-  description: 'Portfolio do carlos',
+  description: 'Portfolio do Carlos — desenvolvedor web e projetos criativos',
+  
+  // Ícones
   icons: {
     icon: ['/favicon.ico?v=4'],
     apple: ['/apple-touch-icon.png?v=4'],
-    shortcut:['/apple-touch-icon.png'], 
-},
-  manifest:'/site.webmanifest'
+    shortcut: ['/apple-touch-icon.png'],
+  },
+  manifest: '/site.webmanifest',
+
+  // SEO adicional
+  alternates: {
+    canonical: 'https://portfolio-carlos-five.vercel.app', // URL principal
+  },
+  robots: {
+    index: true,   // permite indexação
+    follow: true,  // permite seguir links
+    nocache: false
+  },
+  openGraph: {
+    title: 'CRL Portfolio',
+    description: 'Portfolio do Carlos — desenvolvedor web e projetos criativos',
+    url: 'https://portfolio-carlos-five.vercel.app',
+    siteName: 'CRL Portfolio',
+    images: [
+      {
+        url: 'https://portfolio-carlos-five.vercel.app/og-image.png', // opcional para redes sociais
+        width: 1200,
+        height: 630,
+        alt: 'CRL Portfolio',
+      },
+    ],
+    locale: 'pt_BR',
+    type: 'website',
+  },
 };
+
 
 export default function RootLayout({
   children,

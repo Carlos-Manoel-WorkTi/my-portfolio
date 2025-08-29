@@ -21,7 +21,7 @@ const chakra = Chakra_Petch({
 
 export default function About() {
   
-
+    
 
   return (
     <>
