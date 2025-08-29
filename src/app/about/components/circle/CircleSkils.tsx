@@ -3,7 +3,7 @@ import "./style.css"
 export default function CircleSkils() {
   return (
     <>
-            <div className="orbit">
+            <div className="orbit opacity-0 transition-opacity duration-700 delay-500 animate-fadeInExample">
         <ul className="orbit-wrap">
           <li className="orbit-center">
             {/* <i className="orbit-center__icon fa fa-code" /> */}
