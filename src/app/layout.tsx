@@ -10,9 +10,6 @@ import {Theme }from "@/themes/themes-provide";
 import ContactMB from "@/components/contacts/ContactMB";
 
 
-
-import { Metadata } from 'next';
-
 export const metadata: Metadata = {
   title: 'CRL Portfolio',
   description: 'Portfolio do Carlos — desenvolvedor web e projetos criativos',
