@@ -11,6 +11,7 @@ const getInfAll = async (): Promise<ProjectItem[]> => {
       id: doc.id,
       ...(doc.data() as ProjectItem),
     }));
+          console.log("✅ Documento encontrado:", projects);
     return projects;
   } catch (err) {
     console.error("Erro ao buscar projetos:", err);
@@ -25,6 +26,7 @@ const getInfByName = async (name: string): Promise<ProjectItem | null> => {
     const docSnap = await getDoc(docRef);      // pega os dados
 
     if (docSnap.exists()) {
+      console.log("✅ Documento encontrado:", docSnap.data());
       return { ...(docSnap.data() as ProjectItem) };
     } else {
       console.log("❌ Documento não encontrado:", name);
