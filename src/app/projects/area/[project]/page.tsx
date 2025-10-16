@@ -34,7 +34,6 @@ async function fetchProjects(title: string): Promise<ProjectItem | null> {
     }
 
     const data = await res.json();
-    console.log("📦 Projeto recebido:", data);
     return data;
   } catch (err) {
     console.error("Erro no fetchProjects:", err);
