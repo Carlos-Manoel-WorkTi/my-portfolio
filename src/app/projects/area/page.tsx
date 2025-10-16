@@ -16,7 +16,7 @@ export default function Page() {
     
     if (!res.ok) throw new Error("Failed to fetch projects");
     const data = await res.json(); // ✅ lê uma vez
-    console.log("📦 Dados recebidos:", data);
+    // console.log("📦 Dados recebidos:", data);
     return data;
   }
 

@@ -26,7 +26,7 @@ export const getInfAll = async (): Promise<ProjectItem[]> => {
       ...(d.data() as ProjectItem),
     }));
 
-    console.log("✅ [getInfAll] Projetos carregados:", projects);
+    // console.log("✅ [getInfAll] Projetos carregados:", projects);
     return projects;
   } catch (err) {
     console.error("🔥 [getInfAll] Erro ao buscar projetos:", err);
@@ -62,7 +62,7 @@ export const getInfByName = async (name: string): Promise<ProjectItem | null> =>
 
     const data = docSnap.data() as ProjectItem;
     console.log("✅ [getInfByName] Documento encontrado:", data);
-    return { id: docSnap.id, ...data };
+    return { ...data };
   } catch (err) {
     console.error("🔥 [getInfByName] Erro ao buscar projeto:", err);
     return null;
