@@ -1,41 +1,70 @@
+// src/app/api/firebaseStorage.ts
 import { db } from "@/config/firebase";
-import { ListBgsType, ProjectItem } from "@/types/types";
+import { ProjectItem } from "@/types/types";
 import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 
+/**
+ * Busca todos os projetos do Firestore
+ */
+export const getInfAll = async (): Promise<ProjectItem[]> => {
+  console.log("📡 [getInfAll] Iniciando busca de todos os projetos...");
 
+  if (!db) {
+    console.error("❌ [getInfAll] Firestore (db) não inicializado corretamente.");
+    return [];
+  }
 
-const getInfAll = async (): Promise<ProjectItem[]> => {
   try {
-    const snapshot = await getDocs(collection(db, "projects")); // ✅ modular syntax
-    const projects: ProjectItem[] = snapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...(doc.data() as ProjectItem),
+    console.log("📁 [getInfAll] Acessando coleção: 'projects'");
+    const colRef = collection(db, "projects");
+
+    const snapshot = await getDocs(colRef);
+    console.log(`📄 [getInfAll] ${snapshot.size} documentos encontrados.`);
+
+    const projects: ProjectItem[] = snapshot.docs.map((d) => ({
+      id: d.id,
+      ...(d.data() as ProjectItem),
     }));
-          console.log("✅ Documento encontrado:", projects);
+
+    console.log("✅ [getInfAll] Projetos carregados:", projects);
     return projects;
   } catch (err) {
-    console.error("Erro ao buscar projetos:", err);
+    console.error("🔥 [getInfAll] Erro ao buscar projetos:", err);
     return [];
   }
 };
 
-// 🔹 Função para buscar um projeto específico
-const getInfByName = async (name: string): Promise<ProjectItem | null> => {
-  try {
-    const docRef = doc(db, "projects", name); // referência ao documento
-    const docSnap = await getDoc(docRef);      // pega os dados
+/**
+ * Busca um projeto específico pelo nome (id do doc)
+ */
+export const getInfByName = async (name: string): Promise<ProjectItem | null> => {
+  console.log("📡 [getInfByName] Iniciando busca de projeto:", name);
 
-    if (docSnap.exists()) {
-      console.log("✅ Documento encontrado:", docSnap.data());
-      return { ...(docSnap.data() as ProjectItem) };
-    } else {
-      console.log("❌ Documento não encontrado:", name);
+  if (!db) {
+    console.error("❌ [getInfByName] Firestore (db) não inicializado corretamente.");
+    return null;
+  }
+
+  if (!name || typeof name !== "string") {
+    console.error("❌ [getInfByName] Nome inválido recebido:", name);
+    return null;
+  }
+
+  try {
+    console.log("📁 [getInfByName] Tentando acessar doc em 'projects/'", name);
+    const docRef = doc(db, "projects", name);
+
+    const docSnap = await getDoc(docRef);
+    if (!docSnap.exists()) {
+      console.warn("⚠️ [getInfByName] Documento não encontrado:", name);
       return null;
     }
+
+    const data = docSnap.data() as ProjectItem;
+    console.log("✅ [getInfByName] Documento encontrado:", data);
+    return { id: docSnap.id, ...data };
   } catch (err) {
-    console.error("Erro ao buscar projeto:", err);
+    console.error("🔥 [getInfByName] Erro ao buscar projeto:", err);
     return null;
   }
 };
-
-export { getInfByName, getInfAll };
