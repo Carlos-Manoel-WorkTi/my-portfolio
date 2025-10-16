@@ -2,38 +2,46 @@
 
 import Footer from "@/components/footer/Footer";
 import React, { useState, useEffect } from "react";
-import { ListBgsType } from "@/types/types";
+import { ListBgsType, ProjectItem } from "@/types/types";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import NavBottom from "@/components/navBottom/NavBottom";
 
 export default function Page() {
-  async function fetchProjects(): Promise<ListBgsType> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
+  async function fetchProjects(): Promise<ProjectItem[]> {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api`, {
       cache: "no-store",
     });
-
+    
     if (!res.ok) throw new Error("Failed to fetch projects");
-
-    return res.json();
+    const data = await res.json(); // ✅ lê uma vez
+    console.log("📦 Dados recebidos:", data);
+    return data;
   }
 
   const searchParams = useSearchParams();
   const router = useRouter();
   const area = searchParams.toString().replace("=", "");
 
-  const [projects, setProjects] = useState<ListBgsType>([]);
+  const [projects, setProjects] = useState<ProjectItem[]>([]);
   const [currentProject, setCurrentProject] = useState<string>(area || "Todos");
   const [searchTerm, setSearchTerm] = useState("");
 
-  useEffect(() => {
-    async function loadProjects() {
-      const fetchedProjects: ListBgsType = await fetchProjects();
+useEffect(() => {
+  async function loadProjects() {
+    try {
+      const fetchedProjects:ProjectItem[] = await fetchProjects();
       setProjects(fetchedProjects);
+
+    } catch (error) {
+      console.error("❌ Erro ao carregar projetos:", error);
     }
-    loadProjects();
-  }, []);
+  }
+
+  loadProjects();
+}, []);
+
 
   const handleSelectChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = event.target.value;
@@ -44,14 +52,10 @@ export default function Page() {
     }
   };
 
-  const filteredProjects = projects.flatMap(project =>
-    Object.keys(project)
-      .map(key => project[key])
-      .filter(
-        item =>
-          (currentProject === "Todos" || item.area === currentProject) &&
-          item.title.toLowerCase().includes(searchTerm.toLowerCase())
-      )
+  const filteredProjects = projects.filter(
+    (item) =>
+      (currentProject === "Todos" || item.area === currentProject) &&
+      item.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (

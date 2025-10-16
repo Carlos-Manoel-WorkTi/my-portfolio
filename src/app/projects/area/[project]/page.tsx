@@ -2,12 +2,12 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import './style.css';
-import { log } from 'console';
 import Link from 'next/link';
 import Loading from '@/components/feed/loading';
 import Footer from '@/components/footer/Footer';
 import Image from 'next/image';
 import NavBottom from '@/components/navBottom/NavBottom';
+import { ProjectItem } from '@/types/types';
 
 type ProjectPageProps = {
   params: {
@@ -15,63 +15,57 @@ type ProjectPageProps = {
   };
 };
 
-type ProjectData = {
-  title: string;
-  area: string;
-  link_bg_light: string;
-  link_bg_dark: string;
-  images: string[];
-  description: string;
-  color: string;
-  date: string;
-  link: string;
-  github: string;
-  context: string;
-};
 
-async function fetchProjects(projectF: string): Promise<ProjectData | null> {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/projects`, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ title: projectF }), 
-    // O título do projeto que você deseja buscar
-  });
-  console.log(JSON.stringify({ title: projectF }));
+async function fetchProjects(title: string): Promise<ProjectItem | null> {
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+    const res = await fetch(`${baseUrl}/api`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ title }),
+      cache: "no-store",
+    });
 
-  if (!res.ok) {
-    console.error('Failed to fetch project data');
+    if (!res.ok) {
+      console.error(`❌ Erro ao buscar projeto: ${res.status}`);
+      return null;
+    }
+
+    const data = await res.json();
+    console.log("📦 Projeto recebido:", data);
+    return data;
+  } catch (err) {
+    console.error("Erro no fetchProjects:", err);
     return null;
   }
-
-  return res.json(); // Retorne o JSON diretamente
+  return null
 }
 
 
 export default function ProjectPage({ params }: ProjectPageProps) {
   const { project } = params;
-  const [projectData, setProjectData] = useState<ProjectData | null>(null);
-
+  const [projectData, setProjectData] = useState<ProjectItem | null>(null);
+  
   useEffect(() => {
+    let mounted = true;
+
     async function loadData() {
-      console.log(project);
-      
-      const data = await fetchProjects(project);
-      console.log(data);
-      setProjectData(data);
-      console.log('Project data loaded:', data);
-      
-      
+      const data = await fetchProjects(decodeURIComponent(project));
+      if (mounted) setProjectData(data);
     }
+
     loadData();
+    return () => { mounted = false };
   }, [project]);
+
 
   if (!projectData) return <Loading/>;
 
   return (
     <div className='w-full lg:max-w-6xl lg:mx-auto'>
-      <div id="subHeader">
+      <div id="subHeader" >
         <h2 id="title_project">{projectData.title}</h2>
         <div className="card">
         <a className="socialContainer containerOne" href="#">
@@ -92,28 +86,63 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <div id='moreInf'>
           <p id='date-project'>Data: {projectData.date}</p>
           {/* <Link href={projectData.link} target="_blank" id='link-project'>Visitar Projeto</Link> */}
-          <Link href={projectData.link} id='link-project'>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-          </svg>
-          <div className="text">
-           Ir visitar
+          <Link href={projectData.link} id='link-project' target='_blank'>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              </svg>
+              <div className="text">
+              Ir visitar
+            </div>
+          </Link>
         </div>
-      </Link>
-        </div>
-        <div id="context">
-          <p>{projectData.description}</p>
-          <Image className='imageShow'
-          src={projectData.images[0]}alt={projectData.title}width={500}  height={500}/>
-          <p>Contexto: {projectData.context}</p>
-        </div>
-        <div style={{display: 'flex', gap: '40px', marginTop: '40px'}}>
-          <Image
-          src={projectData.images[1]}alt={projectData.title}width={500}  height={500}/>
-          <Image
-          src={projectData.images[0]}alt={projectData.title}width={500}  height={500}/>
+        
+        <div id="context" className="space-y-6">
+          <p className="mb-4">{projectData.description}</p>
+          {projectData.technologies && projectData.technologies.length > 0 && (
+            <div id="tech-stack" className="flex flex-wrap gap-2 mt-2 justify-center sm:justify-start">
+              {projectData.technologies.map((tech, i) => (
+                <span
+                  key={i}
+                  className="bg-gradient-to-r from-violet-500/20 to-fuchsia-500/20
+                            text-violet-400 border border-violet-400/40
+                            px-3 py-1 rounded-full text-xs sm:text-sm font-medium
+                            backdrop-blur-sm hover:scale-105 transition-transform duration-200"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          )}
 
+
+          {/* ✅ Renderização dinâmica do conteúdo */}
+          {(projectData.content) && projectData.content?.length > 0 && (
+            <div className="space-y-8">
+              {projectData.content.map((section, index) => (
+                <div
+                  key={index}
+                  className="rounded-xl py-4 shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  {section.title && <h3 className="text-lg font-semibold mb-3">{section.title}</h3>}
+                  {section.text && <p className="mb-7 mt-3 leading-relaxed">{section.text}</p>}
+                  {section.image && (
+                    <div className="w-full flex justify-center">
+                      <Image
+                        className="rounded-lg object-cover"
+                        src={section.image}
+                        alt={`${projectData.title} - ${section.title || "imagem"}`}
+                        width={600}
+                        height={400}
+                      />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
+
+
       </div>
       <NavBottom place='projects'/>
       <Footer/>

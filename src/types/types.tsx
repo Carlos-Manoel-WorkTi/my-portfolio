@@ -7,10 +7,16 @@ export type ProjectItem = {
     link_bg_light: string;
     link_bg_dark: string;
     description: string;
+    link: string;
     cover: string;
     color: string;
     date: string;
     technologies: string[];
+    content?: Array<{
+      title: string;
+      text: string;
+      image: string;
+    }>;
   };
   
   // Define o tipo para um item na lista de projetos

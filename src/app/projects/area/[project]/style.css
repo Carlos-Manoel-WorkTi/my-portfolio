@@ -166,3 +166,45 @@
     object-fit: cover;
     margin: 10px 10px 10px 0;
   }
+
+  /* === Ajustes para telas menores que 600px === */
+@media (max-width: 600px) {
+  #subHeader {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: auto; /* ajusta altura para conteúdo */
+    padding: 10px 15px;
+    gap: 10px;
+  }
+
+  #title_project {
+    font-size: 1.8em; /* menor para caber na tela */
+    text-align: center;
+    padding-top: 5px;
+    width: 50%;
+  }
+
+  .card {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px;
+    gap: 8px;
+    width: 40%;
+  }
+
+  .socialContainer {
+    width: 36px;
+    height: 36px;
+  }
+
+  .socialSvg {
+    width: 14px;
+  }
+  #link-project {
+    height: 29px;
+    width: 120px;
+    font-size: 17px;
+    border-radius: 2px;
+}
+}

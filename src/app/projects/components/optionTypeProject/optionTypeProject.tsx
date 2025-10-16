@@ -2,7 +2,7 @@ import Link from "next/link"
 import "./optionTypeProject.css"
 import React from 'react'
 import {Chakra_Petch} from "next/font/google"
-import { ListBgsType } from "@/types/types"
+import { ListBgsType, ProjectItem } from "@/types/types"
 
 const mainFontChakra = Chakra_Petch({
   weight:['300'],
@@ -15,31 +15,28 @@ const mainFontChakra = Chakra_Petch({
   full: number;
  }
 
-export default function OptionTypeProject({ list }: { list: ListBgsType }) {
+export default function OptionTypeProject({ list }: { list: ProjectItem[] }) {
     function filterByArea():AreasProjects {
 
       const total = list.length;
 
       const front = list.filter((project: any) => {
-        const key = Object.keys(project)[0];
-        return project[key].area === 'front-end';
+        return project.area === 'front-end';
       }).length;
 
+      
       const back = list.filter((project: any) => {
-        const key = Object.keys(project)[0];
-        return project[key].area === 'back-end';
+        return project.area === 'back-end';
       }).length;
 
       const full = list.filter((project: any) => {
-        const key = Object.keys(project)[0];
-        return project[key].area === 'fullstack';
+        return project.area === 'fullstack';
       }).length;
-      console.log(list);
-      console.log("Total de projetos: ");
       
       return {total, front, back, full};
     }
     const projects = filterByArea();
+console.log("projetos: ", projects);
 
   return (
     <div className={mainFontChakra.className}>
