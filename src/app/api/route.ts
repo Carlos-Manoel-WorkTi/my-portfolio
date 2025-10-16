@@ -1,6 +1,6 @@
 // src/app/api/projects/route.ts
 import { NextResponse } from "next/server";
-import { getInfAll, getInfByName } from "../firebaseStorage";
+import { getInfAll, getInfByName } from "./firebaseStorage";
 import { ProjectItem } from "@/types/types";
 
 // Domínio permitido (ou use "*")
