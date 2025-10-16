@@ -7,7 +7,7 @@ import { ProjectItem } from "@/types/types";
 const ALLOWED_ORIGIN = "https://portfolio-carlos-five.vercel.app";
 
 const headers = {
-  "Access-Control-Allow-Origin": ALLOWED_ORIGIN,
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type",
 };
