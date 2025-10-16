@@ -3,36 +3,18 @@ import { NextResponse } from "next/server";
 import { getInfAll, getInfByName } from "./firebaseStorage";
 import { ProjectItem } from "@/types/types";
 
-// Seu domínio de produção
-const ALLOWED_ORIGIN = "https://portfolio-carlos-five.vercel.app";
-
-const headers = {
-  "Access-Control-Allow-Origin": "*",
-  "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
-  "Access-Control-Allow-Headers": "Content-Type",
-};
-
-// OPTIONS (preflight) request
-export async function OPTIONS() {
-  return new Response(null, { headers });
-}
-
-// GET — lista todos os projetos
 export async function GET() {
-  return NextResponse.json(await getInfAll(), { headers });
+  const projects = await getInfAll();
+  return NextResponse.json(projects);
 }
 
-// POST — busca projeto por título
 export async function POST(req: Request) {
-  const title = await req.json();
-  const project: ProjectItem | null = await getInfByName(title.title);
+  const { title } = await req.json();
+  const project: ProjectItem | null = await getInfByName(title);
 
   if (project) {
-    return NextResponse.json(project, { headers });
+    return NextResponse.json(project);
   } else {
-    return NextResponse.json(
-      { message: "Projeto não encontrado" },
-      { status: 404, headers }
-    );
+    return NextResponse.json({ message: "Projeto não encontrado" }, { status: 404 });
   }
 }
