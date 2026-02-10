@@ -287,9 +287,9 @@ export default function ServeEffect() {
               <span className="icon-inf">$</span> Olá, eu sou um desenvolvedor web,
             </li>
             <li className="lm">
-              <span id='lmg'>estou no ultimo semestre do curso </span><span id='lms'>estou no curso de</span> <span className='curso'>&quot;Análise</span>
+              <span id='lmg'>Sou formado em &quot;<span className='curso'>ADS</span>&quot; e </span><span id='lms'>cursando o curso de</span> <span className='curso'>&quot;Engenharia</span>
             </li>
-            <li><span className='curso'>e Desenvolvimento de Sistemas&quot;.</span> </li>
+            <li><span className='curso'>de software&quot;.</span> </li>
             <li id="ab"   >
               <span className="icon-inf">$</span> Para mais informações: <Link href="/about">
               <button className="signupBtn">
