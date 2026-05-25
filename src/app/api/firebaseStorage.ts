@@ -1,68 +1,114 @@
 // src/app/api/firebaseStorage.ts
-import { db } from "@/config/firebase";
+import { fallbackProjects, getFallbackProjectByName } from "@/data/projects";
 import { ProjectItem } from "@/types/types";
-import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 
-/**
- * Busca todos os projetos do Firestore
- */
+type FirestoreValue = {
+  stringValue?: string;
+  integerValue?: string;
+  doubleValue?: number;
+  booleanValue?: boolean;
+  nullValue?: null;
+  arrayValue?: { values?: FirestoreValue[] };
+  mapValue?: { fields?: Record<string, FirestoreValue> };
+};
+
+type FirestoreDocument = {
+  name: string;
+  fields?: Record<string, FirestoreValue>;
+};
+
+const FIRESTORE_BASE_URL = "https://firestore.googleapis.com/v1";
+
+function getFirebaseRestUrl(path: string) {
+  const projectId = process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID;
+  const apiKey = process.env.NEXT_PUBLIC_FIREBASE_API_KEY;
+
+  if (!projectId || !apiKey) {
+    return null;
+  }
+
+  return `${FIRESTORE_BASE_URL}/projects/${projectId}/databases/(default)/documents/${path}?key=${apiKey}`;
+}
+
+function readFirestoreValue(value: FirestoreValue): unknown {
+  if ("stringValue" in value) return value.stringValue ?? "";
+  if ("integerValue" in value) return Number(value.integerValue);
+  if ("doubleValue" in value) return value.doubleValue;
+  if ("booleanValue" in value) return value.booleanValue;
+  if ("nullValue" in value) return null;
+
+  if (value.arrayValue) {
+    return (value.arrayValue.values ?? []).map(readFirestoreValue);
+  }
+
+  if (value.mapValue) {
+    return readFirestoreFields(value.mapValue.fields ?? {});
+  }
+
+  return undefined;
+}
+
+function readFirestoreFields(fields: Record<string, FirestoreValue>) {
+  return Object.entries(fields).reduce<Record<string, unknown>>((acc, [key, value]) => {
+    acc[key] = readFirestoreValue(value);
+    return acc;
+  }, {});
+}
+
+function parseProjectDocument(document: FirestoreDocument): ProjectItem {
+  const id = decodeURIComponent(document.name.split("/").pop() ?? "");
+
+  return {
+    id,
+    ...(readFirestoreFields(document.fields ?? {}) as Omit<ProjectItem, "id">),
+  };
+}
+
+async function fetchJson<T>(url: string): Promise<T> {
+  const response = await fetch(url, { cache: "no-store" });
+
+  if (!response.ok) {
+    throw new Error(`Firestore REST failed with ${response.status}`);
+  }
+
+  return response.json();
+}
+
 export const getInfAll = async (): Promise<ProjectItem[]> => {
+  const url = getFirebaseRestUrl("projects");
 
-  if (!db) {
-    console.error("❌ [getInfAll] Firestore (db) não inicializado corretamente.");
-    return [];
+  if (!url) {
+    return fallbackProjects;
   }
 
   try {
+    const data = await fetchJson<{ documents?: FirestoreDocument[] }>(url);
+    const projects = (data.documents ?? []).map(parseProjectDocument);
 
-    const colRef = collection(db, "projects");
-
-    const snapshot = await getDocs(colRef);
-
-
-    const projects: ProjectItem[] = snapshot.docs.map((d) => ({
-      id: d.id,
-      ...(d.data() as ProjectItem),
-    }));
-
-    // console.log("✅ [getInfAll] Projetos carregados:", projects);
-    return projects;
+    return projects.length > 0 ? projects : fallbackProjects;
   } catch (err) {
-    console.error("🔥 [getInfAll] Erro ao buscar projetos:", err);
-    return [];
+    console.error("[getInfAll] Erro ao buscar projetos no Firestore:", err);
+    return fallbackProjects;
   }
 };
 
-/**
- * Busca um projeto específico pelo nome (id do doc)
- */
 export const getInfByName = async (name: string): Promise<ProjectItem | null> => {
-
-  if (!db) {
-    console.error("❌ [getInfByName] Firestore (db) não inicializado corretamente.");
+  if (!name || typeof name !== "string") {
+    console.error("[getInfByName] Nome inválido recebido:", name);
     return null;
   }
 
-  if (!name || typeof name !== "string") {
-    console.error("❌ [getInfByName] Nome inválido recebido:", name);
-    return null;
+  const url = getFirebaseRestUrl(`projects/${encodeURIComponent(name)}`);
+
+  if (!url) {
+    return getFallbackProjectByName(name);
   }
 
   try {
-
-    const docRef = doc(db, "projects", name);
-
-    const docSnap = await getDoc(docRef);
-    if (!docSnap.exists()) {
-      console.warn("⚠️ [getInfByName] Documento não encontrado:", name);
-      return null;
-    }
-
-    const data = docSnap.data() as ProjectItem;
-
-    return { ...data };
+    const document = await fetchJson<FirestoreDocument>(url);
+    return parseProjectDocument(document);
   } catch (err) {
-    console.error("🔥 [getInfByName] Erro ao buscar projeto:", err);
-    return null;
+    console.error("[getInfByName] Erro ao buscar projeto no Firestore:", err);
+    return getFallbackProjectByName(name);
   }
 };

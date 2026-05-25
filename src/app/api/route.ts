@@ -3,24 +3,31 @@ import { NextResponse } from "next/server";
 import { getInfAll, getInfByName } from "./firebaseStorage";
 import { ProjectItem } from "@/types/types";
 
-// Domínio permitido (ou use "*")
-const ALLOWED_ORIGIN = "https://portfolio-carlos-mcmc7dddy-carlos-manoel-worktis-projects.vercel.app";
+const defaultAllowedOrigins = [
+  "https://portfolio-carlos-five.vercel.app",
+  "https://portfolio-carlos-mcmc7dddy-carlos-manoel-worktis-projects.vercel.app",
+];
+
+const allowedOrigins = (process.env.ALLOWED_ORIGINS ?? defaultAllowedOrigins.join(","))
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
 
 function corsHeaders(origin: string | null) {
+  const allowedOrigin = origin && allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+
   return {
-    "Access-Control-Allow-Origin": origin === ALLOWED_ORIGIN ? origin : ALLOWED_ORIGIN,
+    "Access-Control-Allow-Origin": allowedOrigin,
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
   };
 }
 
-// OPTIONS — necessário para preflight
 export async function OPTIONS(req: Request) {
   const origin = req.headers.get("origin");
   return new Response(null, { status: 204, headers: corsHeaders(origin) });
 }
 
-// GET — lista todos os projetos
 export async function GET(req: Request) {
   const origin = req.headers.get("origin");
   const data = await getInfAll();
@@ -31,7 +38,6 @@ export async function GET(req: Request) {
   return response;
 }
 
-// POST — busca projeto por título
 export async function POST(req: Request) {
   const origin = req.headers.get("origin");
   const { title } = await req.json();

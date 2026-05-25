@@ -70,6 +70,13 @@ main {
   color: var(--label-color);
 }
 
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 #formContact input,
 #formContact textarea {
   width: 100%;

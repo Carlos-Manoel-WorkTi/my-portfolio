@@ -5,18 +5,21 @@ import Footer from '@/components/footer/Footer';
 import Bg from '@/components/bg/bg';
 import Image from 'next/image';
 import NavBottom from '@/components/navBottom/NavBottom';
+import { Mail, Send, User } from 'lucide-react';
 import "./style.css";
 
 export default function Page() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    website: '',
   });
 
   const [status, setStatus] = useState<string | null>(null);
   const [showToast, setShowToast] = useState(false);
   const [gratitudeMessage, setGratitudeMessage] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (status) {
@@ -53,6 +56,7 @@ export default function Page() {
     e.preventDefault();
     setStatus(null);
     setGratitudeMessage(false);
+    setIsSubmitting(true);
 
     try {
       const response = await fetch('/api/contact', {
@@ -60,15 +64,18 @@ export default function Page() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+      const result = await response.json().catch(() => null);
 
       if (response.ok) {
-        setStatus('Email enviado com sucesso!');
-        setFormData({ name: '', email: '', message: '' });
+        setStatus(result?.message ?? 'Email enviado com sucesso!');
+        setFormData({ name: '', email: '', message: '', website: '' });
       } else {
-        setStatus('Erro ao enviar o email. Tente novamente.');
+        setStatus(result?.message ?? 'Erro ao enviar o email. Tente novamente.');
       }
     } catch {
       setStatus('Erro ao enviar o email. Tente novamente.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -116,7 +123,7 @@ export default function Page() {
         <Image
           id="rk_contact"
           src="/about/rk.gif"
-          alt="My GIF"
+          alt="Foguete animado"
           width={200}
           height={200}
           unoptimized={true}
@@ -127,17 +134,27 @@ export default function Page() {
           Entre em contato
         </h2>
         <p className="text-slate-600 dark:text-slate-400 mt-2 text-lg">
-          Vamos conversar ✨
+          Vamos conversar
         </p>
       </div>
         <div id="containerContact">
           <form onSubmit={handleSubmit} id='formContact'>
+            <input
+              type="text"
+              name="website"
+              value={formData.website}
+              onChange={handleChange}
+              tabIndex={-1}
+              autoComplete="off"
+              className="contact-honeypot"
+              aria-hidden="true"
+            />
             <div className="flex flex-col">
         <label htmlFor="name" className="text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
           Nome
         </label>
         <div className="flex items-center gap-2">
-          <span className="text-slate-500 dark:text-slate-400">👤</span>
+          <User className="h-5 w-5 text-slate-500 dark:text-slate-400" aria-hidden="true" />
           <input
             type="text"
             id="name"
@@ -145,6 +162,7 @@ export default function Page() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Digite seu nome completo"
+            maxLength={80}
             required
             className="flex-1 rounded-md px-3 py-2 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-green-500 outline-none"
           />
@@ -157,7 +175,7 @@ export default function Page() {
           Email
         </label>
         <div className="flex items-center gap-2">
-          <span className="text-slate-500 dark:text-slate-400">📧</span>
+          <Mail className="h-5 w-5 text-slate-500 dark:text-slate-400" aria-hidden="true" />
           <input
             type="email"
             id="email"
@@ -165,6 +183,7 @@ export default function Page() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Seu melhor email"
+            maxLength={120}
             required
             className="flex-1 rounded-md px-3 py-2 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-green-500 outline-none"
           />
@@ -182,6 +201,7 @@ export default function Page() {
           value={formData.message}
           onChange={handleChange}
           placeholder="Escreva sua mensagem aqui..."
+          maxLength={2000}
           required
           rows={5}
           className="rounded-md px-3 py-2 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 focus:ring-2 focus:ring-green-500 outline-none"
@@ -191,9 +211,13 @@ export default function Page() {
       <div className="flex justify-center mt-4">
         <button
           type="submit"
-          className="w-1/2 py-3 rounded-lg bg-gradient-to-r from-green-600 to-green-400 text-white font-semibold shadow-md hover:scale-105 hover:shadow-lg transition"
+          disabled={isSubmitting}
+          className="w-1/2 py-3 rounded-lg bg-gradient-to-r from-green-600 to-green-400 text-white font-semibold shadow-md hover:scale-105 hover:shadow-lg transition disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100"
         >
-          Enviar 🚀
+          <span className="flex items-center justify-center gap-2">
+            {isSubmitting ? 'Enviando...' : 'Enviar'}
+            <Send className="h-4 w-4" aria-hidden="true" />
+          </span>
         </button>
       </div>
           </form>

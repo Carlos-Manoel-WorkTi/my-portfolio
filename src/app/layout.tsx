@@ -11,8 +11,15 @@ import ContactMB from "@/components/contacts/ContactMB";
 
 
 export const metadata: Metadata = {
-  title: 'CRL Portfolio',
+  metadataBase: new URL('https://portfolio-carlos-five.vercel.app'),
+  title: {
+    default: 'Carlos Manoel | Desenvolvedor Full Stack',
+    template: '%s | Carlos Manoel',
+  },
   description: 'Portfolio do Carlos — desenvolvedor web e projetos criativos',
+  keywords: ['Carlos Manoel', 'portfolio', 'desenvolvedor web', 'front-end', 'back-end', 'full stack'],
+  authors: [{ name: 'Carlos Manoel' }],
+  creator: 'Carlos Manoel',
   
   // Ícones
   icons: {
@@ -32,20 +39,26 @@ export const metadata: Metadata = {
     nocache: false
   },
   openGraph: {
-    title: 'CRL Portfolio',
+    title: 'Carlos Manoel | Desenvolvedor Full Stack',
     description: 'Portfolio do Carlos — desenvolvedor web e projetos criativos',
     url: 'https://portfolio-carlos-five.vercel.app',
     siteName: 'CRL Portfolio',
     images: [
       {
-        url: 'https://portfolio-carlos-five.vercel.app/og-image.png', // opcional para redes sociais
-        width: 1200,
-        height: 630,
+        url: '/space5.png',
+        width: 1143,
+        height: 792,
         alt: 'CRL Portfolio',
       },
     ],
     locale: 'pt_BR',
     type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Carlos Manoel | Desenvolvedor Full Stack',
+    description: 'Portfolio do Carlos — desenvolvedor web e projetos criativos',
+    images: ['/space5.png'],
   },
 };
 

@@ -13,18 +13,24 @@ const Stars = ({bg, total = 10000}:{bg:string,total:number}) => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Função para ajustar o total com base na largura da tela
+    const mountNode = mountRef.current;
+
+    if (!mountNode) {
+      return;
+    }
+
     const adjustTotalStars = () => {
+      let nextTotal = total;
+
       if (window.innerWidth < 600) {
-        setAdjustedTotal(300);
+        nextTotal = 300;
       } else if (window.innerWidth < 800) {
-        setAdjustedTotal(1000);
-      } else {
-        setAdjustedTotal(total);
+        nextTotal = 1000;
       }
+
+      setAdjustedTotal((currentTotal) => (currentTotal === nextTotal ? currentTotal : nextTotal));
     };
 
-    // Ajustar o total na inicialização
     adjustTotalStars();
 
     // Cena
@@ -35,13 +41,18 @@ const Stars = ({bg, total = 10000}:{bg:string,total:number}) => {
     camera.position.z = 500;
 
     // Renderizador
-    const renderer = new THREE.WebGLRenderer({ alpha: true });
+    const renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: false,
+      powerPreference: 'low-power',
+    });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     renderer.setSize(window.innerWidth, window.innerHeight);
-    mountRef.current?.appendChild(renderer.domElement);
+    mountNode.appendChild(renderer.domElement);
 
     // Geometria e material das estrelas
     const starsGeometry = new THREE.BufferGeometry();
-    const starCount = adjustedTotal; // Número ajustado de estrelas
+    const starCount = adjustedTotal;
     const starVertices = [];
     const starSizes = [];
 
@@ -68,11 +79,17 @@ const Stars = ({bg, total = 10000}:{bg:string,total:number}) => {
     const stars = new THREE.Points(starsGeometry, starsMaterial);
     scene.add(stars);
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let animationFrameId = 0;
+
     const animate = () => {
-      requestAnimationFrame(animate);
-      stars.rotation.x += 0.0005;
-      stars.rotation.y += 0.0005;
+      if (!prefersReducedMotion) {
+        stars.rotation.x += 0.0005;
+        stars.rotation.y += 0.0005;
+      }
+
       renderer.render(scene, camera);
+      animationFrameId = requestAnimationFrame(animate);
     };
 
     animate();
@@ -81,14 +98,22 @@ const Stars = ({bg, total = 10000}:{bg:string,total:number}) => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
-      adjustTotalStars(); // Ajustar o total de estrelas ao redimensionar
+      adjustTotalStars();
     };
 
     window.addEventListener('resize', handleResize);
 
     return () => {
-      mountRef.current?.removeChild(renderer.domElement);
       window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animationFrameId);
+
+      if (mountNode.contains(renderer.domElement)) {
+        mountNode.removeChild(renderer.domElement);
+      }
+
+      starsGeometry.dispose();
+      starsMaterial.dispose();
+      renderer.dispose();
     };
   }, [adjustedTotal, total]);
 

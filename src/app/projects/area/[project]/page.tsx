@@ -10,16 +10,20 @@ import NavBottom from '@/components/navBottom/NavBottom';
 import { ProjectItem } from '@/types/types';
 
 type ProjectPageProps = {
-  params: {
+  params: Promise<{
     project: string;
-  };
+  }>;
 };
 
 
 async function fetchProjects(title: string): Promise<ProjectItem | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-    const res = await fetch(`${baseUrl}/api`, {
+    const configuredUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = configuredUrl && configuredUrl !== 'undefined'
+      ? `${configuredUrl.replace(/\/$/, '')}/api`
+      : '/api';
+
+    const res = await fetch(apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -44,14 +48,31 @@ async function fetchProjects(title: string): Promise<ProjectItem | null> {
 
 
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const { project } = params;
+  const [project, setProject] = useState<string | null>(null);
   const [projectData, setProjectData] = useState<ProjectItem | null>(null);
-  
+
   useEffect(() => {
     let mounted = true;
 
+    params.then(({ project: projectParam }) => {
+      if (mounted) {
+        setProject(decodeURIComponent(projectParam));
+      }
+    });
+
+    return () => { mounted = false };
+  }, [params]);
+  
+  useEffect(() => {
+    if (!project) {
+      return;
+    }
+
+    const currentProject = project;
+    let mounted = true;
+
     async function loadData() {
-      const data = await fetchProjects(decodeURIComponent(project));
+      const data = await fetchProjects(currentProject);
       if (mounted) setProjectData(data);
     }
 

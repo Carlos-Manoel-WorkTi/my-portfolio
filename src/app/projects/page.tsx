@@ -1,6 +1,7 @@
 import React from 'react';
 import './project.css';
-import { ListBgsType, ProjectItem } from '@/types/types';
+import { ProjectItem } from '@/types/types';
+import { headers } from 'next/headers';
 
 import OptionTypeProject from './components/optionTypeProject/optionTypeProject';
 import Footer from '@/components/footer/Footer';
@@ -12,13 +13,24 @@ import NavBottom from '@/components/navBottom/NavBottom';
 const Slide = React.lazy(() => import('./components/slide/Slide'));
 
 export default async function Project() {
+  const getBaseUrl = async () => {
+    const configuredUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    if (configuredUrl) {
+      return configuredUrl.replace(/\/$/, '');
+    }
+
+    const headersList = await headers();
+    const host = headersList.get('host') ?? 'localhost:3000';
+    const protocol = process.env.NODE_ENV === 'development' ? 'http' : 'https';
+
+    return `${protocol}://${host}`;
+  };
 
   async function fetchProjects(): Promise<ProjectItem[]> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api`, {
+    const res = await fetch(`${await getBaseUrl()}/api`, {
       cache: 'no-store',
     });
-    console.log("Chegou aqui");
-    
   
     if (!res.ok) {
       throw new Error('Failed to fetch projects');

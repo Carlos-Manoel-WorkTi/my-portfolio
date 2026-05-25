@@ -2,6 +2,7 @@
 
 // Define o tipo para um item de projeto
 export type ProjectItem = {
+    id?: string;
     title: string;
     area: string;
     link_bg_light: string;
@@ -12,10 +13,14 @@ export type ProjectItem = {
     color: string;
     date: string;
     technologies: string[];
+    images?: string[];
+    github?: string;
+    preview?: string;
+    context?: string;
     content?: Array<{
-      title: string;
-      text: string;
-      image: string;
+      title?: string;
+      text?: string;
+      image?: string;
     }>;
   };
   

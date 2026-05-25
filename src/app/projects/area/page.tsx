@@ -2,7 +2,7 @@
 
 import Footer from "@/components/footer/Footer";
 import React, { useState, useEffect } from "react";
-import { ListBgsType, ProjectItem } from "@/types/types";
+import { ProjectItem } from "@/types/types";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,7 +10,12 @@ import NavBottom from "@/components/navBottom/NavBottom";
 
 export default function Page() {
   async function fetchProjects(): Promise<ProjectItem[]> {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api`, {
+    const configuredUrl = process.env.NEXT_PUBLIC_API_URL;
+    const apiUrl = configuredUrl && configuredUrl !== 'undefined'
+      ? `${configuredUrl.replace(/\/$/, '')}/api`
+      : '/api';
+
+    const res = await fetch(apiUrl, {
       cache: "no-store",
     });
     
