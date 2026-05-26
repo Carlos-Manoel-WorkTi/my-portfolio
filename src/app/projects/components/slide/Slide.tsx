@@ -10,6 +10,29 @@ interface SlideProps {
   list: ProjectItem[];
 }
 
+function getValidImageUrl(url?: string | null) {
+  if (!url || url === 'none') {
+    return null;
+  }
+
+  return url;
+}
+
+function getImageCandidates(item: ProjectItem, theme?: string) {
+  const themedImage = theme === 'dark' ? item.link_bg_dark : item.link_bg_light;
+  const oppositeThemedImage = theme === 'dark' ? item.link_bg_light : item.link_bg_dark;
+  const candidates = [
+    themedImage,
+    item.cover,
+    oppositeThemedImage,
+    ...(item.images ?? []),
+  ]
+    .map(getValidImageUrl)
+    .filter((url): url is string => Boolean(url));
+
+  return Array.from(new Set(candidates));
+}
+
 export default function Slide({ list }: SlideProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [width, setWidth] = useState<number>(0);
@@ -17,7 +40,6 @@ export default function Slide({ list }: SlideProps) {
   const { resolvedTheme } = useTheme();
   const [isAuto, setIsAuto] = useState<boolean>(false);
   const [isBgLoaded, setIsBgLoaded] = useState(false);
-  const [preloadedImages, setPreloadedImages] = useState<Record<number, boolean>>({});
 
   // Atualiza largura da tela
   useEffect(() => {
@@ -28,22 +50,12 @@ export default function Slide({ list }: SlideProps) {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Precarrega imagens
-  useEffect(() => {
-    list.forEach((item, index) => {
-      const link = resolvedTheme === 'dark' ? item.link_bg_dark : item.link_bg_light;
-      const img = new Image();
-      img.src = link;
-      img.onload = () => setPreloadedImages(prev => ({ ...prev, [index]: true }));
-    });
-  }, [list, resolvedTheme]);
-
   // Atualiza background
   useEffect(() => {
     if (!list[currentIndex]) return;
 
     const item = list[currentIndex];
-    const link = resolvedTheme === 'dark' ? item.link_bg_dark : item.link_bg_light;
+    const candidates = getImageCandidates(item, resolvedTheme);
 
     const gradient = width <= 580
       ? "rgba(16, 14, 14, 0.76) 25%, #000000a8"
@@ -51,22 +63,44 @@ export default function Slide({ list }: SlideProps) {
         ? "rgba(10, 16, 22, 0) 15%, transparent"
         : "rgb(10, 16, 22) 15%, transparent";
 
-    const newBackgroundImage = `linear-gradient(to right, ${gradient}), url("${link}")`;
+    let cancelled = false;
+    let autoTimer: ReturnType<typeof setTimeout>;
 
-    if (preloadedImages[currentIndex]) {
-      setBackgroundImage(newBackgroundImage);
+    setIsBgLoaded(false);
+
+    const showBackground = (url?: string) => {
+      if (cancelled) return;
+
+      setBackgroundImage(
+        url
+          ? `linear-gradient(to right, ${gradient}), url("${url}")`
+          : `linear-gradient(to right, ${gradient})`
+      );
       setIsBgLoaded(true);
-      setTimeout(() => setIsAuto(true), 3000);
-    } else {
+      autoTimer = setTimeout(() => setIsAuto(true), 3000);
+    };
+
+    const loadCandidate = (index: number) => {
+      const candidate = candidates[index];
+
+      if (!candidate) {
+        showBackground();
+        return;
+      }
+
       const img = new Image();
-      img.src = link;
-      img.onload = () => {
-        setBackgroundImage(newBackgroundImage);
-        setIsBgLoaded(true);
-        setTimeout(() => setIsAuto(true), 3000);
-      };
-    }
-  }, [currentIndex, width, resolvedTheme, list, preloadedImages]);
+      img.onload = () => showBackground(candidate);
+      img.onerror = () => loadCandidate(index + 1);
+      img.src = candidate;
+    };
+
+    loadCandidate(0);
+
+    return () => {
+      cancelled = true;
+      clearTimeout(autoTimer);
+    };
+  }, [currentIndex, width, resolvedTheme, list]);
 
   // Auto slide
   useEffect(() => {
