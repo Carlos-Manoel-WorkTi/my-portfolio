@@ -18,12 +18,7 @@ type ProjectPageProps = {
 
 async function fetchProjects(title: string): Promise<ProjectItem | null> {
   try {
-    const configuredUrl = process.env.NEXT_PUBLIC_API_URL;
-    const apiUrl = configuredUrl && configuredUrl !== 'undefined'
-      ? `${configuredUrl.replace(/\/$/, '')}/api`
-      : '/api';
-
-    const res = await fetch(apiUrl, {
+    const res = await fetch('/api', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

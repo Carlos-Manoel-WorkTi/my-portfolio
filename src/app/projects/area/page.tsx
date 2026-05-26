@@ -10,12 +10,7 @@ import NavBottom from "@/components/navBottom/NavBottom";
 
 export default function Page() {
   async function fetchProjects(): Promise<ProjectItem[]> {
-    const configuredUrl = process.env.NEXT_PUBLIC_API_URL;
-    const apiUrl = configuredUrl && configuredUrl !== 'undefined'
-      ? `${configuredUrl.replace(/\/$/, '')}/api`
-      : '/api';
-
-    const res = await fetch(apiUrl, {
+    const res = await fetch('/api', {
       cache: "no-store",
     });
     
