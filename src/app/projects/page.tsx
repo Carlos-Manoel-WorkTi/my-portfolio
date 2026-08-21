@@ -18,6 +18,7 @@ export default async function Project() {
 
   const projectsFiltered = projects.filter((item) => {
     return [
+      'TKK Flow',
       'DuoWord',
       'Decode',
       'Planets Cards',

@@ -105,7 +105,10 @@ export default function Slide({ list }: SlideProps) {
 
   if (!list[currentIndex]) return null;
 
-  const { title, description, color, link } = list[currentIndex];
+  const { title, description, color, link, isPrivate } = list[currentIndex];
+  const projectHref = isPrivate
+    ? `/projects/area/${encodeURIComponent(title)}`
+    : link;
 
   return (
     <div className="container-slide">
@@ -122,8 +125,14 @@ export default function Slide({ list }: SlideProps) {
         <p>{description}</p>
       </div>
       <div id='container-btn'>
-        <a id='btn-ctt' href={link} target="_blank" rel="noreferrer" style={{ backgroundColor: color }}>
-          Ver projeto
+        <a
+          id='btn-ctt'
+          href={projectHref}
+          target={isPrivate ? undefined : "_blank"}
+          rel={isPrivate ? undefined : "noreferrer"}
+          style={{ backgroundColor: color }}
+        >
+          {isPrivate ? "Ver case" : "Ver projeto"}
         </a>
       </div>
 

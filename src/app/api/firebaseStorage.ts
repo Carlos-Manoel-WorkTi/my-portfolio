@@ -64,6 +64,20 @@ function parseProjectDocument(document: FirestoreDocument): ProjectItem {
   };
 }
 
+function mergeProjectsWithFallback(projects: ProjectItem[]): ProjectItem[] {
+  const remoteByTitle = new Map(projects.map((project) => [project.title, project]));
+  const fallbackTitles = new Set(fallbackProjects.map((project) => project.title));
+
+  const knownProjects = fallbackProjects.map(
+    (fallbackProject) => remoteByTitle.get(fallbackProject.title) ?? fallbackProject
+  );
+  const remoteOnlyProjects = projects.filter(
+    (project) => !fallbackTitles.has(project.title)
+  );
+
+  return [...knownProjects, ...remoteOnlyProjects];
+}
+
 async function fetchJson<T>(url: string): Promise<T> {
   const response = await fetch(url, { cache: "no-store" });
 
@@ -85,7 +99,7 @@ export const getInfAll = async (): Promise<ProjectItem[]> => {
     const data = await fetchJson<{ documents?: FirestoreDocument[] }>(url);
     const projects = (data.documents ?? []).map(parseProjectDocument);
 
-    return projects.length > 0 ? projects : fallbackProjects;
+    return projects.length > 0 ? mergeProjectsWithFallback(projects) : fallbackProjects;
   } catch (err) {
     console.error("[getInfAll] Erro ao buscar projetos no Firestore:", err);
     return fallbackProjects;
