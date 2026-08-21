@@ -10,7 +10,7 @@ type ButtonData = {
 };
 
 const buttonData: ButtonData[] = [
-  { text: "CURRICULO", className: "curriculo" },
+  { text: "CURRÍCULO", className: "curriculo" },
   { text: "PROJETOS", className: "projetos", isLink: true }, // Adiciona isLink para Projetos
   { text: "HABILIDADES", className: "habilidades" },
   { text: "IDIOMAS", className: "idiomas" },

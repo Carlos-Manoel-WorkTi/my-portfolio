@@ -8,6 +8,20 @@ import Contacts from "../components/contacts/Contacts";
 import 'aos/dist/aos.css';
 import {Theme }from "@/themes/themes-provide";
 import ContactMB from "@/components/contacts/ContactMB";
+import { Chakra_Petch, Inter } from "next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const chakra = Chakra_Petch({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-display",
+  display: "swap",
+});
 
 
 export const metadata: Metadata = {
@@ -69,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" className="dark"  style={{ colorScheme: 'dark' }}>
+    <html lang="pt-br" className={`${inter.variable} ${chakra.variable} dark`} style={{ colorScheme: 'dark' }}>
       
       <body className="root">
         <Theme attribute="class"

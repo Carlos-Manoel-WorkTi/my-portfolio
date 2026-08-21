@@ -159,7 +159,7 @@
 }
   .loader {
     color: rgb(207, 207, 207);
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font-sans), system-ui, sans-serif;
     font-weight: 600;
     font-size: 19px;
     -webkit-box-sizing: content-box;
@@ -439,7 +439,7 @@
   }
   
 
-  @media screen and (max-width:760px){
+@media screen and (max-width:760px){
     .root > header::after {
       width: 5.5em;
       height: 5.5em;
@@ -465,8 +465,8 @@
       font-size: 1.5em;
   }
   .wrapper {
-    width: 74% !important;
-    margin-top: 94px !important;
+    width: calc(100% - 32px) !important;
+    margin-top: 54px !important;
     
   }
 
@@ -497,7 +497,7 @@
   }
   .wrapper {
     width: 92% !important;
-    margin-top: 53px !important;
+    margin-top: 28px !important;
     left: 0px;
 }
 .dark .containerSecond,.light .containerSecond{
@@ -552,7 +552,7 @@
 
 @media screen and (max-width:550px) {
   .dark .containerSecond,.light .containerSecond {
-    height: 579px;
+    height: 430px;
     align-items: start;
     padding:  0px 20px;
   }

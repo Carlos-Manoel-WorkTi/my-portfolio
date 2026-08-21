@@ -35,8 +35,7 @@ export default function About() {
       <div id="main_about">
       <div id='b-1'>
         <h2 className={chakra.className}>Sobre mim</h2>
-        <p className={chakra.className}>Olá, meu nome é Carlos, e sou um entusiasta apaixonado pelo universo da tecnologia e inovação. Atualmente, estou mergulhado no fascinante mundo da publicidade digital, onde exploro as complexidades e oportunidades do marketing de alto impacto.
-          
+        <p className={chakra.className}>Sou Carlos Manoel, desenvolvedor full stack formado em Análise e Desenvolvimento de Sistemas e estudante de Engenharia de Software. Crio aplicações web completas, transformando ideias em experiências rápidas, acessíveis e bem construídas.
         </p>
       </div>
 

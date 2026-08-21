@@ -23,20 +23,20 @@ export default function Header() {
         <nav>
           <ul className="ul-header gap-4 items-center  hidden md:flex space-x-4 mr-5 animate__animated animate__backInDown">
             <li id='home' className='fw'>
-              <ActiveLink href="/">Home</ActiveLink>
+              <ActiveLink href="/">Início</ActiveLink>
             </li>
             <li id='about' className='fw'>
-              <ActiveLink href="/about" >About</ActiveLink>
+              <ActiveLink href="/about" >Sobre</ActiveLink>
             </li>
             <li id='contact' className='fw'>
-              <ActiveLink href="/contacts"  >Contact</ActiveLink>
+              <ActiveLink href="/contacts"  >Contato</ActiveLink>
             </li>
             <li id='service' className='fw'>
-              <ActiveLink href="/projects">Projects</ActiveLink>
+              <ActiveLink href="/projects">Projetos</ActiveLink>
             </li>
        
              <li id='contact' className='fw'>
-              <ActiveLink href="/projects/area?Todos"  >All</ActiveLink>
+              <ActiveLink href="/projects/area?Todos"  >Todos</ActiveLink>
             </li>
             <li className='pl-4 fw'>
             <ThemeToggle/>
