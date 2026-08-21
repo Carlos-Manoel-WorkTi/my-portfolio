@@ -35,20 +35,10 @@ function getImageCandidates(item: ProjectItem, theme?: string) {
 
 export default function Slide({ list }: SlideProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [width, setWidth] = useState<number>(0);
-  const [backgroundImage, setBackgroundImage] = useState<string>('');
+  const [activeImage, setActiveImage] = useState<string>('');
   const { resolvedTheme } = useTheme();
   const [isAuto, setIsAuto] = useState<boolean>(false);
   const [isBgLoaded, setIsBgLoaded] = useState(false);
-
-  // Atualiza largura da tela
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
 
   // Atualiza background
   useEffect(() => {
@@ -56,12 +46,6 @@ export default function Slide({ list }: SlideProps) {
 
     const item = list[currentIndex];
     const candidates = getImageCandidates(item, resolvedTheme);
-
-    const gradient = width <= 580
-      ? "rgba(16, 14, 14, 0.76) 25%, #000000a8"
-      : resolvedTheme === 'dark'
-        ? "rgba(10, 16, 22, 0) 15%, transparent"
-        : "rgb(10, 16, 22) 15%, transparent";
 
     let cancelled = false;
     let autoTimer: ReturnType<typeof setTimeout>;
@@ -71,11 +55,7 @@ export default function Slide({ list }: SlideProps) {
     const showBackground = (url?: string) => {
       if (cancelled) return;
 
-      setBackgroundImage(
-        url
-          ? `linear-gradient(to right, ${gradient}), url("${url}")`
-          : `linear-gradient(to right, ${gradient})`
-      );
+      setActiveImage(url ?? '');
       setIsBgLoaded(true);
       autoTimer = setTimeout(() => setIsAuto(true), 3000);
     };
@@ -100,7 +80,7 @@ export default function Slide({ list }: SlideProps) {
       cancelled = true;
       clearTimeout(autoTimer);
     };
-  }, [currentIndex, width, resolvedTheme, list]);
+  }, [currentIndex, resolvedTheme, list]);
 
   // Auto slide
   useEffect(() => {
@@ -125,19 +105,26 @@ export default function Slide({ list }: SlideProps) {
 
   if (!list[currentIndex]) return null;
 
-  const { title, description, color } = list[currentIndex];
+  const { title, description, color, link } = list[currentIndex];
 
   return (
-    <div className="container-slide" style={{ backgroundImage }}>
+    <div className="container-slide">
+      {activeImage && (
+        <>
+          <div className="slide-backdrop" style={{ backgroundImage: `url("${activeImage}")` }} />
+          <div className="slide-media" style={{ backgroundImage: `url("${activeImage}")` }} />
+        </>
+      )}
+      <div className="slide-overlay" />
       {!isBgLoaded && <Loading />}
       <div id='dg' className="slide-content">
         <h2>{title}</h2>
         <p>{description}</p>
       </div>
       <div id='container-btn'>
-        <button id='btn-ctt' style={{ backgroundColor: color }}>
-          Entrar em contato
-        </button>
+        <a id='btn-ctt' href={link} target="_blank" rel="noreferrer" style={{ backgroundColor: color }}>
+          Ver projeto
+        </a>
       </div>
 
       <div className='w-full relative flex justify-between container-btns'>

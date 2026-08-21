@@ -9,7 +9,7 @@
     font-size: 1.7em;
     border-left: 4px solid #FFD700;
     padding-left: 10px;
-    font-family: '__Chakra_Petch_cf6273';
+    font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
     width: auto;
 }
 #container_button_curriculo{
@@ -23,7 +23,7 @@
     padding-left: 20px;
     font-size: 1.2em;
     margin-top: 15px;
-    font-family: '__Chakra_Petch_cf6273';
+    font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
 }
 /* From Uiverse.io by andrew-demchenk0 */ 
 .button_cr {

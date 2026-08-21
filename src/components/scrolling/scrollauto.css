@@ -1,5 +1,5 @@
 .wrapper {
-  width: 50%;
+  width: min(860px, calc(100% - 48px));
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1) 20%, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
   overflow: hidden;
   max-width: 1500px;
@@ -7,7 +7,7 @@
   position: relative;
   height: 100px;
   box-sizing: border-box;
-  margin-top: 130px;
+  margin-top: 86px;
   /* margin-left: 23px; */
 }
 @keyframes scrollAuto {
@@ -27,7 +27,7 @@
   animation: scrollAuto 30s linear infinite;
 
   svg{
-    width: 41px;
+    width: 46px;
     
   }
 }
@@ -58,4 +58,21 @@
 }
 #item-9{
   animation-delay: calc(30s / 9 * (9 - 9) * -1);
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: calc(100% - 32px);
+    height: 72px;
+    margin-top: 30px;
+  }
+
+  .item {
+    width: 76px;
+    height: 72px;
+  }
+
+  .item svg {
+    width: 38px;
+  }
 }
