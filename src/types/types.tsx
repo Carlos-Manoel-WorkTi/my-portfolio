@@ -15,6 +15,7 @@ export type ProjectItem = {
     technologies: string[];
     images?: string[];
     github?: string;
+    isPrivate?: boolean;
     preview?: string;
     context?: string;
     content?: Array<{

@@ -14,6 +14,44 @@ const db = admin.firestore();
 // === Lista de projetos ===
 const projects = [
 {
+  title: "TKK Flow",
+  area: "fullstack",
+  link_bg_light: "/bg_project/tkk/cover.png",
+  link_bg_dark: "/bg_project/tkk/cover.png",
+  cover: "/bg_project/tkk/cover.png",
+  description: "TKK Flow é uma solução de automação multiplataforma para fluxos do TikTok, com aplicativo Android nativo, execução web e ferramentas de diagnóstico.",
+  color: "#ec4899",
+  date: "2026",
+  technologies: ["Java 17", "Android SDK", "AccessibilityService", "TypeScript", "Playwright", "Appium", "ADB", "Gradle"],
+  images: [
+    "/bg_project/tkk/cover.png",
+    "/bg_project/tkk/architecture.png",
+    "/bg_project/tkk/controls.png"
+  ],
+  link: "https://github.com/Carlos-Manoel-WorkTi/TKK",
+  github: "https://github.com/Carlos-Manoel-WorkTi/TKK",
+  isPrivate: true,
+  preview: "",
+  context: "O TKK Flow centraliza fluxos de automação que precisam funcionar tanto no navegador quanto diretamente em dispositivos Android. O projeto prioriza controle de execução, limites configuráveis, histórico, diagnóstico e pausas seguras para intervenção manual.",
+  content: [
+    {
+      title: "Contexto e objetivo",
+      text: "O projeto reúne uma implementação web em TypeScript com Playwright, um aplicativo Android nativo e um controlador Appium legado, preservado para comparação e diagnóstico durante a migração.",
+      image: "/bg_project/tkk/cover.png"
+    },
+    {
+      title: "Arquitetura multi-engine",
+      text: "O motor Android utiliza AccessibilityService e executa no próprio aparelho. A versão web mantém os fluxos em TypeScript e Playwright, enquanto o controlador Appium oferece ferramentas de inspeção e diagnóstico.",
+      image: "/bg_project/tkk/architecture.png"
+    },
+    {
+      title: "Controle e segurança",
+      text: "O painel oferece limites configuráveis, histórico e diagnósticos. Diante de login, CAPTCHA ou confirmação de segurança, o fluxo pausa para intervenção manual, sem tentar contornar a proteção da plataforma.",
+      image: "/bg_project/tkk/controls.png"
+    }
+  ]
+},
+{
   title: "DayFlow",
   area: "fullstack",
   link_bg_light: "none",

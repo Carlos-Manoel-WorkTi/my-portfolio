@@ -101,6 +101,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <div id='moreInf'>
           <p id='date-project'>Data: {projectData.date}</p>
           {/* <Link href={projectData.link} target="_blank" id='link-project'>Visitar Projeto</Link> */}
+          {projectData.isPrivate ? (
+            <span id='private-project'>Repositório privado</span>
+          ) : (
           <Link href={projectData.link} id='link-project' target='_blank'>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
@@ -109,6 +112,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               Ir visitar
             </div>
           </Link>
+          )}
         </div>
         
         <div id="context" className="space-y-6">

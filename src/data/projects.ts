@@ -2,6 +2,59 @@ import { ProjectItem } from "@/types/types";
 
 export const fallbackProjects: ProjectItem[] = [
   {
+    title: "TKK Flow",
+    area: "fullstack",
+    link_bg_light: "/bg_project/tkk/cover.png",
+    link_bg_dark: "/bg_project/tkk/cover.png",
+    cover: "/bg_project/tkk/cover.png",
+    description:
+      "TKK Flow é uma solução de automação multiplataforma para fluxos do TikTok, com aplicativo Android nativo, execução web e ferramentas de diagnóstico.",
+    color: "#ec4899",
+    date: "2026",
+    technologies: [
+      "Java 17",
+      "Android SDK",
+      "AccessibilityService",
+      "TypeScript",
+      "Playwright",
+      "Appium",
+      "ADB",
+      "Gradle",
+    ],
+    images: [
+      "/bg_project/tkk/cover.png",
+      "/bg_project/tkk/architecture.png",
+      "/bg_project/tkk/controls.png",
+    ],
+    link: "https://github.com/Carlos-Manoel-WorkTi/TKK",
+    github: "https://github.com/Carlos-Manoel-WorkTi/TKK",
+    isPrivate: true,
+    preview: "",
+    context:
+      "O TKK Flow centraliza fluxos de automação que precisam funcionar tanto no navegador quanto diretamente em dispositivos Android. O projeto prioriza controle de execução, limites configuráveis, histórico, diagnóstico e pausas seguras para intervenção manual.",
+    content: [
+      {
+        title: "Contexto e objetivo",
+        text: "O projeto nasceu para organizar uma automação que evoluiu por diferentes ambientes. A solução reúne uma implementação web em TypeScript com Playwright, um aplicativo Android nativo e um controlador Appium legado, preservado para comparação e diagnóstico durante a migração.",
+        image: "/bg_project/tkk/cover.png",
+      },
+      {
+        title: "Arquitetura multi-engine",
+        text: "No Android, o motor padrão utiliza AccessibilityService e executa no próprio aparelho, sem depender de computador, Node.js ou Appium durante o uso. A implementação web mantém os fluxos em TypeScript e Playwright, enquanto o controlador Appium oferece ferramentas de inspeção para acompanhar mudanças na interface.",
+        image: "/bg_project/tkk/architecture.png",
+      },
+      {
+        title: "Controle e segurança",
+        text: "O painel permite definir ciclos, quantidade de autores coletados e perfis seguidos. Históricos, diagnósticos e logs ficam no armazenamento privado do aplicativo. Diante de login, CAPTCHA, estado inesperado ou confirmação de segurança, o fluxo é pausado para intervenção manual, sem tentar contornar a proteção da plataforma.",
+        image: "/bg_project/tkk/controls.png",
+      },
+      {
+        title: "Resultado",
+        text: "O resultado é uma arquitetura modular que reduz a dependência do Appium, mantém ferramentas de diagnóstico e oferece uma base mais estável para evoluir seletores, recuperação de erros e execução controlada em diferentes ambientes.",
+      },
+    ],
+  },
+  {
     "title": "DayFlow",
     "area": "fullstack",
     "link_bg_light": "none",

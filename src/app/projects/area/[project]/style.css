@@ -138,6 +138,20 @@
     align-items: center;
     transition: all 0.6s ease;
   }
+
+#private-project {
+    display: inline-flex;
+    min-height: 35px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 14px;
+    border: 1px solid rgba(236, 72, 153, 0.55);
+    border-radius: 4px;
+    background: rgba(236, 72, 153, 0.12);
+    color: #f9a8d4;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
   
   #link-project:hover {
     background-color: rgb(6, 149, 37);
